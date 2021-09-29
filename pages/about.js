@@ -4,31 +4,31 @@ export default function AboutPage() {
   return (
     <div className="grid md:grid-cols-2 gap-6 grid-cols-1">
       <div>
-        <section className="mb-6">
-          <h2 className="mb-3 text-xl font-bold">What is Tailwind?</h2>
+        <section className="mb-6 text-led-text">
+          <h2 className="mb-3 text-xl font-bold">Numbers Don&apos;t Lie</h2>
 
           <p>
-            Tailwind CSS is a highly customizable, low-level CSS framework that
-            gives you all of the building blocks you need to build bespoke
-            designs without any annoying opinionated styles you have to fight to
-            override.
+          All your favourite numbers in one place.
+From social app to productivity, finance and business.
+
+
           </p>
         </section>
 
-        <section>
-          <h2 className="mb-3 text-xl font-bold">What is Next.js?</h2>
+        <section className="text-led-text">
+          <h2 className="mb-3 text-xl font-bold ">What is Next.js?</h2>
           <p>
-            Next.js is a minimalistic framework for creating server-rendered
-            React applications.
+          Get fancy realtime updates of numbers going on around you
           </p>
         </section>
       </div>
 
       <Image
-        alt="A one-eyed alien holding a broken cable connected between a server and a desktop computer"
-        src="/critter.svg"
-        width={476}
-        height={297.17}
+        alt="product logos"
+        src="/products.png"
+        width={150}
+        height={80}
+
       />
     </div>
   );

@@ -6,10 +6,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Head>
-        <title>Next.js Starter Tailwind</title>
+        <title>nuMETRICA</title>
         <meta
           name="Description"
-          content="A Next.js starter styled using Tailwind CSS."
+          content="All productivity numbers in one container"
         />
       </Head>
 

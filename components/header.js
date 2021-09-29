@@ -2,27 +2,46 @@ import Link from "next/link";
 import { useState } from "react";
 import cn from "classnames";
 import Image from "next/image";
+import { useRouter } from "next/dist/client/router";
+
+
 
 export default function Header() {
+  const route=useRouter();
+  
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   return (
-    <header className="bg-green-600">
-      <div className="flex flex-wrap items-center justify-between lg:container px-4 py-6 mx-auto md:flex-no-wrap md:px-6">
+    <header className="bg-black">
+      <div className="flex flex-wrap items-center justify-between lg:container px-4 py-4 mx-auto md:flex-no-wrap md:px-4">
         <div className="flex items-center">
-          <Image
-            src="/tailwind-logo.svg"
-            width={40}
-            height={40}
-            priority
-            alt="Tailwind CSS logo"
-          />
-
-          <Link href="/">
-            <a className="text-lg md:text-xl font-bold ml-3 text-white">
-              Next.js Starter Tailwind
-            </a>
-          </Link>
+         <Link href="/"><Image
+          src={"/logo.png"}
+          alt="logo"
+          width={145}
+          height={30}
+          /></Link>
+         
+         <ul
+          className={cn(
+            "md:flex flex-col md:flex-row md:items-center md:justify-center w-full md:w-auto",
+            mobileMenuIsOpen ? `block` : `hidden`
+          )}
+        >
+          {[
+            { title: "Home", route: "/" },
+            { title: "Favorite", route: "/favorite" },
+            { title: "Preference", route: "/preference" },
+            { title: "diy", route: "/diy" },
+          ].map(({ route, title }) => (
+            <li className={cn("mt-3 md:mt-0 md:ml-6")} key={title}>
+              <Link href={route}>
+                <a className="block text-white">{title}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+          
         </div>
 
         <button
@@ -41,13 +60,12 @@ export default function Header() {
 
         <ul
           className={cn(
-            "md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto",
+            "md:flex flex-col md:flex-row md:items-center md:justify-center w-full md:w-auto",
             mobileMenuIsOpen ? `block` : `hidden`
           )}
         >
           {[
-            { title: "Home", route: "/" },
-            { title: "About", route: "/about" },
+            { title: "Login", route: "/auth" }
           ].map(({ route, title }) => (
             <li className="mt-3 md:mt-0 md:ml-6" key={title}>
               <Link href={route}>
