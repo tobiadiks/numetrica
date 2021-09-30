@@ -6,7 +6,7 @@ module.exports = {
   theme:{
     extend:{
       fontFamily:{
-        sans: ['"lcd phone",Oxanium ...defaultTheme.fontFamily.sans],
+        sans: ['Oxanium','"lcd phone"', ...defaultTheme.fontFamily.sans],
       },
       colors:{
         "deep-blue" : "#060509",

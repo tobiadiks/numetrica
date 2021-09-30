@@ -15,7 +15,7 @@ export default function Header() {
     <header className="bg-black">
       <div className="flex flex-wrap items-center justify-between lg:container px-4 py-4 mx-auto md:flex-no-wrap md:px-4">
         <div className="flex items-center">
-         <Link href="/"><Image
+         <Link href="/" passHref><Image
           src={"/logo.png"}
           alt="logo"
           width={145}
@@ -45,7 +45,7 @@ export default function Header() {
         </div>
 
         <button
-          className="flex items-center block px-3 py-2 text-white border border-white rounded md:hidden"
+          className=" items-center block px-3 py-2 text-white border border-white rounded md:hidden"
           onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)}
         >
           <svg
