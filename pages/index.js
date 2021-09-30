@@ -7,7 +7,7 @@ export default function IndexPage() {
     <div className="flex flex-col items-center justify-center space-y-12 ">
       <div className="flex  md:mx-auto lg:mx-auto mx-0 flex-wrap mb-18">
         <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col justify-between align-middle">
-          <h1 className="p-3 font-black text-led-text text-4xl md:text-7xl text-center md:text-left lg:text-left">
+          <h1 className="p-3 font-black text-led-text text-4xl md:text-5xl text-center md:text-left lg:text-left">
             LCD for<p className="text-red-500">metrics that matter</p>
           </h1>
           <p className="px-3 text-led-text  text-center md:text-left lg:text-left">
