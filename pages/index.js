@@ -8,10 +8,10 @@ export default function IndexPage() {
       <div className="flex  md:mx-auto lg:mx-auto mx-0 flex-wrap mb-18">
         <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col justify-between align-middle">
           <h1 className="p-3 font-black text-led-text text-4xl md:text-5xl text-center md:text-left lg:text-left">
-            LCD for<p className="text-red-500">metrics that matter</p>
+            Turn feedbacks<p className="text-red-500">into excellent products</p>
           </h1>
           <p className="px-3 text-led-text  text-center md:text-left lg:text-left">
-            <span className="black">Numetrica</span> is a business and utility
+            <span className="black">Numetrica</span> is an individual & business and utility
             tool. From social app, productivity, finance and business. Use your
             favorite tools in realtime
           </p>
@@ -28,7 +28,7 @@ export default function IndexPage() {
           </p>
         </div>
 
-        <div className="w-full md:w-1/2 lg:w-1/2 mt-5 md:mt-0 lg:mt-0 border-2 border-led-text rounded-md mx-3 md:mx-0 lg:mx-0">
+        <div className="w-full h-auto md:w-1/2 lg:w-1/2 mt-5 md:mt-0 lg:mt-0 mx-3 md:mx-0 lg:mx-0">
           <Image
             src="/livemetric.png"
             alt="Live metrics dashboard"

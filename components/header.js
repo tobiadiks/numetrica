@@ -6,6 +6,7 @@ import { useRouter } from "next/dist/client/router";
 
 
 
+
 export default function Header() {
   const route=useRouter();
   
@@ -28,18 +29,20 @@ export default function Header() {
             mobileMenuIsOpen ? `block` : `hidden`
           )}
         >
+        
           {[
             { title: "Home", route: "/" },
-            { title: "Favorite", route: "/favorite" },
-            { title: "Preference", route: "/preference" },
-            { title: "diy", route: "/diy" },
+            { title: "Product", route: "/product" },
+            { title: "Case Studies", route: "/case-studies" },
           ].map(({ route, title }) => (
             <li className={cn("mt-3 md:mt-0 md:ml-6")} key={title}>
               <Link href={route}>
-                <a className="block text-white">{title}</a>
+                <a className="block text-white">{title.toUpperCase()}</a>
               </Link>
             </li>
           ))}
+
+        
         </ul>
           
         </div>
@@ -65,11 +68,12 @@ export default function Header() {
           )}
         >
           {[
-            { title: "Login", route: "/auth" }
-          ].map(({ route, title }) => (
+            { title: "Log in", route: "/auth", cta: false },
+            { title: "14 Days Trial", route: "/auth", cta: true }
+          ].map(({ route, title, cta }) => (
             <li className="mt-3 md:mt-0 md:ml-6" key={title}>
               <Link href={route}>
-                <a className="block text-white">{title}</a>
+                <a className={cn("block text-white", cta ? `border p-2 rounded hover:bg-white hover:text-black font-medium`: `border-0`)}>{title.toUpperCase()}</a>
               </Link>
             </li>
           ))}

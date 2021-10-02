@@ -9,7 +9,8 @@ function MyApp({ Component, pageProps }) {
         <title>nuMETRICA</title>
         <meta
           name="Description"
-          content="All productivity numbers in one container"
+          content="Turn feedbacks
+into excellent products"
         />
       </Head>
 
