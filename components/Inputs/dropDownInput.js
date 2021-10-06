@@ -5,11 +5,13 @@ export default function DropDownInput(props) {
         value={props.defaultValue}
         className="md:w-11/12 lg:w-11/12 w-11/12 py-3 my-3 px-4 bg-led-screen rounded text-led-text focus:outline-none placeholder-led-text"
       >
-        {[props.data].map((data,index) => (
-          <option key={index} value={data.value}>
-            {data.value}
-          </option>
-        ))}
+        {[props.data].map(
+                    (data, index) => (
+                      <option value={data} key={index}>
+                        {data}
+                      </option>
+                    )
+                  )}
       </select>
     </div>
   );

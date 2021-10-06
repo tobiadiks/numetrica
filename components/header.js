@@ -11,6 +11,7 @@ export default function Header() {
   const route=useRouter();
   
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
+  const [isAuthenticated,setIsAuthenticated] = useState(true);
 
   return (
     <header className="bg-black">
@@ -29,8 +30,21 @@ export default function Header() {
             mobileMenuIsOpen ? `block` : `hidden`
           )}
         >
+        {isAuthenticated?
         
-          {[
+          [
+            { title: "Feedback", route: "/t/feedback" },
+            { title: "Roadmap", route: "/t/roadmap" },
+            { title: "Users", route: "/t/users" },
+          ].map(({ route, title }) => (
+            <li className={cn("mt-3 md:mt-0 md:ml-6")} key={title}>
+              <Link href={route}>
+                <a className="block text-white">{title.toUpperCase()}</a>
+              </Link>
+            </li>
+          )) : 
+
+          [
             { title: "Home", route: "/" },
             { title: "Product", route: "/product" },
             { title: "Case Studies", route: "/case-studies" },
@@ -40,8 +54,8 @@ export default function Header() {
                 <a className="block text-white">{title.toUpperCase()}</a>
               </Link>
             </li>
-          ))}
-
+          ))
+        }
         
         </ul>
           
@@ -67,16 +81,32 @@ export default function Header() {
             mobileMenuIsOpen ? `block` : `hidden`
           )}
         >
-          {[
-            { title: "Log in", route: "/auth", cta: false },
-            { title: "14 Days Trial", route: "/auth", cta: true }
+         {isAuthenticated?
+
+          [
+            { title: "Log out", route: "/", cta: false },
+            { title: "Profile", route: "/profile", cta: false }
           ].map(({ route, title, cta }) => (
             <li className="mt-3 md:mt-0 md:ml-6" key={title}>
               <Link href={route}>
                 <a className={cn("block text-white", cta ? `border p-2 rounded hover:bg-white hover:text-black font-medium`: `border-0`)}>{title.toUpperCase()}</a>
               </Link>
             </li>
-          ))}
+          ))
+
+          :
+
+          [
+            { title: "Log in", route: "/auth", cta: false },
+            { title: "Free Trial", route: "/free-trial", cta: true }
+          ].map(({ route, title, cta }) => (
+            <li className="mt-3 md:mt-0 md:ml-6" key={title}>
+              <Link href={route}>
+                <a className={cn("block text-white", cta ? `border p-2 rounded hover:bg-white hover:text-black font-medium`: `border-0`)}>{title.toUpperCase()}</a>
+              </Link>
+            </li>
+          ))
+         }
         </ul>
       </div>
     </header>

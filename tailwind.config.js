@@ -6,7 +6,7 @@ module.exports = {
   theme:{
     extend:{
       fontFamily:{
-        sans: ['Oxanium',"monospace", ...defaultTheme.fontFamily.sans],
+        sans: ['Oxanium', ...defaultTheme.fontFamily.sans],
       },
       colors:{
         "deep-blue" : "#060509",
