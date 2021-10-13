@@ -1,10 +1,10 @@
-import { Rating } from "react-simple-star-rating";
+import { RatingView } from "react-simple-star-rating";
 export default function ReviewCard(props) {
     return (
       <div className="bg-deep-blue h-auto flex justify-between align-middle border border-gray-800">
         <div className="my-auto px-3 py-6 flex">
           <div className="text-led-text font-bold text-3xl pl-3">
-              <Rating className="flex flex-col" size={16} ratingValue={props.rating} fillColor={"#fff"}
+              <RatingView className="flex flex-col" size={16} ratingValue={props.rating} fillColor={"#fff"}
                   emptyColor={"#848484"}/>
           </div>
           <div className="pl-6">
