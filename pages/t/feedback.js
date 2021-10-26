@@ -15,31 +15,28 @@ export default function FeedBackPage() {
           </div>
           <div className="h-screen overflow-y-scroll">
             <div className="mt-8">
-              <span className="text-led-text font-semibold pl-3">Period</span>
-              <TextInput type="date" />
+              <span className="text-led-text font-semibold pl-2">Period</span>
+              <TextInput center  type="date" />
             </div>
-            <div className="mt-8">
-              <span className="text-led-text font-semibold pl-3">Language</span>
-              <DropDownInput data={["English"]} />
-            </div>
-            <div className="mt-8">
-              <span className="text-led-text font-semibold pl-3 mb-2">
+
+            <div className="mt-8 pl-2">
+              <span className="text-led-text font-semibold  mb-2">
                 Boards
               </span>
-              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
+              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ml-3">Feature Requests</span>
+                  <span className="text-led-text ">Feature Requests</span>
                 </div>{" "}
                 <div>
                   <span className="text-led-text">5,456</span>
                 </div>
               </div>
 
-              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
+              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ml-3">Bug Reports</span>
+                  <span className="text-led-text ">Bug Reports</span>
                 </div>{" "}
                 <div>
                   <span className="text-led-text">456</span>
@@ -47,34 +44,34 @@ export default function FeedBackPage() {
               </div>
             </div>
 
-            <div className="mt-8">
-              <span className="text-led-text font-semibold pl-3 mb-2">
+            <div className="mt-8 pl-2">
+              <span className="text-led-text font-semibold  mb-2">
                 Text Analytics
               </span>
-              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
+              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ml-3">All</span>
+                  <span className="text-led-text ">All</span>
                 </div>{" "}
                 <div>
                   <span className="text-led-text">5,456</span>
                 </div>
               </div>
 
-              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
+              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ml-3">Processed</span>
+                  <span className="text-led-text ">Processed</span>
                 </div>{" "}
                 <div>
                   <span className="text-led-text">456</span>
                 </div>
               </div>
 
-              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
+              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ml-3">Not Processed</span>
+                  <span className="text-led-text ">Unprocessed</span>
                 </div>{" "}
                 <div>
                   <span className="text-led-text">5,000</span>
@@ -82,44 +79,44 @@ export default function FeedBackPage() {
               </div>
             </div>
 
-            <div className="mt-8">
-              <span className="text-led-text font-semibold pl-3 mb-2">
+            <div className="mt-8 pl-2">
+              <span className="text-led-text font-semibold  mb-2">
                 Status
               </span>
-              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
+              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ml-3">Open</span>
+                  <span className="text-led-text ">Open</span>
                 </div>{" "}
                 <div>
                   <span className="text-led-text">54</span>
                 </div>
               </div>
 
-              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
+              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ml-3">Under Review</span>
+                  <span className="text-led-text">Under Review</span>
                 </div>{" "}
                 <div>
                   <span className="text-led-text">45</span>
                 </div>
               </div>
 
-              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
+              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ml-3">In Progress</span>
+                  <span className="text-led-text ">In Progress</span>
                 </div>{" "}
                 <div>
                   <span className="text-led-text">0</span>
                 </div>
               </div>
 
-              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
+              <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ml-3">Planned</span>
+                  <span className="text-led-text ">Planned</span>
                 </div>{" "}
                 <div>
                   <span className="text-led-text">588</span>
@@ -137,7 +134,7 @@ export default function FeedBackPage() {
               <input
                 placeholder="Search feedback"
                 type="text"
-                className="md:w-11/12 lg:w-11/12 w-11/12 py-3 px-4 bg-led-screen rounded text-white focus:outline-none placeholder-led-text"
+                className="md:w-11/12 lg:w-11/12 w-11/12 py-3 px-4 bg-led-screen rounded text-led-text focus:outline-none placeholder-led-text"
               />
             </div>
           </div>
