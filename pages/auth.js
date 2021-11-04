@@ -27,7 +27,7 @@ export default function AuthPage() {
 
   return (
     <div className="flex flex-col items-center justify-center space-y-5">
-      <h2 className="p-2 font-bold text-led-text md:text-2xl text-center w-full md:w-1/2 lg:1/2">
+      <h2 className="p-2 font-bold text-white md:text-2xl text-center w-full md:w-1/2 lg:1/2">
         Login Your Account
       </h2>
 

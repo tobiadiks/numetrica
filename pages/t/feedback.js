@@ -15,21 +15,21 @@ export default function FeedBackPage() {
           </div>
           <div className="h-screen overflow-y-scroll">
             <div className="mt-8">
-              <span className="text-led-text font-semibold pl-2">Period</span>
+              <span className="text-white font-semibold pl-2">Period</span>
               <TextInput center  type="date" />
             </div>
 
             <div className="mt-8 pl-2">
-              <span className="text-led-text font-semibold  mb-2">
+              <span className="text-white font-semibold  mb-2">
                 Boards
               </span>
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ">Feature Requests</span>
+                  <span className="text-led-text ">Feature</span>
                 </div>{" "}
                 <div>
-                  <span className="text-led-text">5,456</span>
+                  <span className="text-white">5,456</span>
                 </div>
               </div>
 
@@ -39,13 +39,13 @@ export default function FeedBackPage() {
                   <span className="text-led-text ">Bug Reports</span>
                 </div>{" "}
                 <div>
-                  <span className="text-led-text">456</span>
+                  <span className="text-white">456</span>
                 </div>
               </div>
             </div>
 
             <div className="mt-8 pl-2">
-              <span className="text-led-text font-semibold  mb-2">
+              <span className="text-white font-semibold  mb-2">
                 Text Analytics
               </span>
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
@@ -54,7 +54,7 @@ export default function FeedBackPage() {
                   <span className="text-led-text ">All</span>
                 </div>{" "}
                 <div>
-                  <span className="text-led-text">5,456</span>
+                  <span className="text-white">5,456</span>
                 </div>
               </div>
 
@@ -64,7 +64,7 @@ export default function FeedBackPage() {
                   <span className="text-led-text ">Processed</span>
                 </div>{" "}
                 <div>
-                  <span className="text-led-text">456</span>
+                  <span className="text-white">456</span>
                 </div>
               </div>
 
@@ -74,13 +74,13 @@ export default function FeedBackPage() {
                   <span className="text-led-text ">Unprocessed</span>
                 </div>{" "}
                 <div>
-                  <span className="text-led-text">5,000</span>
+                  <span className="text-white">5,000</span>
                 </div>
               </div>
             </div>
 
             <div className="mt-8 pl-2">
-              <span className="text-led-text font-semibold  mb-2">
+              <span className="text-white font-semibold  mb-2">
                 Status
               </span>
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
@@ -89,7 +89,7 @@ export default function FeedBackPage() {
                   <span className="text-led-text ">Open</span>
                 </div>{" "}
                 <div>
-                  <span className="text-led-text">54</span>
+                  <span className="text-white">54</span>
                 </div>
               </div>
 
@@ -99,7 +99,7 @@ export default function FeedBackPage() {
                   <span className="text-led-text">Under Review</span>
                 </div>{" "}
                 <div>
-                  <span className="text-led-text">45</span>
+                  <span className="text-white">45</span>
                 </div>
               </div>
 
@@ -109,7 +109,7 @@ export default function FeedBackPage() {
                   <span className="text-led-text ">In Progress</span>
                 </div>{" "}
                 <div>
-                  <span className="text-led-text">0</span>
+                  <span className="text-white">0</span>
                 </div>
               </div>
 
@@ -119,7 +119,7 @@ export default function FeedBackPage() {
                   <span className="text-led-text ">Planned</span>
                 </div>{" "}
                 <div>
-                  <span className="text-led-text">588</span>
+                  <span className="text-white">588</span>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@ export default function FeedBackPage() {
               <input
                 placeholder="Search feedback"
                 type="text"
-                className="md:w-11/12 lg:w-11/12 w-11/12 py-3 px-4 bg-led-screen rounded text-led-text focus:outline-none placeholder-led-text"
+                className="md:w-11/12 lg:w-11/12 w-11/12 py-3 px-4 bg-led-screen rounded text-white focus:outline-none placeholder-led-text"
               />
             </div>
           </div>
@@ -145,6 +145,39 @@ export default function FeedBackPage() {
               behavior is different"
               content="Individual elements for each data point, some of
               its behavior is"
+              sentiment={-1}
+            />
+
+<FeedBackCard
+              title="Individual elements for each data point, some of its
+              behavior is different"
+              content="Individual elements for each data point, some of
+              its behavior is"
+              sentiment={1}
+            />
+
+<FeedBackCard
+              title="Individual elements for each data point, some of its
+              behavior is different"
+              content="Individual elements for each data point, some of
+              its behavior is"
+              sentiment={0}
+            />
+
+<FeedBackCard
+              title="Individual elements for each data point, some of its
+              behavior is different"
+              content="Individual elements for each data point, some of
+              its behavior is"
+              sentiment={-1}
+            />
+
+<FeedBackCard
+              title="Individual elements for each data point, some of its
+              behavior is different"
+              content="Individual elements for each data point, some of
+              its behavior is"
+              sentiment={2}
             />
           </div>
 
@@ -169,9 +202,9 @@ export default function FeedBackPage() {
         <div className="">
           <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-led-text border-b px-3  border-gray-800">
             <div>
-              <div className="flex justify-between mt-2">
-                <div className="text-white font-semibold">Total Feedbacks</div>
-                <div className="text-white font-bold">5,456</div>
+              <div className="flex flex-col align-middle mt-2">
+                <div className="text-blue-600 font-semibold mx-auto">Total Feedbacks</div>
+                <div className="text-white font-bold mx-auto">5,456</div>
               </div>
               <VictoryChart>
                 <VictoryArea
@@ -183,9 +216,9 @@ export default function FeedBackPage() {
                   style={{
                     labels: { fill: "#fff", fontSize: 20, fontWeight: "bold" },
                     data: {
-                      fill: "#ffffff",
+                      fill: "rgba(95,165,250)",
                       fillOpacity: 0.1,
-                      stroke: "#fff",
+                      stroke: "rgba(95,165,250)",
                       strokeWidth: 2,
                     },
                   }}
@@ -202,9 +235,9 @@ export default function FeedBackPage() {
           </div>
 
           <div className="md:full lg:w-full w-full flex flex-col justify-center align-middle text-led-text border-b py-5 px-3 border-gray-800">
-            <div className="flex justify-between  mt-2">
-              <div className="text-white font-semibold">Sentiments</div>
-              <div className="text-white font-bold"></div>
+            <div className="flex flex-col align-middle  mt-2">
+              <div className="text-white mx-auto font-semibold text-center">Sentiments</div>
+              {/* <div className="text-white font-bold"></div> */}
             </div>
 
             <div className="flex flex-col lg:flex-col md:flex-col w-full justify-between align-middle">
@@ -215,12 +248,13 @@ export default function FeedBackPage() {
                   labels={({ datum }) => `${datum.x}`}
                   style={{
                     labels: { fill: "#fff", fontSize: 15, fontWeight: "bold" },
+                  data:{fill:({datum})=>`${datum.fill}`}
                   }}
                   innerRadius={50}
                   data={[
-                    { x: "Positive", y: 63.7 },
-                    { x: "Negative", y: 22.1 },
-                    { x: "Neutral", y: 15.2 },
+                    { x: "Positive", y: 63.7,fill:"rgba(52,211,153)" },
+                    { x: "Negative", y: 22.1,fill:"rgba(248,113,113)" },
+                    { x: "Neutral", y: 15.2 ,fill:"rgba(251,191,36)"},
                   ]}
                   animate={{
                     duration: 2000,
@@ -232,16 +266,16 @@ export default function FeedBackPage() {
               <div className="w-full text-base lg:text-base md:text-base flex flex-col align-middle mx-auto">
                 <div className="my-auto w-full">
                   <div className="flex justify-between w-full">
-                    <div>Positive</div>
-                    <div>63.7%</div>
+                    <div className="text-green-400">Positive</div>
+                    <div className="text-white">63.7%</div>
                   </div>
                   <div className="flex justify-between">
-                    <div>Negative</div>
-                    <div>22.1%</div>
+                    <div className="text-red-400">Negative</div>
+                    <div className="text-white">22.1%</div>
                   </div>
                   <div className="flex justify-between">
-                    <div>Neutral</div>
-                    <div>15.2%</div>
+                    <div className="text-yellow-400">Neutral</div>
+                    <div className="text-white">15.2%</div>
                   </div>
                 </div>
               </div>

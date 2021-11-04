@@ -210,23 +210,20 @@ export default function ReviewPage() {
                 <div className="text-white font-bold">5,456</div>
               </div>
               <VictoryChart>
-                <VictoryArea
+              <VictoryArea
                   interpolation="natural"
                   animate={{
                     duration: 2000,
                     onLoad: { duration: 1000 },
                   }}
                   style={{
-                    labels: { fill: "#fff", fontSize: 20, fontWeight: "bold", },
+                    labels: { fill: "#fff", fontSize: 20, fontWeight: "bold" },
                     data: {
-                      fill: "#ffffff",
+                      fill: "rgba(124,58,237)",
                       fillOpacity: 0.1,
-                      stroke: "#fff",
+                      stroke: "rgba(124,58,237)",
                       strokeWidth: 2,
-                      
                     },
-                    
-                    
                   }}
                   data={[
                     { x: 1, y: 2 },
@@ -248,18 +245,19 @@ export default function ReviewPage() {
 
             <div className="flex flex-col lg:flex-col md:flex-col w-full justify-between align-middle">
               <div className="w-full mx-auto">
-                <VictoryPie
+              <VictoryPie
                   width={600}
                   labelPosition="centroid"
                   labels={({ datum }) => `${datum.x}`}
                   style={{
                     labels: { fill: "#fff", fontSize: 15, fontWeight: "bold" },
+                  data:{fill:({datum})=>`${datum.fill}`}
                   }}
                   innerRadius={50}
                   data={[
-                    { x: "Positive", y: 63.7 },
-                    { x: "Negative", y: 22.1 },
-                    { x: "Neutral", y: 15.2 },
+                    { x: "Positive", y: 63.7,fill:"rgba(124,58,237,0.6)" },
+                    { x: "Negative", y: 22.1,fill:"rgba(124,58,237,0.4)" },
+                    { x: "Neutral", y: 15.2 ,fill:"rgba(124,58,237,0.2)"},
                   ]}
                   animate={{
                     duration: 2000,
@@ -269,18 +267,18 @@ export default function ReviewPage() {
               </div>
 
               <div className="w-full text-base lg:text-base md:text-base flex flex-col align-middle mx-auto">
-                <div className="my-auto w-full">
+              <div className="my-auto w-full">
                   <div className="flex justify-between w-full">
-                    <div>Positive</div>
-                    <div>63.7%</div>
+                    <div className="text-purple-600">Positive</div>
+                    <div className="text-white">63.7%</div>
                   </div>
                   <div className="flex justify-between">
-                    <div>Negative</div>
-                    <div>22.1%</div>
+                    <div className="text-purple-400">Negative</div>
+                    <div className="text-white">22.1%</div>
                   </div>
                   <div className="flex justify-between">
-                    <div>Neutral</div>
-                    <div>15.2%</div>
+                    <div className="text-purple-200">Neutral</div>
+                    <div className="text-white">15.2%</div>
                   </div>
                 </div>
               </div>

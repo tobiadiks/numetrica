@@ -8,10 +8,10 @@ export default function IndexPage() {
       <div className="flex  md:mx-auto lg:mx-auto mx-0 flex-wrap mb-18">
         <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col justify-between align-middle">
           <h1 className=" font-black text-white text-4xl md:text-5xl text-center md:text-left lg:text-left">
-            Turn feedbacks<p className="text-red-500">into excellent products</p>
+            Turn feedbacks<p className="text-blue-600">into excellent products</p>
           </h1>
           <div className=" text-led-text mt-6  text-center md:text-left lg:text-left">
-            <b className="black">Numetrica</b> is an individual & business and utility
+            <b className="black text-blue-600">Numetrica</b> is an individual & business and utility
             tool. From social app, productivity, finance and business. Use your
             favorite tools in realtime
           </div>
@@ -41,10 +41,10 @@ export default function IndexPage() {
 
       <div className="flex  md:mx-auto lg:mx-auto mx-0 flex-wrap flex-row-reverse my-20">
         <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col justify-center align-middle">
-          <h1 className=" font-black text-led-text text-4xl md:text-5xl text-center md:text-left lg:text-left">
+          <h1 className=" font-black text-white text-4xl md:text-5xl text-center md:text-left lg:text-left">
             Monitor your social app metric
           </h1>
-          <div className=" text-led-text  text-center md:text-left lg:text-left">
+          <div className=" text-led-text mt-6  text-center md:text-left lg:text-left">
             Fancy fullscreen mode, turn your gadget into a monitoring tool at
             home or offices.
           </div>
@@ -53,7 +53,7 @@ export default function IndexPage() {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 lg:w-1/2 mt-5 md:mt-0 lg:mt-0 ">
+        {/* <div className="w-full md:w-1/2 lg:w-1/2 mt-5 md:mt-0 lg:mt-0 ">
           <Image
             src="/metricmac.png"
             alt="Metric on mac"
@@ -61,7 +61,7 @@ export default function IndexPage() {
             height={700}
             priority
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

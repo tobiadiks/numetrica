@@ -17,12 +17,12 @@ export default function ReviewCard(props) {
               </div>
               <div className="font-light text-md text-white flex  justify-between align-middle">
                 <div className="font-light text-xs text-white flex  justify-between align-middle">
-                  <span className="font-light text-led-text py-3 my-3">
+                  <span className="font-light text-white py-3 my-3">
                     3 hours ago
                   </span>
                 </div>
                 <div className="font-light text-xs text-white flex  justify-between align-middle">
-                  <select className="py-3 my-3  bg-deep-blue text-led-text focus:outline-none placeholder-led-text">
+                  <select className="py-3 my-3  bg-deep-blue text-white focus:outline-none placeholder-led-text">
                     {["open", "review", "progress", "planned"].map(
                       (data, index) => (
                         <option value={data} key={index}>

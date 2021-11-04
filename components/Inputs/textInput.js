@@ -10,7 +10,7 @@ export default function TextInput(props) {
         value={props.value}
         placeholder={props.placeholder}
         type={props.type}
-        className="w-full py-3 my-3 px-4 bg-led-screen rounded text-led-text focus:outline-none placeholder-led-text"
+        className="w-full py-3 my-3 px-4 bg-led-screen rounded text-white focus:outline-none placeholder-led-text"
       />
     </div>
   );
