@@ -3,31 +3,28 @@ import { useState, useContext, useEffect } from "react";
 import cn from "classnames";
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
-import { AppContext } from "context/state";
-import { logout } from "utils/auth.utils";
+import { useSelector,useDispatch } from "react-redux";
+import {logout} from '../context/features/user/userSlice'
+
 
 export default function Header() {
   const route = useRouter();
-
+  const userState = useSelector((state)=>state.userStore.user);
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const { state } = useContext(AppContext);
+  const dispatch=useDispatch()
 
-  async function LogOut() {
-    await state.setUser({});
-    await logout();
-
-    route.push("/");
+  async function LogOut(routeDestination,title) {
+    if(title=="Log out"){
+      dispatch(logout())
+      route.push(routeDestination);
+    }
+    else{
+      route.push(routeDestination);
+    }
+    
   }
 
-  useEffect(() => {
-    if (state.user.accessToken === undefined) {
-      setIsAuthenticated(false);
-    } else {
-      setIsAuthenticated(true);
-    }
-  }, [state.user.accessToken]);
-
+  
   return (
     <header className="bg-black">
       <div className="flex flex-wrap items-center justify-between lg:w-full px-6 py-4 mx-auto md:flex-no-wrap md:px-6">
@@ -42,7 +39,7 @@ export default function Header() {
               mobileMenuIsOpen ? `block` : `hidden`
             )}
           >
-            {isAuthenticated
+            {userState.success
               ? [
                   { title: "Feedback", route: "/t/feedback" },
                   { title: "Review", route: "/t/review" },
@@ -89,20 +86,21 @@ export default function Header() {
             mobileMenuIsOpen ? `block` : `hidden`
           )}
         >
-          {isAuthenticated
-            ? [{ title: "Log out", route: "/", cta: false }].map(
-                ({ title, cta }, index) => (
+          {userState.success
+            ? [{ title: userState.company.display_name.slice(0,8)+'...', route: "/profile", cta: false,bold:true },{ title: "Log out", route: "/", cta: false,bold:false }].map(
+                ({ title,route, cta,bold }, index) => (
                   <li
                     className="mt-3 md:mt-0 md:ml-6 cursor-pointer"
                     key={index}
-                    onClick={LogOut}
+                    onClick={()=>LogOut(route,title)}
                   >
                     <a
                       className={cn(
                         "block text-white",
                         cta
                           ? `border p-2  rounded hover:bg-white hover:text-black font-medium`
-                          : `border-0`
+                          : `border-0`,
+                          bold ? 'font-bold hover:underline':''
                       )}
                     >
                       {title.toUpperCase()}
@@ -134,3 +132,4 @@ export default function Header() {
     </header>
   );
 }
+ 

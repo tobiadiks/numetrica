@@ -1,28 +1,31 @@
 import TextInput from "@components/Inputs/textInput";
 import PrimaryButton from "@components/Inputs/primaryButton";
-import { useState, useContext } from "react";
+import { useState,useEffect} from "react";
 import { useRouter } from "next/router";
 import { login } from "../utils/auth.utils";
-import { AppContext } from "../context/state";
+import { useSelector,useDispatch, } from "react-redux";
+
+
 export default function AuthPage() {
   const route = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const userState = useSelector(state=>state.userStore.user)
+  const promiseState = useSelector(state=>state.userStore.status)
+  const dispatch = useDispatch();
 
-  const { state } = useContext(AppContext);
+  useEffect(()=>{
+    if(userState.success&&promiseState){
+      route.push('/t/feedback')
+    }
+  },[route,userState.success,promiseState])
+
 
   const LoginUser = async () => {
-    try {
-      const data = await login({ email, password });
-      if (data.accessToken) {
-        state.setUser({ ...data });
-        route.push("t/feedback");
-      } else {
-        alert("something went wrong");
+      await dispatch(login({ email, password }));
+      if(!userState.success&&promiseState){
+        await alert('Incorrect credentials')
       }
-    } catch (err) {
-      err;
-    }
   };
 
   return (
@@ -30,12 +33,12 @@ export default function AuthPage() {
       <h2 className="p-2 font-bold text-white md:text-2xl text-center w-full md:w-1/2 lg:1/2">
         Login Your Account
       </h2>
-
+{console.log(userState,promiseState)}
       <section className="flex flex-col items-center justify-center w-full md:w-1/2 lg:1/2">
         <TextInput
           value={email}
           onChange={(e) => {
-            setEmail(e.target.value);
+            setEmail(e.target.value                                                                         );
           }}
           placeholder="E-mail"
           type="text"

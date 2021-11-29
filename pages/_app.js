@@ -1,39 +1,30 @@
 import "../css/index.css";
 import Head from "next/head";
 import Layout from "@components/layout";
-import { AppContext } from "context/state";
-import { useEffect, useState, useContext } from "react";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistStore } from "redux-persist";
+import store from "context/store";
 
 function MyApp({ Component, pageProps }) {
-  const [user, updateUser] = useState({});
-  function setUser({ accessToken, company }) {
-    updateUser({ accessToken, company });
-  }
-
-  useEffect(() => {
-    const storage = JSON.parse(localStorage.getItem("user"));
-    if (!user.company) {
-      if (storage) {
-        setUser({ ...storage });
-      }
-    }
-  }, [user.company]);
-
+  let persistor = persistStore(store);
   return (
-    <AppContext.Provider value={{ state: { user, setUser } }}>
-      <Layout>
-        <Head>
-          <title>nuMETRICA</title>
-          <meta
-            name="Description"
-            content="Turn feedbacks
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Layout>
+          <Head>
+            <title>nuMETRICA</title>
+            <meta
+              name="Description"
+              content="Turn feedbacks
 into excellent products"
-          />
-        </Head>
+            />
+          </Head>
 
-        <Component {...pageProps} />
-      </Layout>
-    </AppContext.Provider>
+          <Component {...pageProps} />
+        </Layout>
+      </PersistGate>
+    </Provider>
   );
 }
 
