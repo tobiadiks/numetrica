@@ -5,6 +5,9 @@ module.exports = {
   purge: ["./components/**/*.js", "./pages/**/*.js"],
   theme:{
     extend:{
+      boxShadow:{
+        'white' : ' 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 3px 6px -1px rgba(37, 99, 235, 0.05 )',
+      },
       fontFamily:{
         sans: ['Oxanium', ...defaultTheme.fontFamily.sans],
       },
