@@ -23,11 +23,14 @@ export default function AuthPage() {
 
   const CreateUser = async () => {
     const response = signup({ email, password,display_name:business_name });
-    if (!response.success) {
-      await alert("Something went wrong, try again later!");
+    if (!response.success==false) {
+      await alert("Email already exist!");
+    }
+    if (response.success==true){
+      await route.push("/auth");
     }
     else{
-      route.push("/auth");
+      await alert("Something went wrong!");
     }
   };
 
