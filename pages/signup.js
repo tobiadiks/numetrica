@@ -22,7 +22,7 @@ export default function AuthPage() {
   // }, [route, userState.success, promiseState]);
 
   const CreateUser = async () => {
-    const response = signup({ email, password,business_name });
+    const response = signup({ email, password,display_name:business_name });
     if (!response.success) {
       await alert("Something went wrong, try again later!");
     }

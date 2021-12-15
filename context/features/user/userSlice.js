@@ -28,7 +28,7 @@ export const userSlice = createSlice({
       state.status='loading'
     })
     builder.addCase(login.rejected,(state,action)=>{
-      state.status=false;
+      state.status="failed";
     })
   }
 });
