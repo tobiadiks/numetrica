@@ -1,11 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
+const url = process.env.NEXT_PUBLIC_ENV=='development'? "http://localhost:3000" : "https://numetrica.herokuapp.com"
 
 export const login = createAsyncThunk('user/login',async ({ email, password })=>{
   try {
     const response = await axios.post(
-      "http://localhost:3000/auth/company/login",
+      `${url}/auth/company/login`,
       {
         email: email,
         password: password,
@@ -24,7 +24,7 @@ export const login = createAsyncThunk('user/login',async ({ email, password })=>
 export const signup =async ({ email, password, display_name })=>{
   try {
     const response = await axios.post(
-      "http://localhost:3000/auth/company/signup",
+      `${url}/auth/company/signup`,
       {
         email: email,
         password: password,
