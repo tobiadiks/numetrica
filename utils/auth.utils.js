@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-const url = process.env.NEXT_PUBLIC_ENV=='development'? "http://localhost:3000" : "https://numetrica.herokuapp.com"
+let url = process.env.NEXT_PUBLIC_DEV ? "http://localhost:3000" : "https://numetrica.herokuapp.com";
 
 export const login = createAsyncThunk('user/login',async ({ email, password })=>{
   try {
@@ -11,10 +11,11 @@ export const login = createAsyncThunk('user/login',async ({ email, password })=>
         password: password,
       }
     );
-    
+    console.log(url)
     return response.data;
     
   } catch (err) {
+    console.log(url)
     throw new Error(err);
     
   }
