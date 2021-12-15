@@ -24,7 +24,7 @@ export default function AreaChart(){
     return(
         <div>
               <div className="flex flex-col align-middle mt-2" onClick={changeData}>
-                <div className=" cursor-pointer text-blue-600 font-semibold mx-auto">Tap for magic!</div>
+                <div className=" cursor-pointer text-blue-400 font-semibold mx-auto">Tap for magic!</div>
                 <div className="text-white font-bold mx-auto text-sm">0ur analytics react to your live data</div>
               </div>
               <VictoryChart>

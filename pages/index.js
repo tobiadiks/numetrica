@@ -12,23 +12,23 @@ export default function IndexPage() {
         <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col justify-center  align-middle">
           <h1 className=" font-black text-white text-4xl md:text-5xl text-center md:text-left lg:text-left">
             Turn feedbacks
-            <p className="text-blue-600">into excellent products</p>
+            <p className="text-blue-400">into excellent products</p>
           </h1>
-          <div className=" text-led-text mt-6  text-center md:text-left lg:text-left md:text-lg">
-            <b className=" text-blue-600">Numetrica</b> is the business
+          <div className=" text-gray-200 mt-6  text-center md:text-left lg:text-left md:text-lg">
+            <b className=" text-blue-400">Numetrica</b> is the business
             tool for collecting and processing feedbacks using industry grade{" "}
-            <b className="black text-blue-600">AI assistants</b>.
+            <b className="black text-blue-400">AI assistants</b>.
           </div>
           <div className="w-auto p-0">
             <Link href="/auth" passHref={true}>
               <PrimaryButton title="Sign in now" />
             </Link>
           </div>
-          <div className=" text-led-text text-xs md:text-sm text-center md:text-left lg:text-left">
+          <div className=" text-gray-200 text-xs md:text-sm text-center md:text-left lg:text-left">
             <div className="hover:underline cursor-pointer">
               What permissions do we need?
             </div>
-            <div>By signing up, you agree to our <span className=" text-blue-600">Terms</span> and <span className=" text-blue-600">Privacy Policy</span>.</div>
+            <div>By signing up, you agree to our <span className=" text-blue-400">Terms</span> and <span className=" text-blue-400">Privacy Policy</span>.</div>
           </div>
         </div>
 
@@ -49,7 +49,7 @@ export default function IndexPage() {
           <h1 className=" font-black text-white text-4xl md:text-5xl text-center md:text-left lg:text-left">
             Build the survey customers enjoy
           </h1>
-          <div className=" text-led-text mt-6  text-center md:text-left lg:text-left md:text-lg">
+          <div className=" text-gray-200 mt-6  text-center md:text-left lg:text-left md:text-lg">
             Getting feedback survey should be fun for both your team and
             customers. Numetrica builder tool is 100% visual - coding skills
             are not compulsory for you to start setting up your own survey.
@@ -71,7 +71,7 @@ export default function IndexPage() {
         </div>
       </div>
 
-      <div className="flex flex-col   md:mx-auto lg:mx-auto mx-0  md:my-20 lg:w-full bg-blue-600 py-12 rounded-md">
+      <div className="flex flex-col   md:mx-auto lg:mx-auto mx-0  md:my-20 lg:w-full bg-blue-400 py-12 rounded-md">
         <div className="text-center text-black font-extrabold text-2xl w-full md:text-4xl">
           How does it work?
         </div>

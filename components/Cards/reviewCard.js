@@ -3,7 +3,7 @@ export default function ReviewCard(props) {
     return (
       <div className="bg-deep-blue h-auto flex justify-between align-middle border border-gray-800">
         <div className="my-auto px-3 py-6 flex">
-          <div className="text-led-text font-bold text-3xl pl-3">
+          <div className="text-gray-200 font-bold text-3xl pl-3">
               <RatingView className="flex flex-col" size={16} ratingValue={props.rating} fillColor={"#fff"}
                   emptyColor={"#848484"}/>
           </div>
@@ -12,7 +12,7 @@ export default function ReviewCard(props) {
               <div className="font-semibold text-md text-white">
                 {props.title}
               </div>
-              <div className="font-light text-md text-led-text">
+              <div className="font-light text-md text-gray-200">
                 {props.content}...
               </div>
               <div className="font-light text-md text-white flex  justify-between align-middle">

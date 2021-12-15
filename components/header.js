@@ -118,7 +118,7 @@ export default function Header() {
                       className={cn(
                         "block text-white",
                         cta
-                          ? ` p-2 rounded bg-blue-600 hover:bg-blue-800   font-bold`
+                          ? ` p-2 rounded bg-blue-400 hover:bg-blue-800   font-bold`
                           : `border-0`
                       )}
                     >

@@ -21,7 +21,7 @@ export const login = createAsyncThunk('user/login',async ({ email, password })=>
 })
 
 
-export async function signup({ email, password, display_name }) {
+export const signup =async ({ email, password, display_name })=>{
   try {
     const response = await axios.post(
       "http://localhost:3000/auth/company/signup",
@@ -37,3 +37,5 @@ export async function signup({ email, password, display_name }) {
     throw response;
   }
 }
+
+

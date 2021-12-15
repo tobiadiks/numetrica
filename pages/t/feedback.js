@@ -5,10 +5,10 @@ import FeedBackCard from "@components/Cards/feedbackCard";
 import { VictoryArea, VictoryChart, VictoryPie, VictoryTooltip } from "victory";
 export default function FeedBackPage() {
   return (
-    <div className="flex flex-col md:flex-row lg:flex-row justify-start space-y-0 ">
-      <div className="w-full md:w-1/4 lg:w-1/4 flex flex-col justify-start align-middle bg-deep-blue ">
+    <div className="flex flex-col-reverse md:flex-row lg:flex-row justify-start space-y-0 ">
+      <div className="w-full md:w-1/4 lg:w-1/4 hidden md:flex flex-col justify-start align-middle bg-deep-blue ">
         <div className="py-5">
-          <div className="md:full lg:w-full w-full flex justify-center align-middle text-led-text border-b border-gray-800">
+          <div className="md:full lg:w-full w-full flex justify-center align-middle text-gray-200 border-b border-gray-800">
             <div className="md:w-11/12 lg:w-11/12 w-11/12  my-3 px-4  rounded text-white focus:outline-none font-bold text-center">
               Segment
             </div>
@@ -26,7 +26,7 @@ export default function FeedBackPage() {
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ">Feature</span>
+                  <span className="text-gray-200 ">Feature</span>
                 </div>{" "}
                 <div>
                   <span className="text-white">5,456</span>
@@ -36,7 +36,7 @@ export default function FeedBackPage() {
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ">Bug Reports</span>
+                  <span className="text-gray-200 ">Bug Reports</span>
                 </div>{" "}
                 <div>
                   <span className="text-white">456</span>
@@ -51,7 +51,7 @@ export default function FeedBackPage() {
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ">All</span>
+                  <span className="text-gray-200 ">All</span>
                 </div>{" "}
                 <div>
                   <span className="text-white">5,456</span>
@@ -61,7 +61,7 @@ export default function FeedBackPage() {
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ">Processed</span>
+                  <span className="text-gray-200 ">Processed</span>
                 </div>{" "}
                 <div>
                   <span className="text-white">456</span>
@@ -71,7 +71,7 @@ export default function FeedBackPage() {
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ">Unprocessed</span>
+                  <span className="text-gray-200 ">Unprocessed</span>
                 </div>{" "}
                 <div>
                   <span className="text-white">5,000</span>
@@ -86,7 +86,7 @@ export default function FeedBackPage() {
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ">Open</span>
+                  <span className="text-gray-200 ">Open</span>
                 </div>{" "}
                 <div>
                   <span className="text-white">54</span>
@@ -96,7 +96,7 @@ export default function FeedBackPage() {
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text">Under Review</span>
+                  <span className="text-gray-200">Under Review</span>
                 </div>{" "}
                 <div>
                   <span className="text-white">45</span>
@@ -106,7 +106,7 @@ export default function FeedBackPage() {
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ">In Progress</span>
+                  <span className="text-gray-200 ">In Progress</span>
                 </div>{" "}
                 <div>
                   <span className="text-white">0</span>
@@ -116,7 +116,7 @@ export default function FeedBackPage() {
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-led-text ">Planned</span>
+                  <span className="text-gray-200 ">Planned</span>
                 </div>{" "}
                 <div>
                   <span className="text-white">588</span>
@@ -129,17 +129,17 @@ export default function FeedBackPage() {
 
       <div className="w-full md:w-2/4 lg:w-2/4 flex flex-col justify-start align-middle min-h-screen">
         <div className="pt-5">
-          <div className="md:full lg:w-full w-full md:h-auto flex  justify-center align-middle text-led-text">
-            <div className="md:w-11/12 lg:w-11/12 w-11/12  px-4 my-auto flex justify-center align-middle  rounded text-led-text focus:outline-none font-bold text-center">
+          <div className="md:full lg:w-full w-full md:h-auto flex md:mb-2  mb-2 justify-center align-middle text-gray-200">
+            <div className="md:w-full lg:w-full w-full  px-0  my-auto flex justify-center align-middle  rounded text-gray-200 focus:outline-none font-bold text-center">
               <input
                 placeholder="Search feedback"
                 type="text"
-                className="md:w-11/12 lg:w-11/12 w-11/12 py-3 px-4 bg-led-screen rounded text-white focus:outline-none placeholder-led-text"
+                className="md:w-full lg:w-full w-full py-3 md:py-2 px-4 bg-led-screen rounded text-white focus:outline-none placeholder-led-text"
               />
             </div>
           </div>
           {/* Card */}
-          <div className="h-screen overflow-y-scroll">
+          <div className="md:h-screen md:overflow-y-scroll">
             <FeedBackCard
               title="Individual elements for each data point, some of its
               behavior is different"
@@ -186,7 +186,7 @@ export default function FeedBackPage() {
           {
             <div className="bg-deep-blue h-auto flex justify-between mt-7 align-middle border border-gray-800">
               <div className="my-auto px-3 py-6 flex">
-                <div className="text-led-text font-bold  pl-3">1-50</div>
+                <div className="text-gray-200 font-bold  pl-3">1-50</div>
                 <div className="pl-6">
                   <div>
                     <div className="font-semibold  text-white">of 5,456</div>
@@ -200,10 +200,10 @@ export default function FeedBackPage() {
 
       <div className="w-full md:w-1/4 lg:w-1/4 flex flex-col justify-start align-middle bg-deep-blue">
         <div className="">
-          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-led-text border-b px-3  border-gray-800">
+          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-gray-200 border-b px-3  border-gray-800">
             <div>
               <div className="flex flex-col align-middle mt-2">
-                <div className="text-blue-600 font-semibold mx-auto">Total Feedbacks</div>
+                <div className="text-blue-400 font-semibold mx-auto">Total Feedbacks</div>
                 <div className="text-white font-bold mx-auto">5,456</div>
               </div>
               <VictoryChart>
@@ -234,7 +234,7 @@ export default function FeedBackPage() {
             </div>
           </div>
 
-          <div className="md:full lg:w-full w-full flex flex-col justify-center align-middle text-led-text border-b py-5 px-3 border-gray-800">
+          <div className="md:full lg:w-full w-full flex flex-col justify-center align-middle text-gray-200 border-b py-5 px-3 border-gray-800">
             <div className="flex flex-col align-middle  mt-2">
               <div className="text-white mx-auto font-semibold text-center">Sentiments</div>
               {/* <div className="text-white font-bold"></div> */}

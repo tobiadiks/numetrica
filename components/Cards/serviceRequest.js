@@ -13,14 +13,14 @@ export default function ServiceRequestComponent() {
               Have questions in your mind?
             </h2>
           </div>
-          <div className="p-3 md:pl-12 text-center md:mt-8 md:text-left font-serif-Rubik font-light text-medium text-gray-500 md:text-xl">
+          <div className="p-3 md:pl-12 text-center md:mt-8 md:text-left font-serif-Rubik font-light text-medium text-gray-200 md:text-xl">
             If you have questions or need assistance, please do not hesitate and
             contact us by email at{" "}
-            <span className="text-blue-500">support@numetrica.com</span> or via{" "}
-            <span className="text-blue-500">Twitter</span>
+            <span className="text-blue-400">support@numetrica.com</span> or via{" "}
+            <span className="text-blue-400">Twitter</span>
           </div>
 
-          <div className="p-3 md:pl-12 text-center md:mt-0 md:text-left font-serif-Rubik font-light text-medium text-gray-500 md:text-xl">
+          <div className="p-3 md:pl-12 text-center md:mt-0 md:text-left font-serif-Rubik font-light text-medium text-gray-200 md:text-xl">
             Feel free to contact us here
             <p className="text-white">Call: (234) 8112 806 410</p>
           </div>
@@ -31,7 +31,7 @@ export default function ServiceRequestComponent() {
             <h2 className="p-3 md:pl-12 text-center md:text-left font-serif font-bold text-2xl md:text-2xl text-white">
               Schedule a meeting
             </h2>
-            <div className="px-3 md:pl-12 text-center md:text-left font-serif-Rubik font-light text-gray-500 text-medium md:text-2xl">
+            <div className="px-3 md:pl-12 text-center md:text-left font-serif-Rubik font-light text-gray-200 text-medium md:text-2xl">
               Secure a 30 minute session with one of our staff members.
             </div>
 
@@ -47,7 +47,7 @@ export default function ServiceRequestComponent() {
                 <PrimaryButton  title="SCHEDULE MEETING" />
               </div>
 
-              <div className="  text-sm md:text-medium text-center  text-gray-500">
+              <div className="  text-sm md:text-medium text-center  text-gray-200">
                 We respond within 48 hours
               </div>
             </form>
