@@ -14,6 +14,7 @@ export default function AuthPage() {
   const userState = useSelector((state) => state.userStore.user);
   const promiseState = useSelector((state) => state.userStore.status);
   const dispatch = useDispatch();
+  
 
   // useEffect(() => {
   //   if (userState.success && promiseState) {
@@ -22,11 +23,11 @@ export default function AuthPage() {
   // }, [route, userState.success, promiseState]);
 
   const CreateUser = async () => {
-    const response = signup({ email, password,display_name:business_name });
-    if (!response.success==false) {
+    const response = await signup({ email, password,display_name:business_name });
+    if (response.success==false) {
       await alert("Email already exist!");
     }
-    if (response.success==true){
+    else if (response.success==true){
       await route.push("/auth");
     }
     else{
