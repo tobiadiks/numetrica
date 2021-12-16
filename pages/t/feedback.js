@@ -1,9 +1,22 @@
 import DropDownInput from "@components/Inputs/dropDownInput";
 import TextInput from "@components/Inputs/textInput";
 import FeedBackCard from "@components/Cards/feedbackCard";
-
+import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { VictoryArea, VictoryChart, VictoryPie, VictoryTooltip } from "victory";
 export default function FeedBackPage() {
+  const route = useRouter();
+  const userState = useSelector((state) => state.userStore.user);
+  const promiseState = useSelector((state) => state.userStore.status);
+
+  useEffect(() => {
+    if (userState.success && promiseState) {
+      route.push("/auth");
+    }
+  }, [route, userState.success, promiseState]);
+
+
   return (
     <div className="flex flex-col-reverse md:flex-row lg:flex-row justify-start space-y-0 ">
       <div className="w-full md:w-1/4 lg:w-1/4 hidden md:flex flex-col justify-start align-middle bg-deep-blue ">
