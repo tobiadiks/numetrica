@@ -6,7 +6,7 @@ module.exports = {
   theme:{
     extend:{
       boxShadow:{
-        'white' : ' 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 3px 6px -1px rgba(37, 99, 235, 0.05 )',
+        'white' : ' 0 4px 6px -1px rgba(37, 99, 235, 0.4), 0 3px 6px -1px rgba(37, 99, 235, 0.09 )',
       },
       fontFamily:{
         sans: ['Oxanium', ...defaultTheme.fontFamily.sans],

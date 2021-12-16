@@ -22,12 +22,15 @@ export default function AuthPage() {
 
   const LoginUser = async () => {
     await dispatch(login({ email, password }));
-    if (!userState.success && promiseState==false) {
+    if (!userState.success && promiseState==="failed") {
       await alert("Incorrect credentials");
     }
-    if(promiseState=="failed" && useState=={})
+    else if(promiseState==="failed")
     {
       await alert("Cannot connect to server!");
+    }
+    else{
+      route.push("/t/feedback");
     }
   }
 
