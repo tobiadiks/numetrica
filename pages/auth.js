@@ -29,9 +29,9 @@ export default function AuthPage() {
     {
       await alert("Cannot connect to server!");
     }
-    else{
-      route.push("/t/feedback");
-    }
+    // else{
+    //   route.push("/t/feedback");
+    // }
   }
 
   return (
