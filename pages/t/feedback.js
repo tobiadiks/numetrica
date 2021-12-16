@@ -11,7 +11,7 @@ export default function FeedBackPage() {
   const promiseState = useSelector((state) => state.userStore.status);
 
   useEffect(() => {
-    if (userState.success && promiseState) {
+    if (!userState.success && promiseState) {
       route.push("/auth");
     }
   }, [route, userState.success, promiseState]);
