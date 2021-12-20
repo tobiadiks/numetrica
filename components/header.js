@@ -5,7 +5,8 @@ import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
 import { useSelector,useDispatch } from "react-redux";
 import {logout} from '../context/features/user/userSlice'
-
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faUserAlt, faSignOutAlt} from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
   const route = useRouter();
@@ -41,10 +42,10 @@ export default function Header() {
           >
             {userState.success
               ? [
-                  { title: "Feedback", route: "/t/feedback" },
-                  { title: "Review", route: "/t/review" },
+                  // { title: "Feedback", route: "/t/feedback" },
+                  // { title: "Review", route: "/t/review" },
 
-                  { title: "Roadmap", route: "/t/roadmap" },
+                  // { title: "Roadmap", route: "/t/roadmap" },
                 ].map(({ route, title }) => (
                   <li className={cn("mt-3 md:mt-0 md:ml-6")} key={title}>
                     <Link href={route}>
@@ -87,14 +88,15 @@ export default function Header() {
           )}
         >
           {userState.success
-            ? [{ title: userState.company.display_name.slice(0,8)+'...', route: "/profile", cta: false,bold:true },{ title: "Log out", route: "/", cta: false,bold:false }].map(
-                ({ title,route, cta,bold }, index) => (
+            ? [{ title: userState.company.display_name, route: "/profile", cta: false,bold:true,icon:faUserAlt },{ title: "Log out", route: "/", cta: false,bold:false,icon:faSignOutAlt }].map(
+                ({ title,route, cta,bold,icon }, index) => (
                   <li
-                    className="mt-3 md:mt-0 md:ml-6 cursor-pointer"
+                    className="flex mt-3 md:mt-0 md:ml-6 cursor-pointer"
                     key={index}
                     onClick={()=>LogOut(route,title)}
-                  >
-                    <a
+                  > <div className="text-white"><FontAwesomeIcon icon={icon}/></div>
+                    &nbsp;
+                    <div
                       className={cn(
                         "block text-white",
                         cta
@@ -104,7 +106,7 @@ export default function Header() {
                       )}
                     >
                       {title.toUpperCase()}
-                    </a>
+                    </div>
                   </li>
                 )
               )
