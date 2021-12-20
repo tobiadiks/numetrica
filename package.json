@@ -24,7 +24,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@reduxjs/toolkit": "^1.6.2",
-    "axios": "^0.23.0",
+    "axios": "^0.24.0",
     "nanocolors": "^0.2.12",
     "next": "11.1.2",
     "react": "17.0.2",
