@@ -19,6 +19,7 @@ export const createProject = async ({
   accessToken,
   name,
   description,
+  color
 }) => {
   try {
     const response = await axios.post(
@@ -26,6 +27,7 @@ export const createProject = async ({
       {
         name,
         description,
+        color
       },
       {
         headers: { Authorization: `Bearer ${accessToken}` },

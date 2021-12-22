@@ -7,7 +7,12 @@ import { useSelector,useDispatch } from "react-redux";
 import {logout} from '../context/features/user/userSlice'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faUserAlt, faSignOutAlt} from '@fortawesome/free-solid-svg-icons'
-
+import {
+  faCalendarCheck,
+  faChalkboard,
+  faGrin,
+  faList,
+} from "@fortawesome/free-solid-svg-icons";
 export default function Header() {
   const route = useRouter();
   const userState = useSelector((state)=>state.userStore.user);
@@ -28,8 +33,8 @@ export default function Header() {
   
   return (
     <header className="bg-black">
-      <div className="flex flex-wrap items-center justify-between lg:w-full px-6 py-4 mx-auto md:flex-no-wrap md:px-6">
-        <div className="flex items-center">
+      <div className="flex  flex-wrap items-center justify-between lg:w-full px-6 py-4 mx-auto md:flex-no-wrap md:px-6">
+        <div className="flex flex-col md:flex-row items-center">
           <Link href="/" passHref>
             <Image src={"/logo.png"} alt="logo" width={145} height={30} />
           </Link>
@@ -83,12 +88,30 @@ export default function Header() {
 
         <ul
           className={cn(
-            "md:flex flex-col md:flex-row md:items-center md:justify-center w-full md:w-auto",
+            "md:flex flex-col md:flex-row md:items-center md:justify-center w-full md:w-auto ",
             mobileMenuIsOpen ? `block` : `hidden`
           )}
         >
           {userState.success
-            ? [{ title: userState.company.display_name, route: "/profile", cta: false,bold:true,icon:faUserAlt },{ title: "Log out", route: "/", cta: false,bold:false,icon:faSignOutAlt }].map(
+            ?
+          //   <ul>
+          //   {
+          //   [
+              
+          //   ].map((data, index) => (
+           
+          //     <Link key={index} href={data.route} passHref>
+          //       <li className="flex cursor-pointer my-4">
+          //         <span className="text-gray-200 mx-2 w-1/6">
+          //           <FontAwesomeIcon icon={data.icon} />
+          //         </span>
+          //         <span className="text-white font-bold">{data.title}</span>
+          //       </li>
+          //     </Link>
+          //   ))}
+          // </ul>
+
+            [{ title: userState.company.display_name, route: "/profile", cta: false,bold:true,icon:faUserAlt },{ title: "Log out", route: "/", cta: false,bold:false,icon:faSignOutAlt }].map(
                 ({ title,route, cta,bold,icon }, index) => (
                   <li
                     className="flex mt-3 md:mt-0 md:ml-6 cursor-pointer"
@@ -112,7 +135,7 @@ export default function Header() {
               )
             : [
                 { title: "Log in", route: "/auth", cta: false },
-                { title: "Free Trial", route: "/free-trial", cta: true },
+                { title: "Free Trial", route: "/signup", cta: true },
               ].map(({ route, title, cta }) => (
                 <li className="mt-3 md:mt-0 md:ml-6" key={title}>
                   <Link href={route}>

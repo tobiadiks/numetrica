@@ -5,12 +5,14 @@ export const userSlice = createSlice({
   name: "user",
   initialState: {
     user: {},
-    status:null,
+    status:false,
+    loading:false,
   },
   reducers: {
     logout: (state) => {
       state.user={};
-      state.status=null
+      state.status=false;
+      state.loading=false;
     },
   },
   extraReducers:(builder)=>{
@@ -18,17 +20,21 @@ export const userSlice = createSlice({
       state.user = action.payload;
       if(action.payload.success){
         state.status=true;
+        state.loading=false;
       }
       else{
         state.status=false;
+        state.loading=false;
       }
       
     })
     builder.addCase(login.pending,(state,action)=>{
-      state.status='loading'
+      state.status=false;
+      state.loading=true;
     })
     builder.addCase(login.rejected,(state,action)=>{
-      state.status="failed";
+      state.status=false;
+      state.loading=false;
     })
   }
 });

@@ -2,7 +2,7 @@ import cn from 'classnames'
 export default function TextInput(props) {
   return (
     <div className={cn(
-      "md:w-11/12 lg:w-11/12 w-full flex justify-center align-middle text-gray-200",
+      "w-full flex justify-center align-middle text-gray-200",
       props.center?"mx-auto":""
     )}>
       <input

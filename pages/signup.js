@@ -5,16 +5,16 @@ import { useRouter } from "next/router";
 import { signup } from "../utils/auth.utils";
 import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function AuthPage() {
   const route = useRouter();
   const [business_name, setBusinessName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const userState = useSelector((state) => state.userStore.user);
-  const promiseState = useSelector((state) => state.userStore.status);
+  const userState = useSelector((state) => state.userStore);
   const dispatch = useDispatch();
-  
+  const [loading,setLoading]=useState(false)
 
   // useEffect(() => {
   //   if (userState.success && promiseState) {
@@ -23,15 +23,18 @@ export default function AuthPage() {
   // }, [route, userState.success, promiseState]);
 
   const CreateUser = async () => {
+    setLoading(true);
     const response = await signup({ email, password,display_name:business_name });
     if (response.success==false) {
       await alert("Email already exist!");
+      setLoading(false)
     }
     else if (response.success==true){
       await route.push("/auth");
     }
     else{
       await alert("Something went wrong!");
+      setLoading(false)
     }
   };
 
@@ -40,7 +43,7 @@ export default function AuthPage() {
       <h2 className="p-2 font-bold text-white md:text-2xl text-center w-full md:w-1/2 lg:1/2">
         Create Your Account
       </h2>
-      {console.log(userState, promiseState)}
+      {console.log(userState)}
       <section className="flex flex-col items-center justify-center w-full md:w-1/2 lg:1/2">
         <TextInput
           value={business_name}
@@ -64,7 +67,7 @@ export default function AuthPage() {
           placeholder="Password"
           type="password"
         />
-        <PrimaryButton onClick={CreateUser} title="Sign Up" />
+        <PrimaryButton onClick={CreateUser} title="Sign Up" loading={loading} icon={faArrowRight}/>
 
         <div className="text-gray-200 flex justify-center align-middle">
           
