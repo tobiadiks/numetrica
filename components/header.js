@@ -36,7 +36,9 @@ export default function Header() {
       <div className="flex  flex-wrap items-center justify-between lg:w-full px-6 py-4 mx-auto md:flex-no-wrap md:px-6">
         <div className="flex flex-col md:flex-row items-center">
           <Link href="/" passHref>
+            <div>
             <Image src={"/logo.png"} alt="logo" width={145} height={30} />
+            </div>
           </Link>
 
           <ul
@@ -46,18 +48,7 @@ export default function Header() {
             )}
           >
             {userState.success
-              ? [
-                  // { title: "Feedback", route: "/t/feedback" },
-                  // { title: "Review", route: "/t/review" },
-
-                  // { title: "Roadmap", route: "/t/roadmap" },
-                ].map(({ route, title }) => (
-                  <li className={cn("mt-3 md:mt-0 md:ml-6")} key={title}>
-                    <Link href={route}>
-                      <a className="block text-white">{title.toUpperCase()}</a>
-                    </Link>
-                  </li>
-                ))
+              ?""
               : [
                   { title: "Home", route: "/" },
                   { title: "Product", route: "/product" },

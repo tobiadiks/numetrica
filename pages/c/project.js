@@ -12,16 +12,21 @@ import ProjectCardComponent from "@components/Cards/projectCard";
 import PrimaryButton from "@components/Inputs/primaryButton";
 import CreateProjectCardComponent from "@components/Cards/createProjectCard";
 import { useState } from "react";
+
 export default function ProjectPage() {
   const route = useRouter();
-  const userState = useSelector((state) => state.userStore.user);
-  const promiseState = useSelector((state) => state.userStore.status);
+  const userState = useSelector((state) => state.userStore);
   const [hidden,setHidden]=useState(true)
+ 
+ 
   useEffect(() => {
-    if (!userState.success && promiseState) {
+    if (!userState.user.success && userState.status) {
       route.push("/auth");
     }
-  }, [route, userState.success, promiseState]);
+  }, [route, userState.user.success, userState.status]);
+
+ 
+  
 
   return (
     <div className="flex flex-col-reverse md:flex-row lg:flex-row justify-start space-y-0 md:min-h-screen relative">
@@ -39,9 +44,7 @@ export default function ProjectPage() {
           </div>
           
         </div>
-        <ProjectCardComponent
-          data={[{ project_id: 1 }, { project_id: 2, color: "pink" }]}
-        />
+        <ProjectCardComponent />
       </div>
 
       <div className="w-full md:w-1/4 lg:w-1/4 flex flex-col justify-start align-middle bg-deep-blue">

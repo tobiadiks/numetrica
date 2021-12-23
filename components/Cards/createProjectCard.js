@@ -13,6 +13,12 @@ export default function CreateProjectCardComponent(props) {
   const [loading, setLoading] = useState(false);
   const userState = useSelector((state) => state.userStore);
 
+  function chooseColor(){
+    const colorArray=['red','yellow','orange','pink','green','purple']
+    const color = parseInt(Math.random()*5)
+    return colorArray[color]
+  }
+
   const CreateProject = async () => {
     setLoading(true);
     const response = await createProject({
@@ -20,17 +26,23 @@ export default function CreateProjectCardComponent(props) {
       accessToken: userState.user.accessToken,
       name: name,
       description: description,
-      color: "yellow",
+      color: chooseColor(),
     });
-    if (response.success == false) {
-      await alert("Email already exist!");
+    console.log(response,chooseColor())
+    if (response.success === false) {
+      await alert("Failed");
       setLoading(false);
-    } else if (response.success == true) {
-      await route.push("/auth");
+    } else if (response.success === true) {
+    setHidden(!hidden);
+    setLoading(false);
+    setName("");
+    setDescription("")
     } else {
       await alert("Something went wrong!");
       setLoading(false);
+      
     }
+    setLoading(false);
   };
 
   return (
@@ -38,7 +50,7 @@ export default function CreateProjectCardComponent(props) {
       className={`w-full justify-center align-middle items-center h-full z-50 absolute backdrop-filter backdrop-blur-sm ${
         props.hidden == hidden ? "hidden" : ""
       } `}
-    >
+    >{console.log(userState)}
       <div className="flex w-full md:w-1/3 mx-auto my-auto flex-col items-center justify-center py-4 bg-deep-blue shadow-lg">
         <h2 className="font-bold text-white md:text-sm text-center w-full md:w-1/2 lg:1/2">
           <div
