@@ -73,7 +73,7 @@ export const deleteProject = async ({
   project_id,
 }) => {
   try {
-    const response = await axios.put(
+    const response = await axios.delete(
       `${url}/${company_id}/project/${project_id}`,
       {
         headers: { Authorization: `Bearer ${accessToken}` },
