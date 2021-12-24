@@ -14,22 +14,24 @@ export default function CreateProjectCardComponent(props) {
   const [loading, setLoading] = useState(false);
   const userState = useSelector((state) => state.userStore);
   const route = useRouter()
-  function chooseColor(){
-    const colorArray=['red','yellow','orange','pink','green']
-    const color = Math.floor(Math.random() * 5) + 1 ;
-    return colorArray[color]
-  }
+  //function chooseColor(){
+    //const colorArray=['red','yellow','orange','pink','green']
+   // let color = colorArray[~~(Math.random() * colorArray.length)];
+   // return colorArray[color] }
 
   const CreateProject = async () => {
+    const colorArray=['red','yellow','orange','pink','green']
+    let color = colorArray[~~(Math.random() * colorArray.length)];
+  
     setLoading(true);
     const response = await createProject({
       company_id: userState.user.company.company_id,
       accessToken: userState.user.accessToken,
       name: name,
       description: description,
-      color: chooseColor(),
+      color: color,
     });
-    console.log(response,chooseColor())
+    console.log(response)
     if (response.success === false) {
       await alert("Failed");
       setLoading(false);
@@ -49,7 +51,7 @@ export default function CreateProjectCardComponent(props) {
 
   return (
     <div
-      className={`w-full justify-center align-middle items-center h-full z-50 absolute backdrop-filter backdrop-blur-sm ${
+      className={`w-full justify-center align-middle items-center h-full z-50 absolute top-6 backdrop-filter backdrop-blur-sm ${
         props.hidden == hidden ? "hidden" : ""
       } `}
     >{console.log(userState)}
