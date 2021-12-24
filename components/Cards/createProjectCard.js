@@ -17,8 +17,8 @@ export default function CreateProjectCardComponent(props) {
   
 
   const CreateProject = async () => {
-    const colorArray=['red','yellow','orange','pink','green']
-    let color = colorArray[Math.floor(Math.random()*colorArray.length)];
+    const colorArray=['red','yellow','blue','pink','green']
+    let color = await colorArray[Math.floor(Math.random()*colorArray.length)];
   
     setLoading(true);
     const response = await createProject({
