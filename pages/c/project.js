@@ -8,11 +8,11 @@ import {
   faCheckDouble,
   faPlusCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import ProjectCardComponent from "@components/Cards/projectCard";
-import PrimaryButton from "@components/Inputs/primaryButton";
 import CreateProjectCardComponent from "@components/Cards/createProjectCard";
+import PrimaryButton from "@components/Inputs/primaryButton";
 import { useState } from "react";
-
+import dynamic from 'next/dynamic'
+const ProjectCardComponent = dynamic(()=>import("@components/Cards/projectCard"), {ssr:false})
 export default function ProjectPage() {
   const route = useRouter();
   const userState = useSelector((state) => state.userStore);

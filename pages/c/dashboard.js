@@ -1,21 +1,15 @@
-import DropDownInput from "@components/Inputs/dropDownInput";
-import TextInput from "@components/Inputs/textInput";
-import FeedBackCard from "@components/Cards/feedbackCard";
 import { useSelector } from "react-redux";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 import { useRouter } from "next/router";
-import { VictoryArea, VictoryChart, VictoryPie, VictoryTooltip } from "victory";
 import SideNavigation from "@components/Navigation/sideNavigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faArrowDown,
   faCheckDouble,
-  faDotCircle,
-  faExpand,
-  faTrash,
 } from "@fortawesome/free-solid-svg-icons";
-import ProjectCardComponent from "@components/Cards/projectCard";
+import dynamic from 'next/dynamic'
+const ProjectCardComponent = dynamic(()=>import("@components/Cards/projectCard"), {ssr:false})
+
 
 export default function DashboardPage() {
   const route = useRouter();
