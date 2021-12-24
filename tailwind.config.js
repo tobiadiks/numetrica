@@ -9,7 +9,8 @@ module.exports = {
         'white' : ' 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 3px 6px -1px rgba(37, 99, 235, 0.06 )',
       },
       fontFamily:{
-        sans: ['Rubik', ...defaultTheme.fontFamily.sans],
+        sans: ['Work Sans', ...defaultTheme.fontFamily.sans],
+        serif: ['Montserrat', ...defaultTheme.fontFamily.serif],
       },
       colors:{
         "deep-blue" : "#060509",

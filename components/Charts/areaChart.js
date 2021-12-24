@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { VictoryArea, VictoryChart, VictoryPie, VictoryTooltip } from "victory";
-import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
+import { faMagic } from "@fortawesome/free-solid-svg-icons";
 
 export default function AreaChart(){
     const [data,setData]=useState([
@@ -26,8 +26,8 @@ export default function AreaChart(){
     return(
         <div>
               <div className="flex flex-col align-middle mt-2" onClick={changeData}>
-                <div className=" cursor-pointer text-blue-400 font-semibold mx-auto ">Tap for magic!&nbsp;<span className="animate-ping"><FontAwesomeIcon icon={faDotCircle} /></span></div>
-                <div className="text-white font-bold mx-auto text-sm">0ur analytics react to your live data</div>
+                <div className=" cursor-pointer text-black font-semibold mx-auto ">Tap for magic!&nbsp;<span className=""><FontAwesomeIcon icon={faMagic} /></span></div>
+                <div className="text-black  mx-auto text-sm">0ur analytics react to your live data</div>
               </div>
               <VictoryChart>
                 <VictoryArea
@@ -39,9 +39,9 @@ export default function AreaChart(){
                   style={{
                     labels: { fill: "#fff", fontSize: 20, fontWeight: "bold" },
                     data: {
-                      fill: "rgba(95,165,250)",
+                      fill: "rgba(0,0,0)",
                       fillOpacity: 0.1,
-                      stroke: "rgba(95,165,250)",
+                      stroke: "rgba(0,0,0)",
                       strokeWidth: 2,
                     },
                   }}

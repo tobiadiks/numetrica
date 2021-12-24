@@ -53,8 +53,8 @@ export default function CreateProjectCardComponent(props) {
         props.hidden == hidden ? "hidden" : ""
       } `}
     >{console.log(userState)}
-      <div className="flex w-full md:w-1/3 mx-auto my-auto flex-col items-center justify-center py-4 bg-deep-blue shadow-lg">
-        <h2 className="font-bold text-white md:text-sm text-center w-full md:w-1/2 lg:1/2">
+      <div className="flex w-full md:w-1/3 mx-auto my-auto flex-col items-center justify-center py-4 bg-white shadow-lg">
+        <h2 className="font-bold text-black md:text-sm text-center w-full md:w-1/2 lg:1/2">
           <div
             className=" cursor-pointer"
             onClick={() => {

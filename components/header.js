@@ -12,6 +12,7 @@ import {
   faChalkboard,
   faGrin,
   faList,
+  faDotCircle
 } from "@fortawesome/free-solid-svg-icons";
 export default function Header() {
   const route = useRouter();
@@ -32,12 +33,12 @@ export default function Header() {
 
   
   return (
-    <header className="bg-black">
+    <header className="w-full backdrop-filter backdrop-blur-md shadow fixed z-50">
       <div className="flex  flex-wrap items-center justify-between lg:w-full px-6 py-4 mx-auto md:flex-no-wrap md:px-6">
         <div className="flex flex-col md:flex-row items-center">
           <Link href="/" passHref>
-            <div>
-            <Image src={"/logo.png"} alt="logo" width={145} height={30} />
+            <div className='font-black cursor-pointer'>
+            <span className=""><FontAwesomeIcon icon={faDotCircle} /></span>notics
             </div>
           </Link>
 
@@ -56,7 +57,7 @@ export default function Header() {
                 ].map(({ route, title }, index) => (
                   <li className={cn("mt-3 md:mt-0 md:ml-6")} key={index}>
                     <Link href={route}>
-                      <a className="block text-white">{title.toUpperCase()}</a>
+                      <a className="block text-black">{title.toUpperCase()}</a>
                     </Link>
                   </li>
                 ))}
@@ -64,7 +65,7 @@ export default function Header() {
         </div>
 
         <button
-          className=" items-center block px-3 py-2 text-white border border-white rounded md:hidden"
+          className=" items-center block px-3 py-2 text-black border border-white rounded md:hidden"
           onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)}
         >
           <svg
@@ -93,10 +94,10 @@ export default function Header() {
            
           //     <Link key={index} href={data.route} passHref>
           //       <li className="flex cursor-pointer my-4">
-          //         <span className="text-gray-200 mx-2 w-1/6">
+          //         <span className="text-black-800 mx-2 w-1/6">
           //           <FontAwesomeIcon icon={data.icon} />
           //         </span>
-          //         <span className="text-white font-bold">{data.title}</span>
+          //         <span className="text-black font-bold">{data.title}</span>
           //       </li>
           //     </Link>
           //   ))}
@@ -108,11 +109,11 @@ export default function Header() {
                     className="flex mt-3 md:mt-0 md:ml-6 cursor-pointer"
                     key={index}
                     onClick={()=>LogOut(route,title)}
-                  > <div className="text-white"><FontAwesomeIcon icon={icon}/></div>
+                  > <div className="text-black"><FontAwesomeIcon icon={icon}/></div>
                     &nbsp;
                     <div
                       className={cn(
-                        "block text-white",
+                        "block text-black",
                         cta
                           ? `border p-2  rounded hover:bg-white hover:text-black font-medium`
                           : `border-0`,
@@ -132,9 +133,9 @@ export default function Header() {
                   <Link href={route}>
                     <a
                       className={cn(
-                        "block text-white",
+                        "block text-black",
                         cta
-                          ? ` p-2 rounded bg-blue-400 hover:bg-blue-800   font-bold`
+                          ? ` p-2 rounded bg-black text-white hover:bg-gray-900   font-bold`
                           : `border-0`
                       )}
                     >

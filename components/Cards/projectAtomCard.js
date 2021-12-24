@@ -39,15 +39,15 @@ export default function ProjectAtomCardComponent(props) {
     };
   
     return(
-        <div className={cn("w-full md:w-5/12 lg:w-5/12  px-2 py-2 rounded-lg m-1 h-32", props.color.length?`bg-${props.color}-400`:'bg-blue-400')}
+        <div className={cn("w-full md:w-5/12 lg:w-5/12  px-2 py-2 rounded-lg m-1 h-32 shadow-lg", props.color.length?`bg-${props.color}-400`:'bg-gray')}
           >
-            <div className="text-white text-base md:text-xs  font-semibold mb-4 flex justify-between w-full">
+            <div className="text-black text-base md:text-xs  font-semibold mb-4 flex justify-between w-full">
               <span>{props.date}</span>
               <span className="relative" onClick={() => setDrop(!drop)}>
                 <FontAwesomeIcon icon={drop ? faArrowUp : faArrowDown} />
                 {drop ? (
                   <ul className="absolute right-1 bg-white text-base md:text-xs   p-2 rounded divide-y w-auto  shadow-2xl ">
-                    <li className="text-gray-600 font-bold flex my-1 cursor-pointer">
+                    <li className="text-black-800 font-bold flex my-1 cursor-pointer">
                       <div className="mr-1">
                         <FontAwesomeIcon icon={faEdit} />
                       </div>
@@ -65,7 +65,7 @@ export default function ProjectAtomCardComponent(props) {
                 )}
               </span>
             </div>
-            <div onMouseOver={()=>setDrop(false)} className="text-white mb-4 w-full text-center cursor-pointer">
+            <div onMouseOver={()=>setDrop(false)} className="text-black mb-4 w-full text-center cursor-pointer">
               <div className="font-bold text-lg  md:text-medium">{props.name}</div>
               <div className="text-base md:text-xs  font-semibold">
                 {props.description}

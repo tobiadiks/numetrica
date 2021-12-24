@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
       <PersistGate loading={null} persistor={persistor}>
         <Layout>
           <Head>
-            <title>nuMETRICA</title>
+            <title>Notics</title>
             <meta
               name="Description"
               content="Turn feedbacks

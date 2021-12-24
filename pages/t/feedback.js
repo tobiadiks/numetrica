@@ -19,120 +19,120 @@ export default function FeedBackPage() {
 
   return (
     <div className="flex flex-col-reverse md:flex-row lg:flex-row justify-start space-y-0 ">
-      <div className="w-full md:w-1/4 lg:w-1/4 hidden md:flex flex-col justify-start align-middle bg-deep-blue ">
+      <div className="w-full md:w-1/4 lg:w-1/4 hidden md:flex flex-col justify-start align-middle bg-white ">
         <div className="py-5">
-          <div className="md:full lg:w-full w-full flex justify-center align-middle text-gray-200 border-b border-gray-800">
-            <div className="md:w-11/12 lg:w-11/12 w-11/12  my-3 px-4  rounded text-white focus:outline-none font-bold text-center">
+          <div className="md:full lg:w-full w-full flex justify-center align-middle text-black-800 border-b border-gray-800">
+            <div className="md:w-11/12 lg:w-11/12 w-11/12  my-3 px-4  rounded text-black focus:outline-none font-bold text-center">
               Segment
             </div>
           </div>
           <div className="h-screen overflow-y-scroll">
             <div className="mt-8">
-              <span className="text-white font-semibold pl-2">Period</span>
+              <span className="text-black font-semibold pl-2">Period</span>
               <TextInput center  type="date" />
             </div>
 
             <div className="mt-8 pl-2">
-              <span className="text-white font-semibold  mb-2">
+              <span className="text-black font-semibold  mb-2">
                 Boards
               </span>
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-200 ">Feature</span>
+                  <span className="text-black-800 ">Feature</span>
                 </div>{" "}
                 <div>
-                  <span className="text-white">5,456</span>
+                  <span className="text-black">5,456</span>
                 </div>
               </div>
 
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-200 ">Bug Reports</span>
+                  <span className="text-black-800 ">Bug Reports</span>
                 </div>{" "}
                 <div>
-                  <span className="text-white">456</span>
+                  <span className="text-black">456</span>
                 </div>
               </div>
             </div>
 
             <div className="mt-8 pl-2">
-              <span className="text-white font-semibold  mb-2">
+              <span className="text-black font-semibold  mb-2">
                 Text Analytics
               </span>
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-200 ">All</span>
+                  <span className="text-black-800 ">All</span>
                 </div>{" "}
                 <div>
-                  <span className="text-white">5,456</span>
+                  <span className="text-black">5,456</span>
                 </div>
               </div>
 
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-200 ">Processed</span>
+                  <span className="text-black-800 ">Processed</span>
                 </div>{" "}
                 <div>
-                  <span className="text-white">456</span>
+                  <span className="text-black">456</span>
                 </div>
               </div>
 
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-200 ">Unprocessed</span>
+                  <span className="text-black-800 ">Unprocessed</span>
                 </div>{" "}
                 <div>
-                  <span className="text-white">5,000</span>
+                  <span className="text-black">5,000</span>
                 </div>
               </div>
             </div>
 
             <div className="mt-8 pl-2">
-              <span className="text-white font-semibold  mb-2">
+              <span className="text-black font-semibold  mb-2">
                 Status
               </span>
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1  flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-200 ">Open</span>
+                  <span className="text-black-800 ">Open</span>
                 </div>{" "}
                 <div>
-                  <span className="text-white">54</span>
+                  <span className="text-black">54</span>
                 </div>
               </div>
 
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-200">Under Review</span>
+                  <span className="text-black-800">Under Review</span>
                 </div>{" "}
                 <div>
-                  <span className="text-white">45</span>
+                  <span className="text-black">45</span>
                 </div>
               </div>
 
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-200 ">In Progress</span>
+                  <span className="text-black-800 ">In Progress</span>
                 </div>{" "}
                 <div>
-                  <span className="text-white">0</span>
+                  <span className="text-black">0</span>
                 </div>
               </div>
 
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-200 ">Planned</span>
+                  <span className="text-black-800 ">Planned</span>
                 </div>{" "}
                 <div>
-                  <span className="text-white">588</span>
+                  <span className="text-black">588</span>
                 </div>
               </div>
             </div>
@@ -142,12 +142,12 @@ export default function FeedBackPage() {
 
       <div className="w-full md:w-2/4 lg:w-2/4 flex flex-col justify-start align-middle min-h-screen">
         <div className="pt-5">
-          <div className="md:full lg:w-full w-full md:h-auto flex md:mb-2  mb-2 justify-center align-middle text-gray-200">
-            <div className="md:w-full lg:w-full w-full  px-0  my-auto flex justify-center align-middle  rounded text-gray-200 focus:outline-none font-bold text-center">
+          <div className="md:full lg:w-full w-full md:h-auto flex md:mb-2  mb-2 justify-center align-middle text-black-800">
+            <div className="md:w-full lg:w-full w-full  px-0  my-auto flex justify-center align-middle  rounded text-black-800 focus:outline-none font-bold text-center">
               <input
                 placeholder="Search feedback"
                 type="text"
-                className="md:w-full lg:w-full w-full py-3 md:py-2 px-4 bg-led-screen rounded text-white focus:outline-none placeholder-led-text"
+                className="md:w-full lg:w-full w-full py-3 md:py-2 px-4 bg-white rounded text-black focus:outline-none placeholder-gray-400"
               />
             </div>
           </div>
@@ -197,12 +197,12 @@ export default function FeedBackPage() {
           {/* Card end */}
 
           {
-            <div className="bg-deep-blue h-auto flex justify-between mt-7 align-middle border border-gray-800">
+            <div className="bg-white h-auto flex justify-between mt-7 align-middle border border-gray-800">
               <div className="my-auto px-3 py-6 flex">
-                <div className="text-gray-200 font-bold  pl-3">1-50</div>
+                <div className="text-black-800 font-bold  pl-3">1-50</div>
                 <div className="pl-6">
                   <div>
-                    <div className="font-semibold  text-white">of 5,456</div>
+                    <div className="font-semibold  text-black">of 5,456</div>
                   </div>
                 </div>
               </div>
@@ -211,13 +211,13 @@ export default function FeedBackPage() {
         </div>
       </div>
 
-      <div className="w-full md:w-1/4 lg:w-1/4 flex flex-col justify-start align-middle bg-deep-blue">
+      <div className="w-full md:w-1/4 lg:w-1/4 flex flex-col justify-start align-middle bg-white">
         <div className="">
-          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-gray-200 border-b px-3  border-gray-800">
+          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-black-800 border-b px-3  border-gray-800">
             <div>
               <div className="flex flex-col align-middle mt-2">
-                <div className="text-blue-400 font-semibold mx-auto">Total Feedbacks</div>
-                <div className="text-white font-bold mx-auto">5,456</div>
+                <div className="text-black-800 font-semibold mx-auto">Total Feedbacks</div>
+                <div className="text-black font-bold mx-auto">5,456</div>
               </div>
               <VictoryChart>
                 <VictoryArea
@@ -247,10 +247,10 @@ export default function FeedBackPage() {
             </div>
           </div>
 
-          <div className="md:full lg:w-full w-full flex flex-col justify-center align-middle text-gray-200 border-b py-5 px-3 border-gray-800">
+          <div className="md:full lg:w-full w-full flex flex-col justify-center align-middle text-black-800 border-b py-5 px-3 border-gray-800">
             <div className="flex flex-col align-middle  mt-2">
-              <div className="text-white mx-auto font-semibold text-center">Sentiments</div>
-              {/* <div className="text-white font-bold"></div> */}
+              <div className="text-black mx-auto font-semibold text-center">Sentiments</div>
+              {/* <div className="text-black font-bold"></div> */}
             </div>
 
             <div className="flex flex-col lg:flex-col md:flex-col w-full justify-between align-middle">
@@ -280,15 +280,15 @@ export default function FeedBackPage() {
                 <div className="my-auto w-full">
                   <div className="flex justify-between w-full">
                     <div className="text-green-400">Positive</div>
-                    <div className="text-white">63.7%</div>
+                    <div className="text-black">63.7%</div>
                   </div>
                   <div className="flex justify-between">
                     <div className="text-red-400">Negative</div>
-                    <div className="text-white">22.1%</div>
+                    <div className="text-black">22.1%</div>
                   </div>
                   <div className="flex justify-between">
                     <div className="text-yellow-400">Neutral</div>
-                    <div className="text-white">15.2%</div>
+                    <div className="text-black">15.2%</div>
                   </div>
                 </div>
               </div>

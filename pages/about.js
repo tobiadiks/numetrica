@@ -4,7 +4,7 @@ export default function AboutPage() {
   return (
     <div className="grid md:grid-cols-2 gap-6 grid-cols-1">
       <div>
-        <section className="mb-6 text-gray-200">
+        <section className="mb-6 text-black-800">
           <h2 className="mb-3 text-xl font-bold">Numbers Don&apos;t Lie</h2>
 
           <p>
@@ -15,7 +15,7 @@ From social app to productivity, finance and business.
           </p>
         </section>
 
-        <section className="text-gray-200">
+        <section className="text-black-800">
           <h2 className="mb-3 text-xl font-bold ">What is Next.js?</h2>
           <p>
           Get fancy realtime updates of numbers going on around you

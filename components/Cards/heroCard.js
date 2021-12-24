@@ -1,13 +1,15 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 export  const HeroCard=(props)=>{
     return(
-        <div className="rounded-md text-center text-white shadow-lg p-4 bg-black">
-<div className="text-4xl font-bold text-blue-400">
-    {props.number}
+        <div className="rounded-md text-center text-black shadow-lg p-4 bg-white">
+<div className="text-4xl font-bold text-black-800">
+    <FontAwesomeIcon icon={props.icon}/>
 </div>
 <div className="text-2xl mt-2 font-bold">
     {props.title}
 </div>
-<div className="text-medium mt-2 text-gray-200">
+<div className="text-medium mt-2 text-black-800">
     {props.detail}
 </div>
         </div>
