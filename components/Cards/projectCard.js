@@ -9,10 +9,11 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import PrimaryButton from "@components/Inputs/primaryButton";
 import { useRouter } from "next/router";
-import ProjectAtomCardComponent from "./projectAtomCard";
 import { allProject } from "../../utils/project.utils";
 import { useCallback } from "react";
 import { useSelector } from "react-redux";
+import dynamic from 'next/dynamic'
+const ProjectAtomCardComponent = dynamic(()=>import('./projectAtomCard'),{ssr: false})
 export default function ProjectCardComponent(props) {
   const userState = useSelector((state) => state.userStore);
   const [user,setUser]=useState(userState)
