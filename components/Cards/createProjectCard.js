@@ -14,14 +14,11 @@ export default function CreateProjectCardComponent(props) {
   const [loading, setLoading] = useState(false);
   const userState = useSelector((state) => state.userStore);
   const route = useRouter()
-  //function chooseColor(){
-    //const colorArray=['red','yellow','orange','pink','green']
-   // let color = colorArray[~~(Math.random() * colorArray.length)];
-   // return colorArray[color] }
+  
 
   const CreateProject = async () => {
     const colorArray=['red','yellow','orange','pink','green']
-    let color = colorArray[~~(Math.random() * colorArray.length)];
+    let color = colorArray[Math.floor(Math.random()*colorArray.length)];
   
     setLoading(true);
     const response = await createProject({
