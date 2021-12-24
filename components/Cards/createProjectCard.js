@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import PrimaryButton from "@components/Inputs/primaryButton";
 import { createProject } from "utils/project.utils";
+import { useRouter } from "next/router";
 
 export default function CreateProjectCardComponent(props) {
   const [name, setName] = useState("");
@@ -12,7 +13,7 @@ export default function CreateProjectCardComponent(props) {
   const [hidden, setHidden] = useState(true);
   const [loading, setLoading] = useState(false);
   const userState = useSelector((state) => state.userStore);
-
+  const route = useRouter()
   function chooseColor(){
     const colorArray=['red','yellow','orange','pink','green','purple']
     const color = parseInt(Math.random()*5)
@@ -37,6 +38,7 @@ export default function CreateProjectCardComponent(props) {
     setLoading(false);
     setName("");
     setDescription("")
+    route.reload()
     } else {
       await alert("Something went wrong!");
       setLoading(false);

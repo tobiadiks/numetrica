@@ -16,6 +16,7 @@ export default function AuthPage() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    route.prefetch("/c/dashboard")
     if (userState.user.success && userState.status) {
       route.push("/c/dashboard");
     }
