@@ -15,8 +15,8 @@ export default function CreateProjectCardComponent(props) {
   const userState = useSelector((state) => state.userStore);
   const route = useRouter()
   function chooseColor(){
-    const colorArray=['red','yellow','orange','pink','green','purple']
-    const color = parseInt(Math.random()*5)
+    const colorArray=['red','yellow','orange','pink','green']
+    const color = Math.floor(Math.random() * 5) + 1 ;
     return colorArray[color]
   }
 
