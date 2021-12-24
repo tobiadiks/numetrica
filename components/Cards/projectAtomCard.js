@@ -39,7 +39,7 @@ export default function ProjectAtomCardComponent(props) {
     };
   
     return(
-        <div className={cn("w-full md:w-5/12 lg:w-5/12  px-2 py-2 rounded-lg m-1 h-32 shadow-lg", props.color.length?`bg-${props.color}-400`:'bg-gray')}
+        <div className={cn("w-full md:w-5/12 lg:w-5/12  px-2 py-2 rounded-lg m-1 h-32 shadow-lg", `bg-${props.color}-400`)}
           >
             <div className="text-black text-base md:text-xs  font-semibold mb-4 flex justify-between w-full">
               <span>{props.date}</span>
