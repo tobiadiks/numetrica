@@ -28,7 +28,8 @@ export const createProject = async ({
       {
         name,
         description,
-        color
+        color,
+        date_created
       },
       {
         headers: { Authorization: `Bearer ${accessToken}` },
