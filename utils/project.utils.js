@@ -19,7 +19,8 @@ export const createProject = async ({
   accessToken,
   name,
   description,
-  color
+  color,
+  date_created
 }) => {
   try {
     const response = await axios.post(
