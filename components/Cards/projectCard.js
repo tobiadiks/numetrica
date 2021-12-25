@@ -48,10 +48,10 @@ export default function ProjectCardComponent(props) {
 
 
   return (
-    <div className="flex flex-col md:flex-row flex-wrap px-2  justify-start md:h-screen  md:overflow-y-scroll mt-4">
+    <div className="flex flex-col md:flex-row flex-wrap px-2 justify-start md:justify-between md:align-middle md:h-screen bg-grey-100 md:overflow-y-scroll mt-4">
       {loading?
      ( <div className="w-full flex-col flex justify-center relative">
-        <div className="mt-4 mx-auto text-lg font-bold text-black">
+        <div className="mt-4 mx-auto text-lg font-bold text-gray-900">
             Loading...
           </div>
       </div>)
@@ -73,7 +73,7 @@ export default function ProjectCardComponent(props) {
           <div className="w-48 h-48 mx-auto relative">
             <Image src={"/empty.png"} layout={"fill"} alt="empty" />
           </div>
-          <div className="mt-4 mx-auto text-lg font-bold text-black">
+          <div className="mt-4 mx-auto text-lg font-bold text-gray-800">
             You have no active project
           </div>
           <div className="mt-4 mx-auto ">
