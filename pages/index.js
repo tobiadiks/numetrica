@@ -19,7 +19,7 @@ export default function IndexPage() {
         <div className=" px-4 w-full mx-auto md:px-0 z-30  md:w-3/4 lg:w-3/4 flex md:mx-auto flex-col justify-center  align-middle ">
           <h1 className=" font-black mx-auto w-full font-serif text-black text-5xl md:text-7xl text-center md:text-center">
             Turn feedbacks
-            <p className="text-black-800">into excellent products</p>
+            into excellent products
           </h1>
           <div className=" text-black mt-6  w-full mx-auto text-center md:text-center  md:text-lg">
             <b className=" text-black">Notics</b> is the business tool for
