@@ -48,6 +48,7 @@ export default function ProjectAtomCardComponent(props) {
         hidden={hidden}
         name={props.name}
         description={props.description}
+        project_id={props.project_id}
       />
       <div className="text-white text-sm md:text-xs  font-semibold mb-4 flex justify-between w-full">
         <span>{moment(props.date).fromNow()}</span>
