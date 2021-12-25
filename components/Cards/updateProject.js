@@ -83,7 +83,7 @@ export default function UpdateProjectCardComponent(props) {
           <PrimaryButton
             onClick={UpdateProject}
             loading={loading}
-            title="Add"
+            title="Update"
             icon={faUpload}
           />
         </section>
