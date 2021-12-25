@@ -2,7 +2,7 @@ import TextInput from "@components/Inputs/textInput";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlusCircle, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faPlusCircle, faArrowLeft,faUpload } from "@fortawesome/free-solid-svg-icons";
 import PrimaryButton from "@components/Inputs/primaryButton";
 import { updateProject } from "utils/project.utils";
 import { useRouter } from "next/router";
@@ -84,7 +84,7 @@ export default function UpdateProjectCardComponent(props) {
             onClick={UpdateProject}
             loading={loading}
             title="Add"
-            icon={faPlusCircle}
+            icon={faUpload}
           />
         </section>
       </div>
