@@ -14,7 +14,7 @@ import {
 export default function IndexPage() {
   const route = useRouter();
   return (
-    <div className="flex py-6 w-full flex-col items-center justify-center align-middle space-y-12 ">
+    <div className="flex py-12 w-full flex-col items-center justify-center align-middle space-y-12 ">
       <div className="flex w-full justify-center flex-col md:mx-auto lg:mx-auto mx-auto  mb-18 lg:w-full relative">
         <div className=" px-4 w-full mx-auto md:px-0 z-30  md:w-3/4 lg:w-3/4 flex md:mx-auto flex-col justify-center  align-middle ">
           <h1 className=" font-black mx-auto w-full font-serif text-black text-5xl md:text-7xl text-center md:text-center">
@@ -53,7 +53,7 @@ export default function IndexPage() {
         {/* glass and color */}
       </div>
 
-      <div className="flex w-full px-4 flex-col  md:px-4 md:mx-auto lg:mx-auto mx-auto z-30 md:flex-row-reverse my-20 ">
+      <div className="flex w-full px-4 flex-col  md:px-4 md:mx-auto lg:mx-auto mx-auto z-30 md:flex-row-reverse py-20 ">
         <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col justify-center  mx-auto align-middle">
           <h1 className=" font-black text-black text-4xl md:text-5xl text-center md:text-left lg:text-left">
             Build the product customer enjoy
@@ -113,7 +113,7 @@ export default function IndexPage() {
           </div>
         </div>
       </div>
-      <div className="md:px-4 w-full px-4 mx-auto flex justify-center">
+      <div className="md:px-4 w-full px-4 mx-auto flex justify-center py-20">
         <ServiceRequestComponent />
       </div>
     </div>
