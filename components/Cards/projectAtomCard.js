@@ -50,7 +50,7 @@ export default function ProjectAtomCardComponent(props) {
         description={props.description}
       />
       <div className="text-white text-sm md:text-xs  font-semibold mb-4 flex justify-between w-full">
-        <span>{moment(props.date).fromNow()}</span>
+        <span>{moment(props.date,true).fromNow()}</span>
         <span className="relative text-white" onClick={() => setDrop(!drop)}>
           <FontAwesomeIcon icon={drop ? faArrowUp : faArrowDown} />
           {drop ? (
