@@ -27,6 +27,7 @@ export default function CreateProjectCardComponent(props) {
       name: name,
       description: description,
       color: color,
+      date_created: new Date().toLocaleString()
     });
     console.log(response)
     if (response.success === false) {
