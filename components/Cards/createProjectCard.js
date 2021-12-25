@@ -49,11 +49,11 @@ export default function CreateProjectCardComponent(props) {
 
   return (
     <div
-      className={`w-full justify-center align-middle items-center h-full z-50 absolute top-6 backdrop-filter backdrop-blur-sm ${
+      className={`w-full justify-center align-middle items-center h-full z-30 absolute top-1/2 left-1/2 backdrop-filter backdrop-blur-sm ${
         props.hidden == hidden ? "hidden" : ""
       } `}
     >{console.log(userState)}
-      <div className="flex w-full md:w-1/3 mx-auto my-auto flex-col items-center justify-center py-4 bg-white shadow-lg">
+      <div className="flex w-full md:w-1/3 mx-auto my-auto flex-col items-center justify-center py-4 bg-white shadow-lg z-50">
         <h2 className="font-bold text-black md:text-sm text-center w-full md:w-1/2 lg:1/2">
           <div
             className=" cursor-pointer"
