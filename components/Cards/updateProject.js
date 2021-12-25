@@ -24,6 +24,7 @@ export default function UpdateProjectCardComponent(props) {
       accessToken: userState.user.accessToken,
       name: name,
       description: description,
+      project_id:props.project_id
       
     });
     console.log(response)
@@ -46,7 +47,7 @@ export default function UpdateProjectCardComponent(props) {
 
   return (
     <div
-      className={`w-full justify-center align-middle items-center h-full z-30 absolute top-10 left-1/2 backdrop-filter backdrop-blur-sm ${
+      className={`w-full justify-center align-middle items-center h-full z-30 absolute top-10  backdrop-filter backdrop-blur-sm ${
         props.hidden == hidden ? "hidden" : ""
       } `}
     >{console.log(userState)}

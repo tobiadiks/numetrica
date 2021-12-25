@@ -49,7 +49,7 @@ export default function CreateProjectCardComponent(props) {
 
   return (
     <div
-      className={`w-full justify-center align-middle items-center h-full z-30 absolute top-10 left-1/2 backdrop-filter backdrop-blur-sm ${
+      className={`w-full justify-center align-middle items-center h-full z-30 absolute top-10  backdrop-filter backdrop-blur-sm ${
         props.hidden == hidden ? "hidden" : ""
       } `}
     >{console.log(userState)}
