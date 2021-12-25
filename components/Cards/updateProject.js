@@ -4,12 +4,12 @@ import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import PrimaryButton from "@components/Inputs/primaryButton";
-import { createProject } from "utils/project.utils";
+import { updateProject } from "utils/project.utils";
 import { useRouter } from "next/router";
 
 export default function UpdateProjectCardComponent(props) {
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
+  const [name, setName] = useState(props.name);
+  const [description, setDescription] = useState(props.description);
   const [hidden, setHidden] = useState(true);
   const [loading, setLoading] = useState(false);
   const userState = useSelector((state) => state.userStore);
@@ -19,7 +19,7 @@ export default function UpdateProjectCardComponent(props) {
   const UpdateProject = async () => {
     
     setLoading(true);
-    const response = await createProject({
+    const response = await updateProject({
       company_id: userState.user.company.company_id,
       accessToken: userState.user.accessToken,
       name: name,
@@ -66,7 +66,7 @@ export default function UpdateProjectCardComponent(props) {
 
         <section className="flex flex-col items-center justify-center px-2 md:px-0 w-full md:w-10/12 lg:10/12">
           <TextInput
-            value={props.name}
+            value={name}
             onChange={(e) => {
               setName(e.target.value);
             }}
@@ -74,7 +74,7 @@ export default function UpdateProjectCardComponent(props) {
             type="text"
           />
           <TextInput
-            value={props.description}
+            value={description}
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Description of this project?"
             type="text"
