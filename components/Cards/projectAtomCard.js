@@ -39,7 +39,7 @@ export default function ProjectAtomCardComponent(props) {
     };
   
     return(
-        <div className={cn("w-full md:w-5/12 lg:w-5/12  px-2 py-2 rounded-lg md:m-1 my-2  h-32 shadow-md", `bg-white`)}
+        <div className={cn("w-full md:w-5/12 lg:w-5/12  px-2 py-2 rounded-lg md:m-1 my-2  h-1/3 shadow-sm", `bg-white`)}
           >
             <div className="text-gray-800 text-base md:text-xs  font-semibold mb-4 flex justify-between w-full">
               <span>{props.date}</span>
