@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 export default function SideNavigation(props) {
   return (
-    <div className="w-full md:w-1/4 lg:w-1/4 hidden md:flex flex-col justify-start align-middle shadow-xl bg-white ">
+    <div className="w-full md:w-1/4 lg:w-1/4 hidden md:flex flex-col justify-start align-middle shadow-md bg-white ">
       <div className="py-5 px-5">
         {/* content */}
         <ul>
