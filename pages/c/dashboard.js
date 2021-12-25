@@ -23,7 +23,7 @@ export default function DashboardPage() {
   }, [route, userState.success, promiseState]);
 
   return (
-    <div className="flex px-4 md:px-0  flex-col-reverse md:flex-row lg:flex-row justify-start space-y-0 md:min-h-screen">
+    <div className="flex px-4 md:px-0  flex-col-reverse md:flex-row lg:flex-row justify-start space-y-0 ">
       {/* sidenav */}
 
       <SideNavigation />
