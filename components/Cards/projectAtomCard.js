@@ -10,6 +10,7 @@ import { deleteProject } from "utils/project.utils";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import cn from "classnames";
+import moment from "moment";
 
 export default function ProjectAtomCardComponent(props) {
     const [drop, setDrop] = useState(false);
@@ -42,7 +43,7 @@ export default function ProjectAtomCardComponent(props) {
         <div className={cn("w-full  px-2 py-2 rounded-lg    shadow-sm",props.color)}
           >
             <div className="text-white text-sm md:text-xs  font-semibold mb-4 flex justify-between w-full">
-              <span>{props.date}</span>
+              <span>{moment(props.date,"DD MM YYYY hh:mm:ss a").fromNow()}</span>
               <span className="relative text-white" onClick={() => setDrop(!drop)}>
                 <FontAwesomeIcon icon={drop ? faArrowUp : faArrowDown} />
                 {drop ? (
