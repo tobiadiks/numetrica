@@ -48,7 +48,7 @@ export default function ProjectCardComponent(props) {
 
 
   return (
-    <div className="flex flex-col md:flex-row flex-wrap px-2 justify-between item-start  md:h-screen bg-gray-100 md:overflow-y-scroll mt-4">
+    <div className=" grid grid-cols-1 md:grid-cols-3 gap-2  px-2   md:h-screen bg-gray-100 md:overflow-y-scroll mt-4">
       {loading?
      ( <div className="w-full flex-col flex justify-center relative">
         <div className="mt-4 mx-auto text-lg font-bold text-gray-900">
