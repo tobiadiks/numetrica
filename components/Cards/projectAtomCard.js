@@ -39,11 +39,11 @@ export default function ProjectAtomCardComponent(props) {
     };
   
     return(
-        <div className={cn("w-full md:w-5/12 lg:w-5/12  px-2 py-2 rounded-lg md:m-1 my-2  h-1/3 shadow-sm", `bg-white`)}
+        <div className={cn("w-full md:w-5/12 lg:w-5/12  px-2 py-2 rounded-lg md:m-1 my-2  h-42 md:54 shadow-sm", `bg-gray-900`)}
           >
-            <div className="text-gray-800 text-base md:text-xs  font-semibold mb-4 flex justify-between w-full">
+            <div className="text-white text-sm md:text-xs  font-semibold mb-4 flex justify-between w-full">
               <span>{props.date}</span>
-              <span className="relative" onClick={() => setDrop(!drop)}>
+              <span className="relative text-white" onClick={() => setDrop(!drop)}>
                 <FontAwesomeIcon icon={drop ? faArrowUp : faArrowDown} />
                 {drop ? (
                   <ul className="absolute right-1 bg-white text-base md:text-xs   p-2 rounded divide-y w-auto  shadow-2xl ">
@@ -65,9 +65,9 @@ export default function ProjectAtomCardComponent(props) {
                 )}
               </span>
             </div>
-            <div onMouseOver={()=>setDrop(false)} className="text-gray-900 mb-4 w-full text-center cursor-pointer">
+            <div onMouseOver={()=>setDrop(false)} className="text-white mb-4 w-full text-center cursor-pointer">
               <div className="font-bold text-lg  md:text-medium">{props.name}</div>
-              <div className="text-base md:text-xs">
+              <div className="text-sm md:text-xs">
                 {props.description}
               </div>
             </div>
