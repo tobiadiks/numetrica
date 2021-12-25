@@ -59,7 +59,7 @@ export default function AuthPage() {
         />
         <PrimaryButton onClick={LoginUser} title="Login" icon={faArrowRight} loading={userState.loading} />
 
-        <div className="text-black-800 flex justify-center align-middle">
+        <div className="text-gray-800 flex justify-center align-middle">
           <div>or</div>&nbsp;
           <Link href={"/signup"} passHref>
             <div className="font-semibold underline cursor-pointer">

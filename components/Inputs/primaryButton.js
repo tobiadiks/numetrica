@@ -5,7 +5,7 @@ import cn from 'classnames'
 export default function PrimaryButton(props) {
   return (
     <div className={cn(
-      " w-full flex justify-center align-middle text-black-800",
+      " w-full flex justify-center align-middle text-gray-800",
       props.center?"mx-auto":""
     )}>
 

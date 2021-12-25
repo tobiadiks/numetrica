@@ -94,7 +94,7 @@ export default function Header() {
            
           //     <Link key={index} href={data.route} passHref>
           //       <li className="flex cursor-pointer my-4">
-          //         <span className="text-black-800 mx-2 w-1/6">
+          //         <span className="text-gray-800 mx-2 w-1/6">
           //           <FontAwesomeIcon icon={data.icon} />
           //         </span>
           //         <span className="text-black font-bold">{data.title}</span>

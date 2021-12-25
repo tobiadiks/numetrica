@@ -69,7 +69,7 @@ export default function AuthPage() {
         />
         <PrimaryButton onClick={CreateUser} title="Sign Up" loading={loading} icon={faArrowRight}/>
 
-        <div className="text-black-800 flex justify-center align-middle">
+        <div className="text-gray-800 flex justify-center align-middle">
           
            <Link href={"/auth"} passHref>
              <div className="font-semibold underline cursor-pointer">

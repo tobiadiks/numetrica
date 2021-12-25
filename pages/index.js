@@ -24,7 +24,7 @@ export default function IndexPage() {
           <div className=" text-black mt-6  w-full mx-auto text-center md:text-center  md:text-lg">
             <b className=" text-black">Notics</b> is the business tool for
             collecting and processing feedbacks using industry grade{" "}
-            <b className="black text-black-800">AI assistants</b>.
+            <b className="black text-gray-800">AI assistants</b>.
           </div>
           <div className="w-auto md:mx-auto md:w-3/4 p-0">
             <PrimaryButton
@@ -35,12 +35,12 @@ export default function IndexPage() {
               title="Sign in now"
             />
           </div>
-          <div className=" text-black-800 text-xs md:text-sm text-center md:text-center">
+          <div className=" text-gray-800 text-xs md:text-sm text-center md:text-center">
             <div className="font-semibold">No credit card required.</div>
             <div>
               By signing up, you agree to our{" "}
-              <span className=" text-black-800">Terms</span> and{" "}
-              <span className=" text-black-800">Privacy Policy</span>.
+              <span className=" text-gray-800">Terms</span> and{" "}
+              <span className=" text-gray-800">Privacy Policy</span>.
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function IndexPage() {
           <h1 className=" font-black text-black text-2xl md:text-5xl text-center md:text-left lg:text-left">
             Build the product customer enjoy
           </h1>
-          <div className=" text-black-800 mt-6 mx-auto text-center md:text-left lg:text-left md:text-lg">
+          <div className=" text-gray-800 mt-6 mx-auto text-center md:text-left lg:text-left md:text-lg">
             Getting feedback survey should be fun for both your team and
             customer. Notics builder tool is 100% visual - coding skills are not
             compulsory for you to start setting up your own survey.

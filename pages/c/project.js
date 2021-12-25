@@ -49,9 +49,9 @@ export default function ProjectPage() {
 
       <div className="w-full md:w-1/4 lg:w-1/4 flex flex-col justify-start align-middle bg-white">
         <div className="">
-          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-black-800 border-b px-3  border-gray-800">
+          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-gray-800 border-b px-3  border-gray-800">
             <div className="flex flex-row align-middle mt-2">
-              <div className="text-black-800 font-semibold mx-auto">
+              <div className="text-gray-800 font-semibold mx-auto">
                 Planned Task
               </div>
               <div className="text-black font-bold mx-auto">(15)</div>
@@ -74,7 +74,7 @@ export default function ProjectPage() {
           <li className="flex justify-between border text-base md:text-xs  border-gray-800 rounded p-2 ">
             <div className="pr-3 w-4/5">Brief the design team on new bugs</div>
             <div className="flex justify-end w-1/5">
-              <div className="text-black-800">
+              <div className="text-gray-800">
                 <FontAwesomeIcon icon={faCheckDouble} />
               </div>
               {/* <div>
