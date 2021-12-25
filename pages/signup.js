@@ -39,7 +39,7 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-5">
+    <div className="flex px-4 md:px-0 flex-col items-center justify-center space-y-5">
       <h2 className="p-2 font-bold text-black md:text-2xl text-center w-full md:w-1/2 lg:1/2">
         Create Your Account
       </h2>
