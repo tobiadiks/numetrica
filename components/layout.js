@@ -6,7 +6,7 @@ export default function Layout(props) {
     <div className="flex flex-col min-h-screen  font-sans">
       <Header />
       {/* px-4 py-6  md:px-6 md:py-6 */}
-      <main className="flex-1 py-14 md:py-16  bg-white">
+      <main className="flex-1 py-14 md:pt-16  bg-white">
         {props.children}
       </main>
 
