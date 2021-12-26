@@ -11,9 +11,9 @@ export default function PrimaryButton(props) {
 
     {
     props.loading?
-    <button  className="w-full  py-3 my-3 px-4  font-semibold shadow-md focus:outline-none focus:shadow-md hover:shadow-lg rounded-sm text-white  bg-indigo-400  text-center cursor-wait"><span ><FontAwesomeIcon className="animate-spin" icon={faSpinner}/>&nbsp;</span>Loading...</button>
+    <button  className="w-full  py-3 my-3 px-4  font-semibold shadow-md focus:outline-none focus:shadow-md hover:shadow-lg rounded-sm text-white  bg-orange-400  text-center cursor-wait"><span ><FontAwesomeIcon className="animate-spin" icon={faSpinner}/>&nbsp;</span>Loading...</button>
     :
-      <button onClick={props.onClick} className="w-full  py-3 my-3 px-4  font-semibold shadow-md focus:outline-none focus:shadow-md hover:shadow-lg rounded-sm text-white  bg-indigo-600 hover:bg-indigo-500 text-center"><span><FontAwesomeIcon icon={props.icon}/>&nbsp;</span>{props.title}</button>
+      <button onClick={props.onClick} className="w-full  py-3 my-3 px-4  font-semibold shadow-md focus:outline-none focus:shadow-md hover:shadow-lg rounded-sm text-white  bg-orange-700 hover:bg-orange-600 text-center"><span><FontAwesomeIcon icon={props.icon}/>&nbsp;</span>{props.title}</button>
     }
     </div>
   );
