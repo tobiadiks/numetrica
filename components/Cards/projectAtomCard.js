@@ -56,7 +56,7 @@ export default function ProjectAtomCardComponent(props) {
           <FontAwesomeIcon icon={drop ? faArrowUp : faArrowDown} />
           {drop ? (
             <ul className="absolute right-1 bg-white text-base md:text-xs   p-2 rounded divide-y w-auto  shadow-2xl ">
-              <li onClick={()=>{setHidden(false)}} className="text-gray-800  flex my-1 cursor-pointer">
+              <li onClick={()=>{setHidden(false)}} className="text-basic1  flex my-1 cursor-pointer">
                 <div className="mr-1">
                   <FontAwesomeIcon icon={faEdit} />
                 </div>
@@ -84,7 +84,7 @@ export default function ProjectAtomCardComponent(props) {
         className="text-white mb-4 w-full text-center cursor-pointer"
       >
         <div className="font-bold text-lg  md:text-medium">{props.name}</div>
-        <div className="text-sm md:text-xs">{props.description}</div>
+        <div className="text-sm md:text-xs">{props.description.slice(0,45)}...</div>
       </div>
     </div>
   );

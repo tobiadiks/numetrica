@@ -17,30 +17,30 @@ export default function IndexPage() {
     <div className="flex py-12 w-full flex-col items-center justify-center align-middle space-y-12 ">
       <div className="flex w-full justify-center flex-col md:mx-auto lg:mx-auto mx-auto  mb-18 lg:w-full relative">
         <div className=" px-4 w-full mx-auto md:px-0 z-30  md:w-3/4 lg:w-3/4 flex md:mx-auto flex-col justify-center   ">
-          <h1 className=" font-black w-full font-serif text-black  text-3xl md:text-7xl text-center md:text-center">
+          <h1 className=" font-black w-full  font-serif text-basic1  text-3xl md:text-7xl text-center md:text-center">
             Turn feedbacks
             into excellent products
           </h1>
-          <div className=" text-black mt-6  w-full mx-auto text-center md:text-center  md:text-lg">
-            <b className=" text-black">Notics</b> is the business tool for
+          <div className=" text-basic1 mt-6  w-full mx-auto text-center md:text-center  md:text-lg">
+            <b className=" text-basic1">Notics</b> is the business tool for
             collecting and processing feedbacks using industry grade{" "}
-            <b className="black text-gray-800">AI assistants</b>.
+            <b className="">AI assistants</b>.
           </div>
           <div className="w-auto md:mx-auto md:w-3/4 p-0">
-            <PrimaryButton
-              icon={faArrowRight}
+          <PrimaryButton
               onClick={() => {
-                route.push("/auth");
+                route.push("/signup");
               }}
-              title="Sign in now"
+              title="Get started"
+              icon={faArrowRight}
             />
           </div>
-          <div className=" text-gray-800 text-xs md:text-sm text-center md:text-center">
+          <div className=" text-basic1 text-xs md:text-sm text-center md:text-center">
             <div className="font-semibold">No credit card required.</div>
             <div>
               By signing up, you agree to our{" "}
-              <span className=" text-gray-800">Terms</span> and{" "}
-              <span className=" text-gray-800">Privacy Policy</span>.
+              <span className=" text-basic1">Terms</span> and{" "}
+              <span className=" text-basic1">Privacy Policy</span>.
             </div>
           </div>
         </div>
@@ -55,22 +55,23 @@ export default function IndexPage() {
 
       <div className="flex w-full px-4 flex-col  md:px-4 md:mx-auto lg:mx-auto mx-auto z-30 md:flex-row-reverse py-20 ">
         <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col justify-center  mx-auto align-middle">
-          <h1 className=" font-black text-black text-2xl md:text-5xl text-center md:text-left lg:text-left">
+          <h1 className=" font-black text-basic1 text-2xl md:text-5xl text-center md:text-left lg:text-left">
             Build the product customer enjoy
           </h1>
-          <div className=" text-gray-800 mt-6 mx-auto text-center md:text-left lg:text-left md:text-lg">
+          <div className=" text-basic1 mt-6 mx-auto text-center md:text-left lg:text-left md:text-lg">
             Getting feedback survey should be fun for both your team and
             customer. Notics builder tool is 100% visual - coding skills are not
             compulsory for you to start setting up your own survey.
           </div>
           <div className="w-auto  p-0">
-            <PrimaryButton
-              onClick={() => {
-                route.push("/signup");
-              }}
-              title="Get started"
+          <PrimaryButton
               icon={faArrowRight}
+              onClick={() => {
+                route.push("/auth");
+              }}
+              title="Sign in now"
             />
+            
           </div>
         </div>
 
@@ -79,8 +80,8 @@ export default function IndexPage() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center w-full bg-black  md:mx-auto lg:mx-auto mx-auto  md:my-20 lg:w-full py-12 ">
-        <div className="text-center mx-auto text-white font-extrabold text-2xl w-full md:text-4xl font-serif">
+      <div className="flex flex-col justify-center w-full bg-main-brand2  md:mx-auto lg:mx-auto mx-auto  md:my-20 lg:w-full py-12 ">
+        <div className="text-center mx-auto text-basic1 font-extrabold text-2xl w-full md:text-4xl font-serif">
           How does it work?
         </div>
         <div className="flex w-full flex-col md:flex-row justify-center align-middle md:flex-wrap mt-8 mx-auto">

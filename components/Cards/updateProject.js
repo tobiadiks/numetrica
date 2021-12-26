@@ -52,7 +52,7 @@ export default function UpdateProjectCardComponent(props) {
       } `}
     >{console.log(userState)}
       <div className="flex w-full md:w-1/3 mx-auto my-auto flex-col items-center justify-center py-4 bg-white shadow-lg z-50">
-        <h2 className="font-bold text-black md:text-sm text-center w-full md:w-1/2 lg:1/2">
+        <h2 className="font-bold text-basic1 md:text-sm text-center w-full md:w-1/2 lg:1/2">
           <div
             className=" cursor-pointer"
             onClick={() => {

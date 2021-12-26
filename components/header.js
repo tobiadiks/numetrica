@@ -33,9 +33,9 @@ export default function Header() {
 
   
   return (
-    <header className="w-full backdrop-filter backdrop-blur-md shadow fixed z-50">
+    <header className={`w-full  backdrop-filter backdrop-blur-md shadow fixed z-50`}>
       <div className="flex  flex-wrap items-center justify-between lg:w-full px-6 py-4 mx-auto md:flex-no-wrap md:px-6">
-        <div className="flex flex-col md:flex-row items-center">
+        <div className="flex flex-col md:flex-row items-center text-main-brand1">
           <Link href="/" passHref>
             <div className='font-black cursor-pointer'>
             <span className=""><FontAwesomeIcon icon={faDotCircle} /></span>notics
@@ -57,7 +57,7 @@ export default function Header() {
                 ].map(({ route, title }, index) => (
                   <li className={cn("mt-3 md:mt-0 md:ml-6")} key={index}>
                     <Link href={route}>
-                      <a className="block text-black">{title.toUpperCase()}</a>
+                      <a className="block text-basic1">{title.toUpperCase()}</a>
                     </Link>
                   </li>
                 ))}
@@ -65,7 +65,7 @@ export default function Header() {
         </div>
 
         <button
-          className=" items-center block px-3 py-2 text-black border border-white rounded md:hidden"
+          className=" items-center block px-3 py-2 text-basic1 border border-white rounded md:hidden"
           onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)}
         >
           <svg
@@ -94,10 +94,10 @@ export default function Header() {
            
           //     <Link key={index} href={data.route} passHref>
           //       <li className="flex cursor-pointer my-4">
-          //         <span className="text-gray-800 mx-2 w-1/6">
+          //         <span className="text-basic1 mx-2 w-1/6">
           //           <FontAwesomeIcon icon={data.icon} />
           //         </span>
-          //         <span className="text-black font-bold">{data.title}</span>
+          //         <span className="text-basic1 font-bold">{data.title}</span>
           //       </li>
           //     </Link>
           //   ))}
@@ -109,13 +109,13 @@ export default function Header() {
                     className="flex mt-3 md:mt-0 md:ml-6 cursor-pointer"
                     key={index}
                     onClick={()=>LogOut(route,title)}
-                  > <div className="text-black"><FontAwesomeIcon icon={icon}/></div>
+                  > <div className="text-basic1"><FontAwesomeIcon icon={icon}/></div>
                     &nbsp;
                     <div
                       className={cn(
-                        "block text-black",
+                        "block text-basic1",
                         cta
-                          ? `border p-2  rounded hover:bg-white hover:text-black font-medium`
+                          ? `border p-2  rounded hover:bg-white hover:text-basic1 font-medium`
                           : `border-0`,
                           bold ? 'font-bold hover:underline':''
                       )}
@@ -133,10 +133,10 @@ export default function Header() {
                   <Link href={route}>
                     <a
                       className={cn(
-                        "block text-black",
+                        "block",
                         cta
-                          ? ` p-2 rounded bg-black text-white hover:bg-gray-900   font-bold`
-                          : `border-0`
+                          ? ` p-2 rounded bg-main-brand1  text-white font-bold shadow-main-brand1 shadow-md`
+                          : `border-0 text-basic1`
                       )}
                     >
                       {title.toUpperCase()}

@@ -26,8 +26,8 @@ export default function AreaChart(){
     return(
         <div>
               <div className="flex flex-col align-middle mt-2" onClick={changeData}>
-                <div className=" cursor-pointer text-black font-semibold mx-auto ">Tap for magic!&nbsp;<span className=""><FontAwesomeIcon icon={faMagic} /></span></div>
-                <div className="text-black  mx-auto text-sm">0ur analytics react to your live data</div>
+                <div className=" cursor-pointer text-basic1 font-semibold mx-auto ">Tap for magic!&nbsp;<span className=""><FontAwesomeIcon icon={faMagic} /></span></div>
+                <div className="text-basic1  mx-auto text-sm">0ur analytics react to your live data</div>
               </div>
               <VictoryChart>
                 <VictoryArea
@@ -39,9 +39,9 @@ export default function AreaChart(){
                   style={{
                     labels: { fill: "#fff", fontSize: 20, fontWeight: "bold" },
                     data: {
-                      fill: "rgba(0,0,0)",
+                      fill: "#193b68",
                       fillOpacity: 0.1,
-                      stroke: "rgba(0,0,0)",
+                      stroke: "#193b68",
                       strokeWidth: 2,
                     },
                   }}

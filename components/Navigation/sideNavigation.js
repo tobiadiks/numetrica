@@ -9,8 +9,8 @@ import {
 import Link from "next/link";
 export default function SideNavigation(props) {
   return (
-    <div className="w-full md:w-1/4 lg:w-1/4 hidden md:flex flex-col justify-start align-middle shadow-md bg-white ">
-      <div className="py-5 px-5">
+    <div className="w-full md:w-1/4 lg:w-1/4 hidden md:flex flex-col justify-start align-middle bg-white ">
+      <div className="py-5 px-5 mt-12">
         {/* content */}
         <ul>
           {
@@ -24,10 +24,10 @@ export default function SideNavigation(props) {
          
             <Link key={index} href={data.route} passHref>
               <li className="flex cursor-pointer my-4">
-                <span className="text-gray-800 mx-2 w-1/6">
+                <span className="text-main-brand1 mx-2 w-1/6 md:text-sm ">
                   <FontAwesomeIcon icon={data.icon} />
                 </span>
-                <span className="text-black font-bold">{data.title}</span>
+                <span className="text-basic1 font-bold md:text-xs text-sm self-end">{data.title}</span>
               </li>
             </Link>
           ))}

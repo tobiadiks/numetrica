@@ -31,9 +31,9 @@ export default function DashboardPage() {
       <div className="w-full md:w-2/4 lg:w-2/4 flex flex-col ">
         {/* content */}
         <div className="px-2">
-          <div className="text-black text-xl font-bold">Dashboard</div>
+          <div className="text-basic1 text-xl font-bold">Dashboard</div>
         </div>
-        <div className="text-gray-700 text-medium font-bold mt-2 px-2">Projects</div>
+        <div className="text-basic4 text-sm font-bold mt-2 px-2">Your active projects</div>
         <ProjectCardComponent
           data={[{ project_id: 1 }, { project_id: 2, color: "pink" }]}
         />
@@ -41,15 +41,15 @@ export default function DashboardPage() {
 
       <div className="w-full md:w-1/4 lg:w-1/4 flex flex-col justify-start shadow-lg py-6 px-2 md:px-0 align-middle bg-white">
         <div className="">
-          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-gray-800 border-b px-3  border-gray-800">
+          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-basic1 border-b px-3  border-gray-800">
             <div className="flex flex-row align-middle mt-2">
-              <div className="text-gray-800 font-semibold mx-auto">Planned Task</div>
-              <div className="text-black font-bold mx-auto">(15)</div>
+              <div className="text-basic1 font-semibold mx-auto">Planned Task</div>
+              <div className="text-basic1 font-bold mx-auto">(15)</div>
             </div>
           </div>
         </div>
         {/* content */}
-        <ul className="text-black">
+        <ul className="text-basic1">
           <li className="flex justify-between border text-base md:text-xs border-gray-800 rounded p-2 ">
             <div className="pr-3 w-4/5">Create portfolio</div>
             <div className="flex justify-end w-1/5">
@@ -64,7 +64,7 @@ export default function DashboardPage() {
           <li className="flex justify-between border text-base md:text-xs  border-gray-800 rounded p-2 ">
             <div className="pr-3 w-4/5">Brief the design team on new bugs</div>
             <div className="flex justify-end w-1/5">
-              <div className="text-gray-800">
+              <div className="text-basic1">
                 <FontAwesomeIcon icon={faCheckDouble} />
               </div>
               {/* <div>

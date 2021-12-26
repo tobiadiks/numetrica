@@ -9,131 +9,131 @@ export default function ReviewPage() {
     <div className="flex flex-col md:flex-row lg:flex-row justify-start space-y-0 ">
       <div className="w-full md:w-1/4 lg:w-1/4 flex flex-col justify-start align-middle bg-white ">
         <div className="py-5">
-          <div className="md:full lg:w-full w-full flex justify-center align-middle text-gray-800 border-b border-gray-800">
-            <div className="md:w-11/12 lg:w-11/12 w-11/12  my-3 px-4  rounded text-black focus:outline-none font-bold text-center">
+          <div className="md:full lg:w-full w-full flex justify-center align-middle text-basic1 border-b border-gray-800">
+            <div className="md:w-11/12 lg:w-11/12 w-11/12  my-3 px-4  rounded text-basic1 focus:outline-none font-bold text-center">
               Segment
             </div>
           </div>
           <div className="h-screen overflow-y-scroll">
             <div className="mt-8">
-              <span className="text-gray-800 font-semibold pl-3">Period</span>
+              <span className="text-basic1 font-semibold pl-3">Period</span>
               <TextInput type="date" />
             </div>
             <div className="mt-8">
-              <span className="text-gray-800 font-semibold pl-3">Language</span>
+              <span className="text-basic1 font-semibold pl-3">Language</span>
               <DropDownInput data={["English"]} />
             </div>
             <div className="mt-8">
-              <span className="text-gray-800 font-semibold pl-3 mb-2">
+              <span className="text-basic1 font-semibold pl-3 mb-2">
                 Reviews
               </span>
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-800 ml-3">5 Star</span>
+                  <span className="text-basic1 ml-3">5 Star</span>
                 </div>{" "}
                 <div>
-                  <span className="text-gray-800">73</span>
+                  <span className="text-basic1">73</span>
                 </div>
               </div>
 
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-800 ml-3">4 Star</span>
+                  <span className="text-basic1 ml-3">4 Star</span>
                 </div>{" "}
                 <div>
-                  <span className="text-gray-800">45</span>
+                  <span className="text-basic1">45</span>
                 </div>
               </div>
 
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-800 ml-3">3 Star</span>
+                  <span className="text-basic1 ml-3">3 Star</span>
                 </div>{" "}
                 <div>
-                  <span className="text-gray-800">22</span>
+                  <span className="text-basic1">22</span>
                 </div>
               </div>
 
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-800 ml-3">2 Star</span>
+                  <span className="text-basic1 ml-3">2 Star</span>
                 </div>{" "}
                 <div>
-                  <span className="text-gray-800">5</span>
+                  <span className="text-basic1">5</span>
                 </div>
               </div>
 
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-800 ml-3">1 Star</span>
+                  <span className="text-basic1 ml-3">1 Star</span>
                 </div>{" "}
                 <div>
-                  <span className="text-gray-800">3</span>
+                  <span className="text-basic1">3</span>
                 </div>
               </div>
             </div>
 
             <div className="mt-8">
-              <span className="text-gray-800 font-semibold pl-3 mb-2">
+              <span className="text-basic1 font-semibold pl-3 mb-2">
                 Text Analytics
               </span>
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-800 ml-3">All</span>
+                  <span className="text-basic1 ml-3">All</span>
                 </div>{" "}
                 <div>
-                  <span className="text-gray-800">5,456</span>
+                  <span className="text-basic1">5,456</span>
                 </div>
               </div>
 
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-800 ml-3">Processed</span>
+                  <span className="text-basic1 ml-3">Processed</span>
                 </div>{" "}
                 <div>
-                  <span className="text-gray-800">456</span>
+                  <span className="text-basic1">456</span>
                 </div>
               </div>
 
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-800 ml-3">Not Processed</span>
+                  <span className="text-basic1 ml-3">Not Processed</span>
                 </div>{" "}
                 <div>
-                  <span className="text-gray-800">5,000</span>
+                  <span className="text-basic1">5,000</span>
                 </div>
               </div>
             </div>
 
             <div className="mt-8">
-              <span className="text-gray-800 font-semibold pl-3 mb-2">
+              <span className="text-basic1 font-semibold pl-3 mb-2">
                 Status
               </span>
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-800 ml-3">Open</span>
+                  <span className="text-basic1 ml-3">Open</span>
                 </div>{" "}
                 <div>
-                  <span className="text-gray-800">54</span>
+                  <span className="text-basic1">54</span>
                 </div>
               </div>
 
               <div className="md:w-11/12 lg:w-11/12 w-full py-1 my-1 px-4 flex justify-between align-middle">
                 <div>
                   <input type="checkbox" />{" "}
-                  <span className="text-gray-800 ml-3">Under Review</span>
+                  <span className="text-basic1 ml-3">Under Review</span>
                 </div>{" "}
                 <div>
-                  <span className="text-gray-800">45</span>
+                  <span className="text-basic1">45</span>
                 </div>
               </div>
 
@@ -144,12 +144,12 @@ export default function ReviewPage() {
 
       <div className="w-full md:w-2/4 lg:w-2/4 flex flex-col justify-start align-middle min-h-screen">
         <div className="pt-5">
-          <div className="md:full lg:w-full w-full md:h-auto flex  justify-center align-middle text-gray-800">
-            <div className="md:w-11/12 lg:w-11/12 w-11/12  px-4 my-auto flex justify-center align-middle  rounded text-gray-800 focus:outline-none font-bold text-center">
+          <div className="md:full lg:w-full w-full md:h-auto flex  justify-center align-middle text-basic1">
+            <div className="md:w-11/12 lg:w-11/12 w-11/12  px-4 my-auto flex justify-center align-middle  rounded text-basic1 focus:outline-none font-bold text-center">
               <input
                 placeholder="Search review"
                 type="text"
-                className="md:w-11/12 lg:w-11/12 w-11/12 py-3 px-4 bg-white rounded text-black focus:outline-none placeholder-gray-400"
+                className="md:w-11/12 lg:w-11/12 w-11/12 py-3 px-4 bg-white rounded text-basic1 focus:outline-none placeholder-basic2"
               />
             </div>
           </div>
@@ -167,10 +167,10 @@ export default function ReviewPage() {
           {
             <div className="bg-white h-auto flex justify-between mt-7 align-middle border border-gray-800">
               <div className="my-auto px-3 py-6 flex">
-                <div className="text-gray-800 font-bold  pl-3">1-50</div>
+                <div className="text-basic1 font-bold  pl-3">1-50</div>
                 <div className="pl-6">
                   <div>
-                    <div className="font-semibold  text-black">of 5,456</div>
+                    <div className="font-semibold  text-basic1">of 5,456</div>
                   </div>
                 </div>
               </div>
@@ -182,13 +182,13 @@ export default function ReviewPage() {
 
       <div className="w-full  md:w-1/4 lg:w-1/4 flex flex-col justify-start align-middle bg-white">
         <div className="">
-          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-gray-800 border-b px-3  border-gray-800">
+          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-basic1 border-b px-3  border-gray-800">
             <div className="w-full">
               <div className="flex justify-center align-middle flex-col">
-                <div className="text-black font-semibold text-center mb-4">
+                <div className="text-basic1 font-semibold text-center mb-4">
                   Overall Performance
                 </div>
-                <div className="text-black font-bold text-center text-6xl">
+                <div className="text-basic1 font-bold text-center text-6xl">
                   3.0
                 </div>
               </div>
@@ -203,11 +203,11 @@ export default function ReviewPage() {
             </div>
           </div>
 
-          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-gray-800 border-b px-3  border-gray-800">
+          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-basic1 border-b px-3  border-gray-800">
             <div>
               <div className="flex justify-between mt-2">
-                <div className="text-black font-semibold">Total Reviews</div>
-                <div className="text-black font-bold">5,456</div>
+                <div className="text-basic1 font-semibold">Total Reviews</div>
+                <div className="text-basic1 font-bold">5,456</div>
               </div>
               <VictoryChart>
               <VictoryArea
@@ -237,10 +237,10 @@ export default function ReviewPage() {
             </div>
           </div>
 
-          <div className="md:full lg:w-full w-full flex flex-col justify-center align-middle text-gray-800 py-5 px-3">
+          <div className="md:full lg:w-full w-full flex flex-col justify-center align-middle text-basic1 py-5 px-3">
             <div className="flex justify-between  mt-2">
-              <div className="text-black font-semibold">Sentiments</div>
-              <div className="text-black font-bold"></div>
+              <div className="text-basic1 font-semibold">Sentiments</div>
+              <div className="text-basic1 font-bold"></div>
             </div>
 
             <div className="flex flex-col lg:flex-col md:flex-col w-full justify-between align-middle">
@@ -270,15 +270,15 @@ export default function ReviewPage() {
               <div className="my-auto w-full">
                   <div className="flex justify-between w-full">
                     <div className="text-purple-600">Positive</div>
-                    <div className="text-black">63.7%</div>
+                    <div className="text-basic1">63.7%</div>
                   </div>
                   <div className="flex justify-between">
                     <div className="text-purple-400">Negative</div>
-                    <div className="text-black">22.1%</div>
+                    <div className="text-basic1">22.1%</div>
                   </div>
                   <div className="flex justify-between">
                     <div className="text-purple-200">Neutral</div>
-                    <div className="text-black">15.2%</div>
+                    <div className="text-basic1">15.2%</div>
                   </div>
                 </div>
               </div>

@@ -6,16 +6,20 @@ module.exports = {
   theme:{
     extend:{
       boxShadow:{
-        'white' : ' 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 3px 6px -1px rgba(37, 99, 235, 0.06 )',
+        "main-brand1" : "2px 4px 16px 2px #1479ff20",
       },
       fontFamily:{
         sans: ['Work Sans', ...defaultTheme.fontFamily.sans],
         serif: ['Montserrat', ...defaultTheme.fontFamily.serif],
       },
       colors:{
-        "deep-blue" : "#060509",
-        "led-screen" :"#1d1b1b",
-        "led-text": "#848484",
+        "main-brand1": "#1479ff",
+        "main-brand2": "#1479ff10",
+        "main-brand3": "#1479ff20",
+        "basic1": "#193b68",
+        "basic2": "#193b6830",
+        "basic3": "#193b6850",
+        "basic4": "#193b6870",
       },
     },
   },

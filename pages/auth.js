@@ -38,7 +38,7 @@ export default function AuthPage() {
 
   return (
     <div className="flex md:px-0 px-4 py-6 flex-col items-center justify-center space-y-5">
-      <h2 className="p-2 font-bold text-black md:text-2xl text-center w-full md:w-1/2 lg:1/2">
+      <h2 className="p-2 font-bold text-basic1 md:text-2xl text-center w-full md:w-1/2 lg:1/2">
         Login Your Account
       </h2>
       {console.log(userState)}
@@ -59,7 +59,7 @@ export default function AuthPage() {
         />
         <PrimaryButton onClick={LoginUser} title="Login" icon={faArrowRight} loading={userState.loading} />
 
-        <div className="text-gray-800 flex justify-center align-middle">
+        <div className="text-basic1 flex justify-center align-middle">
           <div>or</div>&nbsp;
           <Link href={"/signup"} passHref>
             <div className="font-semibold underline cursor-pointer">
