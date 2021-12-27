@@ -62,6 +62,7 @@ export const updateProject = async ({
       }
     );
     console.log(response.data);
+    
     return response.data;
   } catch (err) {
     const response = new Error(err);

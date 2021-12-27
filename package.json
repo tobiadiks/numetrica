@@ -1,7 +1,7 @@
 {
-  "name": "next-starter-tailwind",
-  "version": "2.0.0",
-  "description": "Next.js starter styled with Tailwind CSS",
+  "name": "notics",
+  "version": "1.0.0",
+  "description": "Notics frontend application",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taylorbryant/next-starter-tailwind.git"
+    "url": "git+https://github.com/tobiadiks/numetrica.git"
   },
-  "author": "Taylor Bryant",
+  "author": "Adeleke Oluwatobi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/taylorbryant/next-starter-tailwind/issues"
+    "url": "https://github.com/tobiadiks/numetrica/issues"
   },
-  "homepage": "https://github.com/taylorbryant/next-starter-tailwind#readme",
+  "homepage": "https://github.com/tobiadiks/numetrica#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",

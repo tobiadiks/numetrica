@@ -12,6 +12,7 @@ import CreateProjectCardComponent from "@components/Cards/createProjectCard";
 import PrimaryButton from "@components/Inputs/primaryButton";
 import { useState } from "react";
 import dynamic from 'next/dynamic'
+import TaskCardComponent from "@components/Cards/taskCard";
 const ProjectCardComponent = dynamic(()=>import("@components/Cards/projectCard"), {ssr:false})
 export default function ProjectPage() {
   const route = useRouter();
@@ -47,44 +48,7 @@ export default function ProjectPage() {
         <ProjectCardComponent />
       </div>
 
-      <div className="w-full  md:w-1/4 lg:w-1/4 flex flex-col justify-start align-middle bg-white">
-        <div className="">
-          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-basic1 border-b px-3  border-gray-800">
-            <div className="flex flex-row align-middle mt-2">
-              <div className="text-basic1 font-semibold mx-auto">
-                Planned Task
-              </div>
-              <div className="text-basic1 font-bold mx-auto">(15)</div>
-            </div>
-          </div>
-        </div>
-        {/* content */}
-        <ul className="text-basic1">
-          <li className="flex justify-between border text-base md:text-xs  border-gray-800 rounded p-2 ">
-            <div className="pr-3 w-4/5">Create portfolio</div>
-            <div className="flex justify-end w-1/5">
-              <div>
-                <FontAwesomeIcon icon={faCheckDouble} />
-              </div>
-              {/* <div>
-                <FontAwesomeIcon icon={faTrash} />
-              </div> */}
-            </div>
-          </li>
-          <li className="flex justify-between border text-base md:text-xs  border-gray-800 rounded p-2 ">
-            <div className="pr-3 w-4/5">Brief the design team on new bugs</div>
-            <div className="flex justify-end w-1/5">
-              <div className="text-basic1">
-                <FontAwesomeIcon icon={faCheckDouble} />
-              </div>
-              {/* <div>
-                <FontAwesomeIcon icon={faTrash} />
-              </div> */}
-            </div>
-          </li>
-        </ul>
-      </div>
-      
+     <TaskCardComponent/>
     </div>
   );
 }

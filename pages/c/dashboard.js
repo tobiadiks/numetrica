@@ -3,77 +3,41 @@ import { useEffect } from "react";
 
 import { useRouter } from "next/router";
 import SideNavigation from "@components/Navigation/sideNavigation";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCheckDouble,
-} from "@fortawesome/free-solid-svg-icons";
-import dynamic from 'next/dynamic'
-const ProjectCardComponent = dynamic(()=>import("@components/Cards/projectCard"), {ssr:false})
-
+import dynamic from "next/dynamic";
+import TaskCardComponent from "@components/Cards/taskCard";
+const ProjectCardComponent = dynamic(
+  () => import("@components/Cards/projectCard"),
+  { ssr: false }
+);
 
 export default function DashboardPage() {
   const route = useRouter();
-  const userState = useSelector((state) => state.userStore.user);
-  const promiseState = useSelector((state) => state.userStore.status);
+  const userState = useSelector((state) => state.userStore);
 
   useEffect(() => {
-    if (!userState.success && promiseState) {
+    if (!userState.user.success) {
       route.push("/auth");
     }
-  }, [route, userState.success, promiseState]);
+  }, [route, userState.user.success]);
 
   return (
     <div className="flex px-4 md:px-0  flex-col-reverse md:flex-row lg:flex-row justify-start space-y-0 md:min-h-screen">
       {/* sidenav */}
 
       <SideNavigation />
-
+{/* center content */}
       <div className="w-full md:w-2/4 lg:w-2/4 flex flex-col ">
-        {/* content */}
-        <div className="px-2">
+        
+        <div className="px-2 mt-8 md:mt-0">
           <div className="text-basic1 text-xl font-bold">Dashboard</div>
         </div>
-        <div className="text-basic4 text-sm font-bold mt-2 px-2">Your active projects</div>
-        <ProjectCardComponent
-          data={[{ project_id: 1 }, { project_id: 2, color: "pink" }]}
-        />
+        <div className="text-basic4 text-sm font-bold mt-2 px-2 mb-4 md:mb-0">
+          Hi {userState.user.company.display_name} here are your active projects
+        </div>
+        <ProjectCardComponent />
       </div>
 
-      <div className="w-full md:w-1/4 lg:w-1/4 flex flex-col justify-start shadow-lg py-6 px-2 md:px-0 align-middle bg-white">
-        <div className="">
-          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-basic1 border-b px-3  border-gray-800">
-            <div className="flex flex-row align-middle mt-2">
-              <div className="text-basic1 font-semibold mx-auto">Planned Task</div>
-              <div className="text-basic1 font-bold mx-auto">(15)</div>
-            </div>
-          </div>
-        </div>
-        {/* content */}
-        <ul className="text-basic1">
-          <li className="flex justify-between border text-base md:text-xs border-gray-800 rounded p-2 ">
-            <div className="pr-3 w-4/5">Create portfolio</div>
-            <div className="flex justify-end w-1/5">
-              <div>
-                <FontAwesomeIcon icon={faCheckDouble} />
-              </div>
-              {/* <div>
-                <FontAwesomeIcon icon={faTrash} />
-              </div> */}
-            </div>
-          </li>
-          <li className="flex justify-between border text-base md:text-xs  border-gray-800 rounded p-2 ">
-            <div className="pr-3 w-4/5">Brief the design team on new bugs</div>
-            <div className="flex justify-end w-1/5">
-              <div className="text-basic1">
-                <FontAwesomeIcon icon={faCheckDouble} />
-              </div>
-              {/* <div>
-                <FontAwesomeIcon icon={faTrash} />
-              </div> */}
-            </div>
-          </li>
-        </ul>
-      </div>
+      <TaskCardComponent />
     </div>
   );
 }

@@ -12,7 +12,7 @@ export const login = createAsyncThunk('user/login',async ({ email, password })=>
       }
     );
     
-    
+    console.log(response.status);
     return response.data;
     
   
@@ -20,7 +20,7 @@ export const login = createAsyncThunk('user/login',async ({ email, password })=>
 
 
 export const signup =async ({ email, password, display_name })=>{
-  try {
+  
     const response = await axios.post(
       `${url}/auth/company/register`,
       {
@@ -31,10 +31,7 @@ export const signup =async ({ email, password, display_name })=>{
     );
     console.log(response.data)
     return response.data;
-  } catch (err) {
-    const response =  new Error(err);
-    throw response;
-  }
+
 }
 
 

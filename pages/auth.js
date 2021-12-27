@@ -6,41 +6,35 @@ import { login } from "../utils/auth.utils";
 import { useSelector, useDispatch } from "react-redux";
 import Link from "next/link";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { logout } from "context/features/user/userSlice";
 
 export default function AuthPage() {
   const route = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const userState = useSelector((state) => state.userStore);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
-    route.prefetch("/c/dashboard")
+    route.prefetch("/c/dashboard");
     if (userState.user.success && userState.status) {
       route.push("/c/dashboard");
     }
-  }, [route, userState.user.success,userState.status]);
+  }, [route, userState.user.success, userState.status]);
+
+  
 
   const LoginUser = async () => {
-    await dispatch(login({ email, password }));
-    if (!userState.user.success && !userState.status && !userState.loading) {
-      await alert("Incorrect credentials");
-    }
-    else if(!userState.status && !userState.loading)
-    {
-      await alert("Cannot connect to server!");
-    }
-    // else{
-    //   route.push("/t/feedback");
-    // }
-  }
+    dispatch(login({ email, password }));
+
+  };
 
   return (
     <div className="flex md:px-0 px-4 py-6 flex-col items-center justify-center space-y-5">
       <h2 className="p-2 font-bold text-basic1 md:text-2xl text-center w-full md:w-1/2 lg:1/2">
         Login Your Account
       </h2>
+      
       {console.log(userState)}
       <section className="flex flex-col items-center justify-center w-full md:w-1/2 lg:1/2">
         <TextInput
@@ -57,7 +51,12 @@ export default function AuthPage() {
           placeholder="Password"
           type="password"
         />
-        <PrimaryButton onClick={LoginUser} title="Login" icon={faArrowRight} loading={userState.loading} />
+        <PrimaryButton
+          onClick={LoginUser}
+          title="Login"
+          icon={faArrowRight}
+          loading={userState.loading}
+        />
 
         <div className="text-basic1 flex justify-center align-middle">
           <div>or</div>&nbsp;
