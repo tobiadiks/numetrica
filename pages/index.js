@@ -53,7 +53,7 @@ export default function IndexPage() {
         {/* glass and color */}
       </div>
 
-      <div className="flex w-full px-4 flex-col  md:px-4 md:mx-auto lg:mx-auto mx-auto z-30 md:flex-row-reverse py-20 ">
+      <div className="flex w-full px-4 flex-col  md:px-4 md:mx-auto lg:mx-auto mx-auto z-30 md:flex-row-reverse py-10 bg-main-brand3 ">
         <div className="w-full md:w-1/2 lg:w-1/2 flex flex-col justify-center  mx-auto align-middle">
           <h1 className=" font-black text-basic1 text-2xl md:text-5xl text-center md:text-left lg:text-left">
             Build the product customer enjoy
@@ -61,7 +61,7 @@ export default function IndexPage() {
           <div className=" text-basic1 mt-6 mx-auto text-center md:text-left lg:text-left md:text-lg">
             Getting feedback survey should be fun for both your team and
             customer. Notics builder tool is 100% visual - coding skills are not
-            compulsory for you to start setting up your own survey.
+            compulsory for you to start setting up for growth.
           </div>
           <div className="w-auto  p-0">
           <PrimaryButton
@@ -75,12 +75,26 @@ export default function IndexPage() {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 lg:w-1/2 mt-5 md:mt-0 lg:mt-0 ">
-          <AreaChart />
+        <div className="w-full h-full md:pr-4 md:w-1/2 lg:w-1/2 mt-5 md:mt-0 lg:mt-0 relative">
+          <Image
+          alt="chat"
+          src={"/chat.svg"}
+          width={4359}
+          height={5022}
+          layout="responsive"
+          />
         </div>
       </div>
 
-      <div className="flex flex-col justify-center w-full bg-main-brand2  md:mx-auto lg:mx-auto mx-auto  md:my-20 lg:w-full py-12 ">
+      <div className="flex w-full px-4 flex-col  md:px-4 py-10  ">
+<div className="flex flex-col justify-center text-basic1">
+  <div className="text-center mx-auto text-2xl font-bold md:px-52">A complete feedback <span className="text-main-brand1">OS </span>for successful solution</div>
+  <div className="text-center mx-auto md:text-xs mt-4 md:px-40">Whatever you are building, our tools are carved to be the best fit for your organization, from pages, customer aquisition, survey, customer support or live chats, all-in-one with our powerful automation tool. </div>
+
+</div>
+      </div>
+
+      <div className="flex flex-col justify-center w-full bg-main-brand3  md:mx-auto lg:mx-auto mx-auto   lg:w-full py-10 ">
         <div className="text-center mx-auto text-basic1 font-extrabold text-2xl w-full md:text-4xl font-serif">
           How does it work?
         </div>
@@ -114,7 +128,7 @@ export default function IndexPage() {
           </div>
         </div>
       </div>
-      <div className="md:px-4 w-full px-4 mx-auto flex justify-center py-20">
+      <div className="md:px-4 w-full px-4 mx-auto flex justify-center py-10">
         <ServiceRequestComponent />
       </div>
     </div>
