@@ -9,7 +9,7 @@ export default function TaskCardComponent(props) {
           <div className="md:w-full py-4 lg:w-full w-full flex justify-center align-middle text-basic1 border-b px-3  border-gray-800">
             <div className="flex flex-row align-middle mt-0 md:mt-4">
               <div className="text-basic1 font-semibold mx-auto text-sm">
-                Today&apos;s Timeline
+                Support Requests
               </div>
               
             </div>

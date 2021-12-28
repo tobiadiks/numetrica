@@ -37,8 +37,13 @@ export default function Header() {
       <div className="flex  flex-wrap items-center justify-between lg:w-full px-6 py-4 mx-auto md:flex-no-wrap md:px-6">
         <div className="flex flex-col md:flex-row items-center text-main-brand1">
           <Link href="/" passHref>
-            <div className='font-black cursor-pointer'>
-            <span className=""><FontAwesomeIcon icon={faDotCircle} /></span>notics
+            <div className='font-black cursor-pointer h-6 w-20 relative'>
+           <Image
+           alt="logo"
+           src="/logo-text1.svg"
+           layout="fill"
+          
+           />
             </div>
           </Link>
 
