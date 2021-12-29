@@ -152,7 +152,7 @@ export default function IndexPage() {
 
 <div >
   <div className=" text-center mt-8 font-semibold text-basic1  text-medium w-full ">Want to build a successful company?</div> 
-  <div className="w-auto  p-0">
+  <div className="w-auto md:w-1/2 mx-auto  p-0">
             <PrimaryButton
               icon={faArrowRight}
               onClick={() => {
