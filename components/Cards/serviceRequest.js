@@ -48,7 +48,7 @@ export default function ServiceRequestComponent() {
               </div>
 
               <div className="  text-sm md:text-medium text-center  text-basic1">
-                We respond within 48 hours
+                We respond within 24 hours
               </div>
             </form>
           </div>
