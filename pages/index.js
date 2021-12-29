@@ -18,8 +18,7 @@ export default function IndexPage() {
       <div className="flex w-full justify-center flex-col md:mx-auto lg:mx-auto mx-auto  mb-18 lg:w-full relative">
         <div className=" px-4 w-full mx-auto md:px-0 z-30  md:w-3/4 lg:w-3/4 flex md:mx-auto flex-col justify-center   ">
           <h1 className=" font-black w-full  font-serif text-basic1  text-3xl md:text-7xl text-center md:text-center">
-            Turn feedbacks
-            into excellent products
+            Turn feedbacks into excellent products
           </h1>
           <div className=" text-basic1 mt-6  w-full mx-auto text-center md:text-center  md:text-lg">
             <b className=" text-basic1">Notics</b> is the business tool for
@@ -27,7 +26,7 @@ export default function IndexPage() {
             <b className="">AI assistants</b>.
           </div>
           <div className="w-auto md:mx-auto md:w-3/4 p-0">
-          <PrimaryButton
+            <PrimaryButton
               onClick={() => {
                 route.push("/signup");
               }}
@@ -64,34 +63,106 @@ export default function IndexPage() {
             compulsory for you to start setting up for growth.
           </div>
           <div className="w-auto  p-0">
-          <PrimaryButton
+            <PrimaryButton
               icon={faArrowRight}
               onClick={() => {
                 route.push("/auth");
               }}
               title="Sign in now"
             />
-            
           </div>
         </div>
 
         <div className="w-full h-full md:pr-4 md:w-1/2 lg:w-1/2 mt-5 md:mt-0 lg:mt-0 relative">
           <Image
-          alt="chat"
-          src={"/chat.svg"}
-          width={4359}
-          height={5022}
-          layout="responsive"
+            alt="chat"
+            src={"/chat.svg"}
+            width={4359}
+            height={5022}
+            layout="responsive"
           />
         </div>
       </div>
 
       <div className="flex w-full px-4 flex-col  md:px-4 py-10  ">
-<div className="flex flex-col justify-center text-basic1">
-  <div className="text-center mx-auto text-2xl font-bold md:px-52">A complete feedback <span className="text-main-brand1">OS </span>for successful solution</div>
-  <div className="text-center mx-auto md:text-xs mt-4 md:px-40">Whatever you are building, our tools are carved to be the best fit for your organization, from pages, customer aquisition, survey, customer support or live chats, all-in-one with our powerful automation tool. </div>
+        <div className="flex flex-col justify-center text-basic1">
+          <div className="text-center mx-auto text-2xl font-bold md:px-52">
+            A complete feedback <span className="text-main-brand1">OS </span>for
+            successful solution
+          </div>
+          <div className="text-center mx-auto md:text-xs mt-4 md:px-40">
+            Whatever you are building, our tools are carved to be the best fit
+            for your organization, from pages, customer acquisition, survey,
+            customer support or live chats, all-in-one with our powerful
+            automation tool.{" "}
+          </div>
+        </div>
 
+        {/* circles */}
+        <div className=" w-full h-60 mx-auto mt-12    flex align-baseline   relative ">
+        <div className="h-20 w-20 p-4 absolute  shadow-md rounded-full bg-white  top-0 left-0 md:left-24">
+            <Image
+              src="/FeedbackAudience.svg"
+              layout="responsive"
+              alt="logo"
+              height={120}
+              width={120}
+            />
+          </div>
+
+          <div className="h-28 w-28 p-4 absolute  shadow-md rounded-full bg-yellow-100  top-12 right-5 md:right-32">
+            <Image
+              src="/UserAcquisitions.svg"
+              layout="responsive"
+              alt="logo"
+              height={160}
+              width={160}
+            />
+          </div>
+
+          <div className="h-28 w-28 p-4 absolute  shadow-md rounded-full bg-green-100  bottom-10 left-0 md:right-1/2">
+            <Image
+              src="/Analytic.svg"
+              layout="responsive"
+              alt="logo"
+              height={160}
+              width={160}
+            />
+          </div>
+
+          <div className="h-16 w-16 p-4 absolute  shadow-md rounded-full bg-blue-100  top-0 right-28 md:right-1/2">
+            <Image
+              src="/Website.svg"
+              layout="responsive"
+              alt="logo"
+              height={160}
+              width={160}
+            />
+          </div>
+          <div className="h-20 w-20 p-4 relative self-end shadow-md rounded-full bg-red-100  bottom-0 left-1/2 transform -translate-x-1/2">
+            <Image
+              src="/Startup.svg"
+              layout="responsive"
+              alt="logo"
+              height={160}
+              width={160}
+            />
+          </div>
+        </div>
+
+<div >
+  <div className=" text-center mt-8 font-semibold text-basic1  text-medium w-full ">Want to build a successful company?</div> 
+  <div className="w-auto  p-0">
+            <PrimaryButton
+              icon={faArrowRight}
+              onClick={() => {
+                route.push("/signup");
+              }}
+              title="Start here"
+            />
+          </div>
 </div>
+
       </div>
 
       <div className="flex flex-col justify-center w-full bg-main-brand3  md:mx-auto lg:mx-auto mx-auto   lg:w-full py-10 ">

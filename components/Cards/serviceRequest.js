@@ -6,7 +6,7 @@ import PrimaryButton from "@components/Inputs/primaryButton";
 export default function ServiceRequestComponent() {
   return (
     <>
-      <div className="flex flex-col-reverse md:flex-row-reverse shadow-md  justify-between w-full py-8">
+      <div className="flex flex-col-reverse md:flex-row-reverse md:shadow-md shadow-none  justify-between w-full py-8">
         <div className="w-full md:w-1/2 lg:w-1/2 relative">
           <div>
             <h2 className="p-3 md:pl-12 text-center md:text-left font-serif font-bold text-2xl md:text-2xl text-basic1">
