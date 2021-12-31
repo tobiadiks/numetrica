@@ -42,7 +42,7 @@ export default function ProjectAtomCardComponent(props) {
 
   return (
     <div
-      className={cn("w-full  px-2 py-2 rounded-lg  relative  shadow-sm ", props.color)}
+      className={cn("w-full  px-2 py-2 rounded-lg  relative  shadow-sm h-fit ", props.color)}
     >
       <UpdateProjectCardComponent
         hidden={hidden}

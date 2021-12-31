@@ -6,6 +6,7 @@ import { faPlusCircle, faArrowLeft,faUpload } from "@fortawesome/free-solid-svg-
 import PrimaryButton from "@components/Inputs/primaryButton";
 import { updateProject } from "utils/project.utils";
 import { useRouter } from "next/router";
+import TextAreaInput from "@components/Inputs/textAreaInput";
 
 export default function UpdateProjectCardComponent(props) {
   const [name, setName] = useState(props.name);
@@ -51,7 +52,7 @@ export default function UpdateProjectCardComponent(props) {
         props.hidden == hidden ? "hidden" : ""
       } `}
     >{console.log(userState)}
-      <div className="flex w-full md:w-1/3 mx-auto my-auto flex-col items-center justify-center py-4 bg-white shadow-lg z-50">
+      <div className="flex w-full md:w-full mx-auto my-auto flex-col items-center justify-center py-4 bg-white shadow-lg z-50">
         <h2 className="font-bold text-basic1 md:text-sm text-center w-full md:w-1/2 lg:1/2">
           <div
             className=" cursor-pointer"
@@ -74,11 +75,11 @@ export default function UpdateProjectCardComponent(props) {
             placeholder="Name of campaign/project"
             type="text"
           />
-          <TextInput
+          <TextAreaInput
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Description of this project?"
-            type="text"
+            
           />
           <PrimaryButton
             onClick={UpdateProject}

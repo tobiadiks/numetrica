@@ -22,8 +22,6 @@ export default function CreateProjectCardComponent(props) {
     const colorArray = [
       "bg-red-400",
       "bg-yellow-400",
-      "bg-blue-400",
-      "bg-pink-400",
       "bg-green-400",
     ];
     let color = colorArray[Math.floor(Math.random() * colorArray.length)];

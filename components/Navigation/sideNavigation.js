@@ -4,6 +4,7 @@ import {
   faChalkboard,
   faGrin,
   faList,
+  faRocket,
   faUserAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
@@ -19,7 +20,8 @@ export default function SideNavigation(props) {
             { title: "Project", icon: faList, route: "/c/project" },
             { title: "Task", icon: faCalendarCheck, route: "/c/task" },
             { title: "Profile", icon: faUserAlt, route: "/c/profile" },
-            { title: "Support", icon: faGrin, route: "/c/support" },
+            { title: "Customer Support", icon: faGrin, route: "/c/support" },
+            { title: "Feature Request", icon: faRocket, route: "/c/feature-request" },
           ].map((data, index) => (
          
             <Link key={index} href={data.route} passHref>
