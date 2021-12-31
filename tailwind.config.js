@@ -10,7 +10,7 @@ module.exports = {
       },
       fontFamily:{
         sans: ['Work Sans', ...defaultTheme.fontFamily.sans],
-        serif: ['Montserrat', ...defaultTheme.fontFamily.serif],
+        serif: ['Montserrat', 'Nunito', ...defaultTheme.fontFamily.serif],
       },
       colors:{
         "main-brand1": "#1479ff",
