@@ -17,7 +17,7 @@ export default function IndexPage() {
     <div className="flex py-12 w-full flex-col items-center justify-center align-middle space-y-12 ">
       <div className="flex w-full justify-center flex-col md:mx-auto lg:mx-auto mx-auto  mb-18 lg:w-full relative">
         <div className=" px-4 w-full mx-auto md:px-0 z-30  md:w-3/4 lg:w-3/4 flex md:mx-auto flex-col justify-center   ">
-          <h1 className=" font-black w-full  font-serif text-basic1  text-3xl md:text-7xl text-center md:text-center">
+          <h1 className=" font-black w-full  font-serif-Nunito text-basic1  text-3xl md:text-7xl text-center md:text-center">
             Turn feedbacks into excellent products
           </h1>
           <div className=" text-basic1 mt-6  w-full mx-auto text-center md:text-center  md:text-lg">
