@@ -12,7 +12,7 @@ import TextAreaInput from "@components/Inputs/textAreaInput";
 export default function CreateProjectCardComponent(props) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [type_id, setTypeString] = useState(null);
+  const [type_id, setTypeString] = useState("abtest");
   const [hidden, setHidden] = useState(true);
   const [loading, setLoading] = useState(false);
   const userState = useSelector((state) => state.userStore);
@@ -88,7 +88,7 @@ export default function CreateProjectCardComponent(props) {
 
           <DropDownInput
             
-            value={"abtest"}
+            value={type_id}
             onChange={(e) => {
               setTypeString(e.target.value);
             }}
