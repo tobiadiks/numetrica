@@ -18,6 +18,7 @@ export const createProject = async ({
   company_id,
   accessToken,
   name,
+  type_id,
   description,
   color,
   date_created
@@ -29,6 +30,7 @@ export const createProject = async ({
         name,
         description,
         color,
+        type_id,
         date_created
       },
       {

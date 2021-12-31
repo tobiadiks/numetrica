@@ -65,6 +65,7 @@ export default function ProjectCardComponent(props) {
             project_id={data.project_id}
             name={data.name}
             description={data.description}
+            type_string={data.type_string}
             date={data.date_created}
           />
         ))

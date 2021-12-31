@@ -42,7 +42,7 @@ export default function ProjectAtomCardComponent(props) {
 
   return (
     <div
-      className={cn("w-full  px-2 py-2 rounded-lg    shadow-sm ", props.color)}
+      className={cn("w-full  px-2 py-2 rounded-lg  relative  shadow-sm ", props.color)}
     >
       <UpdateProjectCardComponent
         hidden={hidden}
@@ -81,10 +81,11 @@ export default function ProjectAtomCardComponent(props) {
       </div>
       <div
         onMouseOver={() => setDrop(false)}
-        className="text-white mb-4 w-full text-center cursor-pointer"
+        className="text-white mb-4 w-full  text-center cursor-pointer"
       >
-        <div className="font-bold text-lg  md:text-medium">{props.name}</div>
+        <div className="font-bold text-base  md:text-base">{props.name}</div>
         <div className="text-sm md:text-xs">{props.description.slice(0,45)}...</div>
+      <div className={`bg-white absolute bottom-0 left-1/2 transform z-20 translate-y-1/4  -translate-x-1/2 w-fit text${props.color.slice(2,)} text-xs self-baseline font-bold mx-auto mt-4 p-1 rounded-md`}>{props.type_string}</div>
       </div>
     </div>
   );

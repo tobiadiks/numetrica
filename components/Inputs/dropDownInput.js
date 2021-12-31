@@ -3,17 +3,19 @@ import cn from 'classnames'
 export default function DropDownInput(props) {
   return (
     <div className={cn(
-      "md:w-11/12 lg:w-11/12 w-full flex justify-center align-middle text-basic1",
+      "md:w-full lg:w-full w-full flex justify-center align-middle text-basic1",
       props.center?"mx-auto":""
     )}>
       <select
-        value={props.defaultValue}
-        className="w-full py-3 my-3 px-4 bg-white rounded text-basic1 focus:outline-none placeholder-basic2"
+        onChange={props.onChange}
+        value={props.value?props.value:null}
+        placeholder={props.placeholder}
+        className="w-full py-3 md:p-4 my-3 px-4   bg-main-brand3 rounded-sm text-basic1  focus:outline-none placeholder-basic2"
       >
-        {[props.data].map(
+        {props.data.map(
                     (data, index) => (
-                      <option value={data} key={index}>
-                        {data}
+                      <option value={data.type_id} key={index}>
+                        {data.type_string}
                       </option>
                     )
                   )}
