@@ -9,7 +9,7 @@ export default function ReviewPage() {
     <div className="flex flex-col md:flex-row lg:flex-row justify-start space-y-0 ">
       <div className="w-full md:w-1/4 lg:w-1/4 flex flex-col justify-start align-middle bg-white ">
         <div className="py-5">
-          <div className="md:full lg:w-full w-full flex justify-center align-middle text-basic1 border-b border-gray-800">
+          <div className="md:full lg:w-full w-full flex justify-center align-middle text-basic1 border-b border-basic1">
             <div className="md:w-11/12 lg:w-11/12 w-11/12  my-3 px-4  rounded text-basic1 focus:outline-none font-bold text-center">
               Segment
             </div>
@@ -165,7 +165,7 @@ export default function ReviewPage() {
           {/* Card end */}
 
           {
-            <div className="bg-white h-auto flex justify-between mt-7 align-middle border border-gray-800">
+            <div className="bg-white h-auto flex justify-between mt-7 align-middle border border-basic1">
               <div className="my-auto px-3 py-6 flex">
                 <div className="text-basic1 font-bold  pl-3">1-50</div>
                 <div className="pl-6">
@@ -182,7 +182,7 @@ export default function ReviewPage() {
 
       <div className="w-full  md:w-1/4 lg:w-1/4 flex flex-col justify-start align-middle bg-white">
         <div className="">
-          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-basic1 border-b px-3  border-gray-800">
+          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-basic1 border-b px-3  border-basic1">
             <div className="w-full">
               <div className="flex justify-center align-middle flex-col">
                 <div className="text-basic1 font-semibold text-center mb-4">
@@ -203,7 +203,7 @@ export default function ReviewPage() {
             </div>
           </div>
 
-          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-basic1 border-b px-3  border-gray-800">
+          <div className="md:w-full py-5 lg:w-full w-full flex justify-center align-middle text-basic1 border-b px-3  border-basic1">
             <div>
               <div className="flex justify-between mt-2">
                 <div className="text-basic1 font-semibold">Total Reviews</div>

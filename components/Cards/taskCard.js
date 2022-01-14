@@ -6,7 +6,7 @@ export default function TaskCardComponent(props) {
     return(
         <div className="w-full md:w-1/4 lg:w-1/4 flex flex-col justify-start shadow-md py-6 px-2 md:px-0   md:align-middle bg-white">
         <div className="">
-          <div className="md:w-full py-4 lg:w-full w-full flex justify-center align-middle text-basic1 border-b px-3  border-gray-800">
+          <div className="md:w-full py-4 lg:w-full w-full flex justify-center align-middle text-basic1 border-b px-3  border-basic1">
             <div className="flex flex-row align-middle mt-0 md:mt-4">
               <div className="text-basic1 font-semibold mx-auto text-sm">
                Today&apos;s task
