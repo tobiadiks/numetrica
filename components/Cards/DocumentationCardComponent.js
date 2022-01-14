@@ -3,6 +3,7 @@ import {
   faArrowDown,
   faArrowUp,
   faEdit,
+  faPaperPlane,
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
@@ -16,11 +17,12 @@ import dynamic from "next/dynamic";
 import cn from 'classnames'
 import { logout } from "context/features/user/userSlice";
 import DocumentationAtomCardComponent from './DocumentationAtomCard'
+import EmptyCardContainer from "@components/EmptyStates/emptyCardComponent";
 export default function DocumentationCardComponent(props) {
   const userState = useSelector((state) => state.userStore);
   const [user, setUser] = useState(userState);
   const [loading, setLoading] = useState(false);
-  const [project, setProject] = useState([1,2,3]);
+  const [project, setProject] = useState([]);
 
   const route = useRouter();
  
@@ -47,17 +49,12 @@ export default function DocumentationCardComponent(props) {
 //     }
 //     getProject();
 //   }, [user.user.company.company_id, user.user.accessToken]);
-
+while (loading){
+<EmptyCardContainer/>
+}
   return (
+    project.length ? (
     <div className={cn(" grid grid-cols-2 md:grid-cols-3  gap-2  px-2   md:h-screen bg-main-brand2 md:overflow-y-auto mt-4",project.length>=12?"":"md:grid-rows-3")}>
-      {loading ? (
-        <div className="w-full flex-col flex justify-center relative">
-          <div className="mt-4 mx-auto text-lg font-bold text-gray-900">
-            Loading...
-          </div>
-        </div>
-      ) : // ({/* project card */}
-<>
           <DocumentationAtomCardComponent
             key={'project'}
             id={'project'}
@@ -93,9 +90,20 @@ export default function DocumentationCardComponent(props) {
             title={"90 views"}
             hint={"Connecting to the API"}
           />
+    </div>):
+     (
+      <div className="w-full flex-col flex justify-center my-4 relative">
+        <div className="w-48 h-48 mx-auto relative">
+          <Image height={200} width={200} src={"/empty.svg"} layout={"responsive"} alt="empty" />
+        </div>
+        <div className="mt-4 mx-auto text-lg font-bold text-basic1">
+          So empty!
+        </div>
+        <div className="mt-1 mx-auto text-center px-4 md:px-16 text-xs text-basic1">
+          Click the button above to start writing great documentations
+        </div>
        
-       </>
-       }
-    </div>
+      </div>
+    )
   );
 }

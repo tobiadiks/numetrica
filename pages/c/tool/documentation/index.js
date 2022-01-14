@@ -34,7 +34,7 @@ export default function IndexPage() {
           </div>
         </div>
         <div className="text-basic4 text-sm font-bold mt-2 px-2 mb-4 md:mb-0">
-          Hi {userState.user.company.display_name} here are pages of documentations you made.
+          Hi there here are documentations you have made.
         </div>
         <DocumentationCardComponent/>
       </div>

@@ -13,6 +13,7 @@ import PrimaryButton from "@components/Inputs/primaryButton";
 import { useState } from "react";
 import dynamic from 'next/dynamic'
 import TaskCardComponent from "@components/Cards/taskCard";
+import AuthPage from "pages/auth";
 const ProjectCardComponent = dynamic(()=>import("@components/Cards/projectCard"), {ssr:false})
 export default function ProjectPage() {
   const route = useRouter();

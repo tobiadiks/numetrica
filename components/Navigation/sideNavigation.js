@@ -2,11 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendarCheck,
   faChalkboard,
+  faClock,
+  faClone,
   faGlobe,
   faGrin,
   faList,
   faPaperPlane,
   faRocket,
+  faTimes,
   faTools,
   faUserAlt,
 } from "@fortawesome/free-solid-svg-icons";
@@ -21,11 +24,11 @@ export default function SideNavigation(props) {
           {
           [
             { title: "Dashboard", icon: faChalkboard, route: "/c/dashboard" },
-            { title: "Project", icon: faList, route: "/c/project" },
-            { title: "Task Manager", icon: faTools, route: "/c/task" },
-            { title: "Documention Builder", icon: faPaperPlane, route: "/c/tool/documentation/" },
+            { title: "Project", icon: faTools, route: "/c/project" },
+            { title: "Task Manager", icon:faClock , route: "/c/task" },
+            { title: "Documention", icon: faPaperPlane, route: "/c/tool/documentation/" },
             // { title: "Page Builder(coming soon!)", icon: faGlobe, route: "/c/tool/pages/home" },
-            { title: "Page Builder(coming soon!)", icon: faGlobe, route: "#" },
+            { title: "Pages(upcoming!)", icon: faGlobe, route: "#" },
             { title: "Profile", icon: faUserAlt, route: "/c/profile" },
             { title: "Feature Request", icon: faRocket, route: "/c/feature-request" },
           ].map((data, index) => (
