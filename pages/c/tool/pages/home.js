@@ -1,3 +1,7 @@
+export default function Home{
+  return null
+}
+
 // import {useNode} from "@craftjs/core";
 // import React from "react";
 // import {Editor, Frame, Canvas,Element, Selector} from "@craftjs/core";
