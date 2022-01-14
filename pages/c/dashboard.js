@@ -29,7 +29,7 @@ export default function DashboardPage() {
           <div className="text-basic1 text-xl font-bold">Dashboard</div>
         </div>
         <div className="text-basic4 text-sm font-bold mt-2 px-2 mb-4 md:mb-0">
-          Hi {userState.user.company.display_name} here are your active projects
+          Hi there here are your active projects
         </div>
         <DashboardCardComponent/>
       </div>

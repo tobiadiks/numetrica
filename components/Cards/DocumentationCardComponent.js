@@ -13,6 +13,7 @@ import { allProject } from "../../utils/project.utils";
 import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import dynamic from "next/dynamic";
+import cn from 'classnames'
 import { logout } from "context/features/user/userSlice";
 import DocumentationAtomCardComponent from './DocumentationAtomCard'
 export default function DocumentationCardComponent(props) {
@@ -48,7 +49,7 @@ export default function DocumentationCardComponent(props) {
 //   }, [user.user.company.company_id, user.user.accessToken]);
 
   return (
-    <div className=" grid grid-cols-2 md:grid-cols-3  gap-2  px-2   md:h-screen bg-main-brand2 md:overflow-y-auto mt-4">
+    <div className={cn(" grid grid-cols-2 md:grid-cols-3  gap-2  px-2   md:h-screen bg-main-brand2 md:overflow-y-auto mt-4",project.length>=12?"":"md:grid-rows-3")}>
       {loading ? (
         <div className="w-full flex-col flex justify-center relative">
           <div className="mt-4 mx-auto text-lg font-bold text-gray-900">
@@ -58,6 +59,14 @@ export default function DocumentationCardComponent(props) {
       ) : // ({/* project card */}
 <>
           <DocumentationAtomCardComponent
+            key={'project'}
+            id={'project'}
+            color={"bg-green-400"}
+            name={"Getting Started"}
+            title={"3 views"}
+            hint={"How to get started"}
+          />
+           <DocumentationAtomCardComponent
             key={'project'}
             id={'project'}
             color={"bg-green-400"}

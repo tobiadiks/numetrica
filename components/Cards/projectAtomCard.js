@@ -46,7 +46,7 @@ route.push(`/c/tool/${props.type_id}/${props.id}`)
 
   return (
     <div
-      className={cn("w-full  px-2 py-2 rounded-lg  relative  shadow-sm h-fit ", props.color)}
+      className={cn("w-full  px-2 py-2 rounded-lg  relative  shadow-sm h-full ", props.color)}
     >
       <UpdateProjectCardComponent
         hidden={hidden}

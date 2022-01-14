@@ -13,7 +13,9 @@ import { allProject } from "../../utils/project.utils";
 import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import dynamic from "next/dynamic";
+import cn from 'classnames'
 import { logout } from "context/features/user/userSlice";
+import EmptyCardContainer from "@components/EmptyStates/emptyCardComponent";
 const ProjectAtomCardComponent = dynamic(() => import("./projectAtomCard"), {
   ssr: false,
 });
@@ -49,15 +51,15 @@ export default function ProjectCardComponent(props) {
     getProject();
   }, [user.user.company.company_id, user.user.accessToken]);
 
+  while (loading){
+    return(
+      <div>
+        <EmptyCardContainer/>
+    </div>)
+  }
   return (
-    <div className=" grid grid-cols-2 md:grid-cols-3  gap-2  px-2   md:h-screen bg-main-brand2 md:overflow-y-auto mt-4">
-      {loading ? (
-        <div className="w-full flex-col flex justify-center relative">
-          <div className="mt-4 mx-auto text-lg font-bold text-gray-900">
-            Loading...
-          </div>
-        </div>
-      ) : // ({/* project card */}
+    <div className={cn(" grid grid-cols-2 md:grid-cols-3  gap-2  px-2   md:h-screen bg-main-brand2 md:overflow-y-auto mt-4",project.length>=12?"":"md:grid-rows-3")}>
+      { // ({/* project card */}
       project.length ? (
         project.map((data) => (
           <ProjectAtomCardComponent
@@ -93,3 +95,4 @@ export default function ProjectCardComponent(props) {
     </div>
   );
 }
+

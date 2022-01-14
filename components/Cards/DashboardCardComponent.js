@@ -15,6 +15,8 @@ import { useDispatch, useSelector } from "react-redux";
 import dynamic from "next/dynamic";
 import { logout } from "context/features/user/userSlice";
 import { dashboardMetric } from "../../utils/dashboard.utils";
+import EmptyCardComponent from "@components/EmptyStates/emptyCard";
+import EmptyCardContainer from "@components/EmptyStates/emptyCardComponent";
 
 const DashboardAtomCardComponent = dynamic(() => import("./DashboardAtomCard"), {
   ssr: false,
@@ -52,15 +54,11 @@ export default function DashboardCardComponent(props) {
   }, [user.user.company.company_id, user.user.accessToken]);
 
   return (
-    <div className=" grid grid-cols-2 md:grid-cols-3  gap-2  px-2   md:h-screen bg-main-brand2 md:overflow-y-auto mt-4">
+<> 
       {loading ? (
-        <div className="w-full flex-col flex justify-center relative">
-          <div className="mt-4 mx-auto text-lg font-bold text-gray-900">
-            Loading...
-          </div>
-        </div>
+        <EmptyCardContainer/>
       ) : // ({/* project card */}
-<>
+   <div className=" grid grid-cols-2 md:grid-cols-3 md:grid-rows-3  gap-2  px-2   md:h-screen bg-main-brand2 md:overflow-y-auto mt-4">
           <DashboardAtomCardComponent
             key={'project'}
             id={'project'}
@@ -97,9 +95,9 @@ export default function DashboardCardComponent(props) {
             title={"Task"}
             hint={"All your active tasks"}
           />
+       </div>
        
-       </>
        }
-    </div>
+    </>
   );
 }

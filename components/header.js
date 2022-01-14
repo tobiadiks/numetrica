@@ -90,7 +90,7 @@ export default function Header() {
 
         <ul
           className={cn(
-            "md:flex flex-col md:flex-row md:items-center md:justify-center w-full md:w-auto transition  ",
+            " flex-col md:hidden md:flex-row md:items-center md:justify-center w-full md:w-auto transition  ",
             mobileMenuIsOpen ? `block` : `hidden`
           )}
         >
@@ -138,6 +138,98 @@ export default function Header() {
                   icon: faRocket,
                   route: "/c/feature-request",
                 },
+                {
+                  title: "Notifications",
+                  route: "/notification",
+                  cta: false,
+                  bold: true,
+                  icon: faBell,
+                },
+                {
+                  title: "Log out",
+                  route: "/",
+                  cta: false,
+                  bold: false,
+                  icon: faSignOutAlt,
+                },
+              ].map(({ title, route, cta, bold, icon }, index) => (
+                <li
+                  className="flex mt-3 md:mt-0 md:ml-6 cursor-pointer"
+                  key={index}
+                  onClick={() => LogOut(route, title)}
+                >
+                  {" "}
+                  <div className="text-basic1">
+                    <FontAwesomeIcon icon={icon} />
+                  </div>
+                  &nbsp;
+                  <div
+                    className={cn(
+                      "block text-basic1",
+                      cta
+                        ? `border p-2  rounded hover:bg-white hover:text-basic1 font-medium`
+                        : `border-0`,
+                      bold ? "font-bold hover:underline" : ""
+                    )}
+                  >
+                    {title.toUpperCase()}
+                  </div>
+                </li>
+              ))
+            : [
+                { title: "Log in", route: "/auth", cta: false },
+                { title: "Free Trial", route: "/signup", cta: true },
+              ].map(({ route, title, cta }) => (
+                <li className="mt-3 md:mt-0 md:ml-6" key={title}>
+                  <Link href={route}>
+                    <a
+                      className={cn(
+                        "block",
+                        cta
+                          ? ` p-2 rounded bg-main-brand1  text-white font-bold shadow-main-brand1 shadow-md`
+                          : `border-0 text-basic1`
+                      )}
+                    >
+                      {title.toUpperCase()}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+        </ul>
+
+        <ul
+          className={cn(
+            "md:flex flex-col  md:flex-row md:items-center md:justify-center w-full md:w-auto transition  ",
+            mobileMenuIsOpen ? `hidden` : `hidden`
+          )}
+        >
+          {userState.success
+            ? //   <ul>
+              //   {
+              //   [
+
+              //   ].map((data, index) => (
+
+              //     <Link key={index} href={data.route} passHref>
+              //       <li className="flex cursor-pointer my-4">
+              //         <span className="text-basic1 mx-2 w-1/6">
+              //           <FontAwesomeIcon icon={data.icon} />
+              //         </span>
+              //         <span className="text-basic1 font-bold">{data.title}</span>
+              //       </li>
+              //     </Link>
+              //   ))}
+              // </ul>
+
+              [
+                
+                {
+                  title: "Dashboard",
+                  icon: faChalkboard,
+                  route: "/c/dashboard",
+                },
+               
+               
                 {
                   title: "Notifications",
                   route: "/notification",

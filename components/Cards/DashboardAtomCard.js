@@ -27,7 +27,7 @@ route.push(`/c/${props.id}`)
 
   return (
     <div
-      className={cn("w-full  px-2 py-2 rounded-lg  relative  shadow-sm h-fit ", props.color)}
+      className={cn("w-full  px-2 py-2 rounded-lg  relative  shadow-sm h-auto ", props.color)}
     >
       
       <div className="text-white text-sm md:text-xs  font-semibold mb-4 flex justify-between w-full">
