@@ -28,13 +28,13 @@ export default function IndexPage() {
       <div className="w-full md:w-2/4 lg:w-2/4 flex flex-col ">
         
       <div className="px-2 flex justify-between items-center">
-          <div className="text-basic1 text-xl font-bold">{userState.user.company.display_name}&apos;s Documentation</div>
+          <div className="text-basic1 text-xl font-bold"> Documentation</div>
           <div>
             <PrimaryButton onClick={()=>null} title="New" icon={faPlusCircle} />
           </div>
         </div>
         <div className="text-basic4 text-sm font-bold mt-2 px-2 mb-4 md:mb-0">
-          Hi there here are documentations you have made.
+          Hi there! here are documentations you have made.
         </div>
         <DocumentationCardComponent/>
       </div>
