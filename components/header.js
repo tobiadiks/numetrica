@@ -3,47 +3,52 @@ import { useState, useContext, useEffect } from "react";
 import cn from "classnames";
 import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
-import { useSelector,useDispatch } from "react-redux";
-import {logout} from '../context/features/user/userSlice'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faUserAlt, faSignOutAlt, faBell} from '@fortawesome/free-solid-svg-icons'
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../context/features/user/userSlice";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUserAlt,
+  faSignOutAlt,
+  faBell,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faCalendarCheck,
   faChalkboard,
   faGrin,
   faList,
-  faDotCircle
+  faDotCircle,
+
+  faGlobe,
+  
+  faPaperPlane,
+  faRocket,
+  faTools,
+  
 } from "@fortawesome/free-solid-svg-icons";
 export default function Header() {
   const route = useRouter();
-  const userState = useSelector((state)=>state.userStore.user);
+  const userState = useSelector((state) => state.userStore.user);
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
 
-  async function LogOut(routeDestination,title) {
-    if(title=="Log out"){
-      dispatch(logout())
+  async function LogOut(routeDestination, title) {
+    if (title == "Log out") {
+      dispatch(logout());
+      route.push(routeDestination);
+    } else {
       route.push(routeDestination);
     }
-    else{
-      route.push(routeDestination);
-    }
-    
   }
 
-  
   return (
-    <header className={`w-full  backdrop-filter backdrop-blur-md shadow fixed z-50`}>
+    <header
+      className={`w-full  backdrop-filter backdrop-blur-md shadow fixed z-50`}
+    >
       <div className="flex  flex-wrap items-center justify-between lg:w-full px-6 py-4 mx-auto md:flex-no-wrap md:px-6">
         <div className="flex flex-col md:flex-row items-center text-main-brand1">
           <Link href="/" passHref>
-            <div className='font-black cursor-pointer h-6 w-20 relative'>
-           <Image
-           alt="logo"
-           src="/logo-text1.svg"
-           layout="fill"
-          
-           />
+            <div className="font-black cursor-pointer h-6 w-20 relative">
+              <Image alt="logo" src="/logo-text1.svg" layout="fill" />
             </div>
           </Link>
 
@@ -54,7 +59,7 @@ export default function Header() {
             )}
           >
             {userState.success
-              ?""
+              ? ""
               : [
                   { title: "Home", route: "/" },
                   { title: "Product", route: "/product" },
@@ -85,51 +90,92 @@ export default function Header() {
 
         <ul
           className={cn(
-            "md:flex flex-col md:flex-row md:items-center md:justify-center w-full md:w-auto ",
+            "md:flex flex-col md:flex-row md:items-center md:justify-center w-full md:w-auto transition  ",
             mobileMenuIsOpen ? `block` : `hidden`
           )}
         >
           {userState.success
-            ?
-          //   <ul>
-          //   {
-          //   [
-              
-          //   ].map((data, index) => (
-           
-          //     <Link key={index} href={data.route} passHref>
-          //       <li className="flex cursor-pointer my-4">
-          //         <span className="text-basic1 mx-2 w-1/6">
-          //           <FontAwesomeIcon icon={data.icon} />
-          //         </span>
-          //         <span className="text-basic1 font-bold">{data.title}</span>
-          //       </li>
-          //     </Link>
-          //   ))}
-          // </ul>
+            ? //   <ul>
+              //   {
+              //   [
 
-            [{ title: "Notifications", route: "/notification", cta: false,bold:true,icon:faBell },{ title: "Log out", route: "/", cta: false,bold:false,icon:faSignOutAlt }].map(
-                ({ title,route, cta,bold,icon }, index) => (
-                  <li
-                    className="flex mt-3 md:mt-0 md:ml-6 cursor-pointer"
-                    key={index}
-                    onClick={()=>LogOut(route,title)}
-                  > <div className="text-basic1"><FontAwesomeIcon icon={icon}/></div>
-                    &nbsp;
-                    <div
-                      className={cn(
-                        "block text-basic1",
-                        cta
-                          ? `border p-2  rounded hover:bg-white hover:text-basic1 font-medium`
-                          : `border-0`,
-                          bold ? 'font-bold hover:underline':''
-                      )}
-                    >
-                      {title.toUpperCase()}
-                    </div>
-                  </li>
-                )
-              )
+              //   ].map((data, index) => (
+
+              //     <Link key={index} href={data.route} passHref>
+              //       <li className="flex cursor-pointer my-4">
+              //         <span className="text-basic1 mx-2 w-1/6">
+              //           <FontAwesomeIcon icon={data.icon} />
+              //         </span>
+              //         <span className="text-basic1 font-bold">{data.title}</span>
+              //       </li>
+              //     </Link>
+              //   ))}
+              // </ul>
+
+              [
+                
+                {
+                  title: "Dashboard",
+                  icon: faChalkboard,
+                  route: "/c/dashboard",
+                },
+                { title: "Project", icon: faList, route: "/c/project" },
+                { title: "Task Manager", icon: faTools, route: "/c/task" },
+                {
+                  title: "Documention Builder",
+                  icon: faPaperPlane,
+                  route: "/c/tool/documentation/",
+                },
+                // { title: "Page Builder(coming soon!)", icon: faGlobe, route: "/c/tool/pages/home" },
+                {
+                  title: "Page Builder(coming soon!)",
+                  icon: faGlobe,
+                  route: "#",
+                },
+                { title: "Profile", icon: faUserAlt, route: "/c/profile" },
+                {
+                  title: "Feature Request",
+                  icon: faRocket,
+                  route: "/c/feature-request",
+                },
+                {
+                  title: "Notifications",
+                  route: "/notification",
+                  cta: false,
+                  bold: true,
+                  icon: faBell,
+                },
+                {
+                  title: "Log out",
+                  route: "/",
+                  cta: false,
+                  bold: false,
+                  icon: faSignOutAlt,
+                },
+              ].map(({ title, route, cta, bold, icon }, index) => (
+                <li
+                  className="flex mt-3 md:mt-0 md:ml-6 cursor-pointer"
+                  key={index}
+                  onClick={() => LogOut(route, title)}
+                >
+                  {" "}
+                  <div className="text-basic1">
+                    <FontAwesomeIcon icon={icon} />
+                  </div>
+                  &nbsp;
+                  <div
+                    className={cn(
+                      "block text-basic1",
+                      cta
+                        ? `border p-2  rounded hover:bg-white hover:text-basic1 font-medium`
+                        : `border-0`,
+                      bold ? "font-bold hover:underline" : ""
+                    )}
+                  >
+                    {title.toUpperCase()}
+                  </div>
+                </li>
+              ))
             : [
                 { title: "Log in", route: "/auth", cta: false },
                 { title: "Free Trial", route: "/signup", cta: true },
@@ -154,4 +200,3 @@ export default function Header() {
     </header>
   );
 }
- 

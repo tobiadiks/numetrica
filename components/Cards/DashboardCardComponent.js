@@ -52,7 +52,7 @@ export default function DashboardCardComponent(props) {
   }, [user.user.company.company_id, user.user.accessToken]);
 
   return (
-    <div className=" grid grid-cols-1 md:grid-cols-3  gap-2  px-2   md:h-screen bg-main-brand2 md:overflow-y-auto mt-4">
+    <div className=" grid grid-cols-2 md:grid-cols-3  gap-2  px-2   md:h-screen bg-main-brand2 md:overflow-y-auto mt-4">
       {loading ? (
         <div className="w-full flex-col flex justify-center relative">
           <div className="mt-4 mx-auto text-lg font-bold text-gray-900">
@@ -87,6 +87,15 @@ export default function DashboardCardComponent(props) {
             name={121}
             title={"Feature Request"}
             hint={"All features requested by your users."}
+          />
+
+<DashboardAtomCardComponent
+            key={'tasks'}
+            id={'tasks'}
+            color={"bg-yellow-400"}
+            name={41}
+            title={"Task"}
+            hint={"All your active tasks"}
           />
        
        </>

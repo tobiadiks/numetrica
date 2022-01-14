@@ -50,7 +50,7 @@ export default function ProjectCardComponent(props) {
   }, [user.user.company.company_id, user.user.accessToken]);
 
   return (
-    <div className=" grid grid-cols-1 md:grid-cols-3  gap-2  px-2   md:h-screen bg-main-brand2 md:overflow-y-auto mt-4">
+    <div className=" grid grid-cols-2 md:grid-cols-3  gap-2  px-2   md:h-screen bg-main-brand2 md:overflow-y-auto mt-4">
       {loading ? (
         <div className="w-full flex-col flex justify-center relative">
           <div className="mt-4 mx-auto text-lg font-bold text-gray-900">
