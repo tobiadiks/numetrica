@@ -40,6 +40,10 @@ export default function ProjectAtomCardComponent(props) {
     setLoading(false);
   };
 
+  const routeProject=(id,type_id)=>{
+route.push(`/c/tool/${props.type_id}/${props.id}`)
+  };
+
   return (
     <div
       className={cn("w-full  px-2 py-2 rounded-lg  relative  shadow-sm h-fit ", props.color)}
@@ -81,6 +85,7 @@ export default function ProjectAtomCardComponent(props) {
       </div>
       <div
         onMouseOver={() => setDrop(false)}
+        onClick={()=>routeProject(props.id, props.type_id)}
         className="text-white mb-4 w-full  text-center cursor-pointer"
       >
         <div className="font-bold text-base  md:text-base">{props.name}</div>

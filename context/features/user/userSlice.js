@@ -20,18 +20,35 @@ export const userSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(login.fulfilled, (state, action) => {
-      state.user = action.payload;
+      console.log(typeof(action.payload.status))
+      if(action.payload.status===201){
+      state.user = action.payload.data;
       state.status = true;
       state.loading = false;
+      }
+      else if(action.payload.status===401){
+      state.user = {};
+      state.status = false;
+      state.loading = false;
+      alert("Failed to log in check credentials")
+      }
+      else{
+        state.user = {};
+        state.status = false;
+        state.loading = false;
+        alert("Check your internet connection!")
+      }
+      
     });
     builder.addCase(login.pending, (state, action) => {
       state.status = false;
       state.loading = true;
     });
     builder.addCase(login.rejected, (state, action) => {
+      state.user = {};
       state.status = false;
       state.loading = false;
-      alert("Failed to log in check credentials");
+      alert("Failed to log in check credentials[")
     });
   },
 });

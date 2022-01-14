@@ -1,4 +1,5 @@
 import "../css/index.css";
+import 'react-quill/dist/quill.snow.css'
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import Head from "next/head";
 import Layout from "@components/layout";

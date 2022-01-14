@@ -6,7 +6,7 @@ import { useRouter } from "next/dist/client/router";
 import { useSelector,useDispatch } from "react-redux";
 import {logout} from '../context/features/user/userSlice'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faUserAlt, faSignOutAlt} from '@fortawesome/free-solid-svg-icons'
+import {faUserAlt, faSignOutAlt, faBell} from '@fortawesome/free-solid-svg-icons'
 import {
   faCalendarCheck,
   faChalkboard,
@@ -108,7 +108,7 @@ export default function Header() {
           //   ))}
           // </ul>
 
-            [{ title: userState.company.display_name, route: "/profile", cta: false,bold:true,icon:faUserAlt },{ title: "Log out", route: "/", cta: false,bold:false,icon:faSignOutAlt }].map(
+            [{ title: "Notifications", route: "/notification", cta: false,bold:true,icon:faBell },{ title: "Log out", route: "/", cta: false,bold:false,icon:faSignOutAlt }].map(
                 ({ title,route, cta,bold,icon }, index) => (
                   <li
                     className="flex mt-3 md:mt-0 md:ml-6 cursor-pointer"

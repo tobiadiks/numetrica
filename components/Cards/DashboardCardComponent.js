@@ -14,23 +14,25 @@ import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import dynamic from "next/dynamic";
 import { logout } from "context/features/user/userSlice";
-const ProjectAtomCardComponent = dynamic(() => import("./projectAtomCard"), {
+import { dashboardMetric } from "../../utils/dashboard.utils";
+
+const DashboardAtomCardComponent = dynamic(() => import("./DashboardAtomCard"), {
   ssr: false,
 });
-export default function ProjectCardComponent(props) {
+export default function DashboardCardComponent(props) {
   const userState = useSelector((state) => state.userStore);
   const [user, setUser] = useState(userState);
   const [loading, setLoading] = useState(false);
-  const [project, setProject] = useState([]);
+  const [metric, setMetric] = useState({projects:"-",documentation:'-'});
 
   const route = useRouter();
  
 
  
   useEffect(() => {
-    async function getProject() {
+    async function getMetric() {
       setLoading(true);
-      const response = await allProject({
+      const response = await dashboardMetric({
         company_id: user.user.company.company_id,
         accessToken: user.user.accessToken,
       });
@@ -41,12 +43,12 @@ export default function ProjectCardComponent(props) {
 
         setLoading(false);
       } else if (response.data) {
-        setProject(response.data);
+        setMetric(response.data);
         setLoading(false);
       }
       setLoading(false);
     }
-    getProject();
+    getMetric();
   }, [user.user.company.company_id, user.user.accessToken]);
 
   return (
@@ -58,38 +60,37 @@ export default function ProjectCardComponent(props) {
           </div>
         </div>
       ) : // ({/* project card */}
-      project.length ? (
-        project.map((data) => (
-          <ProjectAtomCardComponent
-            key={data.project_id}
-            id={data.project_id}
-            type_id={data.type_id}
-            color={data.color}
-            project_id={data.project_id}
-            name={data.name}
-            description={data.description}
-            type_string={data.type_string}
-            date={data.date_created}
+<>
+          <DashboardAtomCardComponent
+            key={'project'}
+            id={'project'}
+            color={"bg-green-400"}
+            name={metric.projects}
+            title={"Project"}
+            hint={"All projects you are working on."}
           />
-        ))
-      ) : (
-        <div className="w-full flex-col flex justify-center  relative">
-          <div className="w-48 h-48 mx-auto relative">
-            <Image src={"/empty.png"} layout={"fill"} alt="empty" />
-          </div>
-          <div className="mt-4 mx-auto text-lg font-bold text-basic1">
-            You have no active project
-          </div>
-          <div className="mt-4 mx-auto ">
-            <PrimaryButton
-              title={"Project"}
-              onClick={() => {
-                route.push("/c/project");
-              }}
-            />
-          </div>
-        </div>
-      )}
+
+          <DashboardAtomCardComponent
+            key={'documentation'}
+            id={'tool/documentation'}
+            color={"bg-blue-400"}
+            name={metric.documentation}
+            title={"Documentation"}
+            hint={"Documentation pages you have created."}
+            
+          />
+
+<DashboardAtomCardComponent
+            key={'requests'}
+            id={'feature-request'}
+            color={"bg-red-400"}
+            name={121}
+            title={"Feature Request"}
+            hint={"All features requested by your users."}
+          />
+       
+       </>
+       }
     </div>
   );
 }
