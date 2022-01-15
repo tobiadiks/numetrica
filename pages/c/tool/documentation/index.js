@@ -8,7 +8,7 @@ import TaskCardComponent from "@components/Cards/taskCard";
 import DashboardCardComponent from "@components/Cards/DashboardCardComponent";
 import DocumentationCardComponent from "@components/Cards/DocumentationCardComponent";
 import PrimaryButton from "@components/Inputs/primaryButton";
-import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import { faPlusCircle,faMousePointer } from "@fortawesome/free-solid-svg-icons";
 export default function IndexPage() {
   const route = useRouter();
   const userState = useSelector((state) => state.userStore);
