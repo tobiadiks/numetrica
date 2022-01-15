@@ -38,8 +38,8 @@ export default function IndexPage() {
             <div className="font-semibold">No credit card required.</div>
             <div>
               By signing up, you agree to our{" "}
-              <span className=" text-basic1">Terms</span> and{" "}
-              <span className=" text-basic1">Privacy Policy</span>.
+              <Link href={"/terms"} passHref><span className="cursor-pointer text-main-brand1">Terms</span></Link> and{" "}
+              <Link href={"/privacy-policy"} passHref><span className="cursor-pointer text-main-brand1">Privacy Policy</span></Link>.
             </div>
           </div>
         </div>
