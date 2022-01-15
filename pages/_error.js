@@ -24,7 +24,7 @@ export default function CustomError() {
         <FontAwesomeIcon className="animate-pulse" icon={faMousePointer} />
       </div>
       <div className="mt-1 mx-auto text-center px-4 md:px-16 text-xs text-basic1">
-        <ul>
+        <ul className=" list-disc">
           <li className="text-main-brand1">
             <Link href={"/auth"} passHref>
               Are you logged in?
