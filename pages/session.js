@@ -21,7 +21,7 @@ const dispatch = useDispatch();
         />
       </div>
       <div
-        onClick={async () =>{ dispatch(logout); await route.push("/auth")}}
+        onClick={async () =>{ dispatch(logout); setTimeout(()=>await route.push("/auth"),5000)}}
         className="mt-4 cursor-pointer mx-auto text-lg font-bold text-basic1"
       >
         Continue Session!{" "}
