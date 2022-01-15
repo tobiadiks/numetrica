@@ -10,7 +10,7 @@ export default function Custom404(){
             <Image height={200} width={200} src={"/404.svg"} layout={"responsive"} alt="empty" />
           </div>
           <div onClick={()=>route.back()} className="mt-4 cursor-pointer mx-auto text-lg font-bold text-basic1">
-            Go back! <FontAwesomeIcon icon={faMousePointer}/> 
+            Go back! <FontAwesomeIcon className="animate-pulse" icon={faMousePointer}/> 
           </div>
           <div className="mt-1 mx-auto text-center px-4 md:px-16 text-xs text-basic1">
             You are not alone, it happens that this page was not found.

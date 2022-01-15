@@ -45,6 +45,7 @@ export default function IndexPage() {
         </div>
         {/* glass and color */}
         <div className="h-14 w-14 top-1/3 left-5 rounded-full z-0 bg-yellow-400 absolute "></div>
+        
         <div className="h-12 w-12 top-1/3 left-5 rounded-full z-0 bg-yellow-400 absolute animate-ping"></div>
         <div className="h-8 w-8 top-1/4 right-5 rounded-full z-0 bg-red-400 absolute "></div>
         <div className="h-6 w-6 top-1/4 right-5 rounded-full z-0 bg-red-400 absolute animate-ping delay-[4000]"></div>
