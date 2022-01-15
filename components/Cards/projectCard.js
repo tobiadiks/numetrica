@@ -30,17 +30,14 @@ export default function ProjectCardComponent(props) {
       });
       console.log(response);
       if (response.status === 401) {
-        alert("Session expired!");
-        route.push("/auth");
+        route.push("/session");
 
         setLoading(false);
       } else if (response.data) {
         setProject(response.data);
         setLoading(false);
       }
-      else{
-        route.push("/auth");
-      }
+    
       setLoading(false);
     }
     getProject();

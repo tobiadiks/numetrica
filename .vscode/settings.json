@@ -4,5 +4,6 @@
         "grapesjs",
         "Notics",
         "prefetch"
-    ]
+    ],
+    "DockerRun.DisableDockerrc": true
 }

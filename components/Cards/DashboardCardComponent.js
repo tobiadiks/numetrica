@@ -40,8 +40,7 @@ export default function DashboardCardComponent(props) {
       });
       console.log(response);
       if (response.status === 401) {
-        alert("Session expired!");
-        //route.push("/auth");
+        route.push("/session");
 
         setLoading(false);
       } else if (response.data) {
@@ -51,7 +50,7 @@ export default function DashboardCardComponent(props) {
       setLoading(false);
     }
     getMetric();
-  }, [user.user.company.company_id, user.user.accessToken]);
+  }, [route,user.user.company.company_id, user.user.accessToken]);
 
   return (
 <> 
