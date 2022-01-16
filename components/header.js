@@ -142,7 +142,7 @@ export default function Header() {
                   title: "Notifications",
                   route: "/notification",
                   cta: false,
-                  bold: true,
+                  bold: false,
                   icon: faBell,
                 },
                 {
@@ -231,14 +231,14 @@ export default function Header() {
                
                
                 {
-                  title: "Notifications",
+                  title: "",
                   route: "/notification",
                   cta: false,
-                  bold: true,
+                  bold: false,
                   icon: faBell,
                 },
                 {
-                  title: "Log out",
+                  title: "",
                   route: "/",
                   cta: false,
                   bold: false,
