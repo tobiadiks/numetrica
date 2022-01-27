@@ -66,7 +66,7 @@ export default function ABTestPage() {
               ) : (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  className="h-full w-full object"
+                  className="h-full w-full object-contain"
                   alt="B"
                   src={imageUrlA}
                   
@@ -122,7 +122,7 @@ export default function ABTestPage() {
               ) : (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   alt="B"
                   src={imageUrlB}
                   
