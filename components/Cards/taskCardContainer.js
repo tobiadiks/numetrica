@@ -44,9 +44,20 @@ export default function TaskCardContainer(props) {
         calendarID: 'work'
         }
     ],
+    '07-01-2022': [
+      {
+      id: 2,
+      startAt: '2022-01-18T16:00:01.000Z',
+      endAt: '2022-01-18T17:05:01.000Z',
+      timezoneStartAt: 'Europe/Berlin', // optional
+      summary: 'io',
+      color: 'blue',
+      
+      }
+  ],
     '16-01-2022': [
         {
-        id: 2,
+        id: 3,
         startAt: '2022-01-16T18:00:00.000Z',
         endAt: '2022-01-16T19:00:00.000Z',
         timezoneStartAt: 'Europe/Berlin', // optional
@@ -84,7 +95,10 @@ while (loading){
 
     <div className={cn(" px-2 h-screen   md:h-screen bg-main-brand2 overflow-y-auto md:overflow-y-auto mt-4")}>
          {/* calender */}
-         <CreateTaskCardComponent day={day} hidden={hidden}/>
+         <CreateTaskCardComponent day={day} hidden={hidden} onClose={() => {
+              setHidden(!hidden);
+              
+            }}/>
          <Kalend
       onEventClick={null}
       onNewEventClick={(e)=>{ setDay(new Date(e.day).toISOString());setHidden(false)}}

@@ -49,7 +49,7 @@ export default function CreateTaskCardComponent(props) {
       setDescription("");
       route.reload();
     } else {
-      await alert("Something went wrong!");
+       alert("Something went wrong!");
       setLoading(false);
     }
     setLoading(false);
@@ -58,7 +58,7 @@ export default function CreateTaskCardComponent(props) {
   return (
     <div
       className={`w-full justify-center align-middle  items-center h-full z-30 absolute   backdrop-filter backdrop-blur-sm ${
-        props.hidden == hidden ? "hidden" : ""
+        props.hidden == true ? "hidden" : "block"
       } `}
     >
       {console.log(props.day)}
@@ -66,10 +66,7 @@ export default function CreateTaskCardComponent(props) {
         <h2 className="font-bold text-basic1 md:text-sm text-center w-full md:w-1/2 lg:1/2">
           <div
             className=" cursor-pointer"
-            onClick={() => {
-              setHidden(!hidden);
-              setLoading(false);
-            }}
+            onClick={props.onClose}
           >
             <FontAwesomeIcon className=" animate-pulse" icon={faArrowLeft} />
           </div>
