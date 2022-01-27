@@ -72,7 +72,10 @@ export default function ABTestPage() {
                   
                 />
               )}
-              <div className=" text-green-500 absolute top-0 right-0 transform translate-x-2 -translate-y-2 text-xl">
+              <div onClick={()=>{
+                setImageFileA(null);
+                setImageUrlA(null)
+              }} className=" text-green-500 absolute top-0 right-0 transform translate-x-2 -translate-y-2 text-xl z-50">
                 <FontAwesomeIcon icon={faTimesCircle} />
               </div>
             </div>
@@ -128,7 +131,10 @@ export default function ABTestPage() {
                   
                 />
               )}
-              <div className=" text-blue-500 absolute top-0 right-0 transform translate-x-2 -translate-y-2 text-xl">
+              <div onClick={()=>{
+                setImageFileB(null);
+                setImageUrlB(null)
+              }} className=" text-blue-500 absolute top-0 right-0 transform translate-x-2 -translate-y-2 text-xl z-50">
                 <FontAwesomeIcon icon={faTimesCircle} />
               </div>
             </div>
