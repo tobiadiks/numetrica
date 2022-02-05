@@ -92,8 +92,8 @@ export default function CreateProjectCardComponent(props) {
             }}
             data={[
               { type_id: "abtest", type_string: "A/B Test" },
-              { type_id: "nps", type_string: "NPS Survey" },
-              { type_id: "csat", type_string: "CSAT" },
+              // { type_id: "nps", type_string: "NPS Survey" },
+              // { type_id: "csat", type_string: "CSAT" },
               //"Long Survey(coming soon..)",
             ]}
           />

@@ -3,6 +3,8 @@ import {
   faArrowDown,
   faArrowUp,
   faEdit,
+  faEye,
+  faInfoCircle,
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
@@ -40,13 +42,19 @@ export default function ProjectAtomCardComponent(props) {
     setLoading(false);
   };
 
-  const routeProject=(id,type_id)=>{
-route.push(`/c/tool/${props.type_id}/${props.id}`)
+  const routeProject = (id, type_id) => {
+    route.push(`/c/tool/${props.type_id}/${props.id}`);
+  };
+  const routeEditProject = (id, type_id) => {
+    route.push(`/c/tool/${props.type_id}/${props.id}/edit`);
   };
 
   return (
     <div
-      className={cn("w-full  px-2 py-2 rounded-lg  relative  shadow-sm h-full ", props.color)}
+      className={cn(
+        "w-full  px-2 py-2 rounded-lg  relative  shadow-sm h-full ",
+        props.color
+      )}
     >
       <UpdateProjectCardComponent
         hidden={hidden}
@@ -60,11 +68,39 @@ route.push(`/c/tool/${props.type_id}/${props.id}`)
           <FontAwesomeIcon icon={drop ? faArrowUp : faArrowDown} />
           {drop ? (
             <ul className="absolute right-1 bg-white text-base md:text-xs   p-2 rounded divide-y w-auto  shadow-2xl ">
-              <li onClick={()=>{setHidden(false)}} className="text-basic1  flex my-1 cursor-pointer">
+              <li
+                onClick={() => {
+                  routeProject(props.id, props.type_id)
+                }}
+                
+                className=" flex my-1 cursor-pointer text-green-600"
+              >
+                <div className="mr-1">
+                  <FontAwesomeIcon icon={faEye} />
+                </div>
+                Preview
+              </li>
+              <li
+                onClick={() => {
+                  routeEditProject(props.id, props.type_id)
+                }}
+                className="text-basic1  flex my-1 cursor-pointer"
+              >
                 <div className="mr-1">
                   <FontAwesomeIcon icon={faEdit} />
                 </div>
                 Edit
+              </li>
+              <li
+                onClick={() => {
+                  setHidden(false);
+                }}
+                className="text-basic1  flex my-1 cursor-pointer"
+              >
+                <div className="mr-1">
+                  <FontAwesomeIcon icon={faInfoCircle} />
+                </div>
+                Info
               </li>
               <li
                 onClick={() => {
@@ -85,12 +121,20 @@ route.push(`/c/tool/${props.type_id}/${props.id}`)
       </div>
       <div
         onMouseOver={() => setDrop(false)}
-        onClick={()=>routeProject(props.id, props.type_id)}
+        onClick={() => routeProject(props.id, props.type_id)}
         className="text-white mb-4 w-full  text-center cursor-pointer"
       >
         <div className="font-bold text-base  md:text-base">{props.name}</div>
-        <div className="text-sm md:text-xs">{props.description.slice(0,45)}...</div>
-      <div className={`bg-white absolute bottom-0 left-1/2 transform z-20 translate-y-1/4  -translate-x-1/2 w-fit text${props.color.slice(2,)} text-xs self-baseline font-bold mx-auto mt-4 p-1 rounded-md`}>{props.type_string}</div>
+        <div className="text-sm md:text-xs">
+          {props.description.slice(0, 45)}...
+        </div>
+        <div
+          className={`bg-white absolute bottom-0 left-1/2 transform z-20 translate-y-1/4  -translate-x-1/2 w-fit text${props.color.slice(
+            2
+          )} text-xs self-baseline font-bold mx-auto mt-4 p-1 rounded-md`}
+        >
+          {props.type_string}
+        </div>
       </div>
     </div>
   );
