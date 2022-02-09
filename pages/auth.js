@@ -40,7 +40,7 @@ export default function AuthPage() {
         <TextInput
           value={email}
           onChange={(e) => {
-            setEmail(e.target.value);
+            setEmail(e.target.value.toLowerCase());
           }}
           placeholder="E-mail"
           type="text"

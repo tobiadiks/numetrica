@@ -17,13 +17,10 @@ import {
   faGrin,
   faList,
   faDotCircle,
-
   faGlobe,
-  
   faPaperPlane,
   faRocket,
   faTools,
-  
 } from "@fortawesome/free-solid-svg-icons";
 export default function Header() {
   const route = useRouter();
@@ -65,7 +62,11 @@ export default function Header() {
                   { title: "Product", route: "/product" },
                   { title: "Case Studies", route: "/case-studies" },
                 ].map(({ route, title }, index) => (
-                  <li className={cn("mt-3 md:mt-0 md:ml-6")} key={index}>
+                  <li
+                    onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)}
+                    className={cn("mt-3 md:mt-0 md:ml-6")}
+                    key={index}
+                  >
                     <Link href={route}>
                       <a className="block text-basic1">{title.toUpperCase()}</a>
                     </Link>
@@ -113,7 +114,6 @@ export default function Header() {
               // </ul>
 
               [
-                
                 {
                   title: "Dashboard",
                   icon: faChalkboard,
@@ -156,7 +156,10 @@ export default function Header() {
                 <li
                   className="flex mt-3 md:mt-0 md:ml-6 cursor-pointer"
                   key={index}
-                  onClick={() => LogOut(route, title)}
+                  onClick={() => {
+                    LogOut(route, title);
+                    setMobileMenuIsOpen(!mobileMenuIsOpen);
+                  }}
                 >
                   {" "}
                   <div className="text-basic1">
@@ -222,14 +225,12 @@ export default function Header() {
               // </ul>
 
               [
-                
                 {
                   title: "Dashboard",
                   icon: faChalkboard,
                   route: "/c/dashboard",
                 },
-               
-               
+
                 {
                   title: "",
                   route: "/notification",

@@ -24,6 +24,7 @@ export default function AuthPage() {
 
   const CreateUser = async () => {
     setLoading(true);
+    if(business_name,email,password){
     const response = await signup({ email, password,display_name:business_name });
     console.log(response)
     if (response.data.success==false) {
@@ -36,6 +37,9 @@ export default function AuthPage() {
     else{
       alert("Something went wrong!");
       setLoading(false)
+    }}
+    else{
+      alert('no field should be blank')
     }
     setLoading(false)
   };
@@ -50,7 +54,7 @@ export default function AuthPage() {
         <TextInput
           value={business_name}
           onChange={(e) => {
-            setBusinessName(e.target.value);
+            setBusinessName(e.target.value.toLowerCase());
           }}
           placeholder="Business Name"
           type="text"
@@ -58,7 +62,7 @@ export default function AuthPage() {
         <TextInput
           value={email}
           onChange={(e) => {
-            setEmail(e.target.value);
+            setEmail(e.target.value.toLowerCase());
           }}
           placeholder="E-mail"
           type="text"

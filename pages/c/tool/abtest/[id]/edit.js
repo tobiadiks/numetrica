@@ -13,7 +13,7 @@ import cn from "classnames";
 import { Image, image } from "next/image";
 import { useRef, useState } from "react";
 import TextInput from "@components/Inputs/textInput";
-import { abtest } from "utils/abtest.utils";
+import { abtestEdit, abtestGet } from "utils/abtest.utils";
 import { useRouter } from "next/router";
 export default function ABTestPage() {
   //const [imageFileA, setImageFileA] = useState(null);
@@ -29,8 +29,17 @@ export default function ABTestPage() {
   // const imgB = useRef(null);
   const route = useRouter();
 
+  useEffect(() => {
+    const data = abtestGet({
+      company_id: userState.user.company.company_id,
+      accessToken: userState.user.accessToken,
+      project_id: route.query.id,
+    });
+console.log(data)
+  }, [route.query.id,userState.user.accessToken,userState.user.company.company_id]);
+
   const saveABTest = () => {
-    abtest({
+    abtestEdit({
       accessToken: userState.user.accessToken,
       company_id: userState.user.company.company_id,
       project_id: route.query.id,
@@ -41,7 +50,13 @@ export default function ABTestPage() {
 
   return (
     <div className="relative">
-      <div className={cn("fixed right-0 z-50 top-3/4 bg-blue-50 shadow-md text-main-brand1 text text-2xl h-16 w-16 rounded-full p-2 animate-pulse delay-1000 flex content-center",imageUrlA&&imageUrlB?'block':'hidden')}>
+      <div
+        onClick={() => saveABTest()}
+        className={cn(
+          "fixed right-0 z-50 top-3/4 bg-blue-50 shadow-md text-main-brand1 text text-2xl h-16 w-16 rounded-full p-2 animate-pulse delay-1000 flex content-center",
+          imageUrlA && imageUrlB ? "block" : "hidden"
+        )}
+      >
         <FontAwesomeIcon className="mx-auto my-auto" icon={faSave} />
       </div>
       <div className="min-h-screen  flex flex-col  md:flex-row md:transform translate-y-1 md:-translate-y-2">

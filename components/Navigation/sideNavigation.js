@@ -28,7 +28,7 @@ export default function SideNavigation(props) {
             { title: "Task Manager", icon:faClock , route: "/c/task" },
             { title: "Documention", icon: faPaperPlane, route: "/c/tool/documentation/" },
             // { title: "Page Builder(coming soon!)", icon: faGlobe, route: "/c/tool/pages/home" },
-            { title: "Pages(upcoming!)", icon: faGlobe, route: "#" },
+            // { title: "Pages(upcoming!)", icon: faGlobe, route: "#" },
             { title: "Profile", icon: faUserAlt, route: "/c/profile" },
             { title: "Feature Request", icon: faRocket, route: "/c/feature-request" },
           ].map((data, index) => (
