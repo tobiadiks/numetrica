@@ -15,6 +15,7 @@ import { useRef, useState } from "react";
 import TextInput from "@components/Inputs/textInput";
 import { abtestEdit, abtestGet } from "utils/abtest.utils";
 import { useRouter } from "next/router";
+import {useEffect } from "react";
 export default function ABTestPage() {
   //const [imageFileA, setImageFileA] = useState(null);
   //const [imageFileB, setImageFileB] = useState(null);
