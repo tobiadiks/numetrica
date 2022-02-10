@@ -36,7 +36,7 @@ export const abtestVote =async ({project_id,value})=>{
   return await axios.post(
       `${url}/abtest/${project_id}/`,
       {
-        value
+        value:value
       },
     
     {

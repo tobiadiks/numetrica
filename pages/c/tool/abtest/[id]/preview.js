@@ -1,11 +1,13 @@
 import PrimaryButton from "@components/Inputs/primaryButton";
 import Image from "next/image";
+import cn from 'classnames'
 import { abtestGet } from "utils/abtest.utils";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImages } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function ABTestPage() {
   const route = useRouter();
@@ -44,8 +46,11 @@ export default function ABTestPage() {
     <div className="min-h-screen flex flex-col relative md:flex-row md:transform translate-y-1 md:-translate-y-2">
       <div className="w-full md:w-1/2 flex  align-middle flex-col bg-green-500">
         <div className="w-24 h-24 backdrop-filter rounded-lg backdrop-brightness-110 md:mt-6 mt-8 mx-auto flex">
-          <div className="bg-white h-[65%] w-full rounded-b-lg self-end flex">
-            <div className="font-bold text-xs text-green-500 text-center mx-auto my-auto">
+          <div className={cn('bg-white h-full  w-full rounded-b-lg self-end flex',
+          // votes.a>=0 || votes.b>=0?
+          // 'h'+[(votes.a / (votes.a + votes.b)*100).toFixed()]:'0'
+          )}>
+            <div className="font-bold text-md text-green-500 text-center mx-auto my-auto">
               {votes.a>=0 || votes.b>=0?
               (votes.a / (votes.a + votes.b)*100).toFixed():'-'}%
             </div>
@@ -82,8 +87,12 @@ export default function ABTestPage() {
 
       <div className="w-full md:w-1/2 flex  align-middle flex-col bg-blue-500">
         <div className="w-24 h-24 backdrop-filter rounded-lg backdrop-brightness-110 md:mt-6 mt-8 mx-auto flex">
-          <div className="bg-white h-[45%] w-full rounded-b-lg self-end flex">
-            <div className="font-bold text-xs text-blue-500 text-center mx-auto my-auto">
+          <div className={cn('bg-white h-full w-full rounded-b-lg self-end flex',
+          // votes.a>=0 || votes.b>=0?
+          // 'h-['+(votes.b / (votes.a + votes.b)*100).toFixed().toString()+'%]':['0'+'%']
+          )
+          }>
+            <div className="font-bold text-md text-blue-500 text-center mx-auto my-auto">
             {votes.a>=0 || votes.b>=0?
               (votes.b / (votes.a + votes.b)*100).toFixed():'-'}%
             </div>

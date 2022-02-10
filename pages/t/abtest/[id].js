@@ -21,8 +21,8 @@ export default function ABTestPage() {
       console.log(response);
       if (response.data) {
         console.log(response);
-        setImageUrlA(response.data.item_a_url);
-        setImageUrlB(response.data.item_b_url);
+        setImageUrlA(response.data.abtest.item_a_url);
+        setImageUrlB(response.data.abtest.item_b_url);
         setLoading(false);
       }
       setLoading(false);
@@ -34,17 +34,16 @@ export default function ABTestPage() {
     const response = abtestVote({
       project_id: route.query.id,
       value: value,
-    });
-    if (response.data) {
-      console.log(response);
-      setVoted(true);
+    });setVoted(!voted);
+    if (response.status==201) {
+      null
     }
     
 
     console.log(response);
   };
 
-  if (voted) {
+  while (voted) {
     return (
       <div className="min-h-screen flex flex-col relative md:flex-row md:transform  ">
         <div className="mx-auto my-auto  text-lg md:text-3xl font-bold">
@@ -57,10 +56,10 @@ export default function ABTestPage() {
       </div>
     );
   }
-
+console.log(voted)
   return (
     <div className="min-h-screen flex flex-col relative md:flex-row md:transform translate-y-1 md:-translate-y-2">
-      {console.log(value)}{" "}
+      {" "}
       <div className="w-full md:w-1/2 flex  align-middle flex-col bg-green-500">
         <div className="w-24 h-24 backdrop-filter rounded-full backdrop-brightness-110 md:mt-6 mt-8 mx-auto flex">
           <div
