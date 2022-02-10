@@ -242,18 +242,21 @@ if(headCheck=='t'){
                 },
                 {
                   title: "",
-                  route: "/",
+                  router: "/",
                   cta: false,
                   bold: false,
                   icon: faSignOutAlt,
                 },
-              ].map(({ title, route, cta, bold, icon }, index) => (
+              ].map(({ title, router, cta, bold, icon }, index) => (
                 <li
                   className="flex mt-3 md:mt-0 md:ml-6 cursor-pointer"
                   key={index}
                   onClick={() => {
-                    if(route=="/"){
-                      LogOut(route, title)
+                    if(router=="/"){
+                      LogOut(router, title)
+                    }
+                    else{
+                      route.push(router)
                     }
                     }}
                 >
