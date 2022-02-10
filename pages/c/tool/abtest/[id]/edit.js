@@ -68,7 +68,7 @@ export default function ABTestPage() {
     if (response.status === 401) {
       route.push("/session");
       setLoading(false);
-    } else if (response.data) {
+    } else  {
       route.reload()
     }
     
