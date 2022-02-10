@@ -15,7 +15,7 @@ import { useRef, useState } from "react";
 import TextInput from "@components/Inputs/textInput";
 import { abtestEdit, abtestGet } from "utils/abtest.utils";
 import { useRouter } from "next/router";
-import {useEffect } from "react";
+import { useEffect } from "react";
 export default function ABTestPage() {
   //const [imageFileA, setImageFileA] = useState(null);
   //const [imageFileB, setImageFileB] = useState(null);
@@ -25,32 +25,50 @@ export default function ABTestPage() {
   const [imageBVisible, setImageBVisible] = useState(false);
   const [linkA, setLinkA] = useState(null);
   const [linkB, setLinkB] = useState(null);
+  const [loading, setLoading] = useState(false);
   const userState = useSelector((state) => state.userStore);
   // const imgA = useRef(null);
   // const imgB = useRef(null);
   const route = useRouter();
+  const { id } = route.query;
 
   useEffect(() => {
-    const data = abtestGet({
-      company_id: userState.user.company.company_id,
-      accessToken: userState.user.accessToken,
-      project_id: route.query.id,
-    });
-console.log(data)
-  }, [route.query.id,userState.user.accessToken,userState.user.company.company_id]);
+    async function getData() {
+      setLoading(true);
+      const response = await abtestGet({
+        company_id: userState.user.company.company_id,
+        accessToken: userState.user.accessToken,
+        project_id: id,
+      });
+      console.log(response);
+      if (response.status === 401) {
+        route.push("/session");
+        setLoading(false);
+      } else if (response.data) {
+        console.log(response);
+        setImageUrlA(response.data.item_a_url);
+        setImageUrlB(response.data.item_b_url);
+        setLoading(false);
+      }
+      setLoading(false);
+    }
+    getData();
+  }, [route,id, userState.user.accessToken, userState.user.company.company_id]);
 
   const saveABTest = () => {
-    abtestEdit({
+    const data = abtestEdit({
       accessToken: userState.user.accessToken,
       company_id: userState.user.company.company_id,
       project_id: route.query.id,
-      imageUrlA: imageUrlA,
-      imageUrlB: imageUrlB,
+      item_a_url: imageUrlA,
+      item_b_url: imageUrlB,
     });
+    console.log(data);
   };
 
   return (
     <div className="relative">
+      {console.log({ imageUrlA, imageUrlB })}
       <div
         onClick={() => saveABTest()}
         className={cn(
@@ -110,7 +128,7 @@ console.log(data)
                   title="Done"
                 />
               </div>
-              {imageUrlA === null ? (
+              {imageUrlA === null || imageUrlA === undefined ? (
                 <div className="relative flex flex-row w-full h-full ">
                   <div className="text-8xl w-1/2 text-left text-green-100 font-bold self-end">
                     A
@@ -195,7 +213,7 @@ console.log(data)
                   title="Done"
                 />
               </div>
-              {imageUrlB === null ? (
+              {imageUrlB === null || imageUrlB === undefined ? (
                 <div className="relative flex flex-row-reverse w-full h-full ">
                   <div className="text-8xl w-1/2 text-right text-blue-100 font-bold self-end">
                     B

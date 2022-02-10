@@ -27,16 +27,18 @@ export default function Header() {
   const userState = useSelector((state) => state.userStore.user);
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   const dispatch = useDispatch();
-
+const headCheck = route.pathname.split('/')[1]
   async function LogOut(routeDestination, title) {
-    if (title == "Log out") {
+    if (title == "Log out"||"/") {
       dispatch(logout());
       route.push(routeDestination);
     } else {
       route.push(routeDestination);
     }
   }
-
+if(headCheck=='t'){
+  return null
+}
   return (
     <header
       className={`w-full  backdrop-filter backdrop-blur-md shadow fixed z-50`}
@@ -249,7 +251,11 @@ export default function Header() {
                 <li
                   className="flex mt-3 md:mt-0 md:ml-6 cursor-pointer"
                   key={index}
-                  onClick={() => LogOut(route, title)}
+                  onClick={() => {
+                    if(route=="/"){
+                      LogOut(route, title)
+                    }
+                    }}
                 >
                   {" "}
                   <div className="text-basic1">

@@ -43,7 +43,7 @@ export default function ProjectAtomCardComponent(props) {
   };
 
   const routeProject = (id, type_id) => {
-    route.push(`/c/tool/${props.type_id}/${props.id}`);
+    route.push(`/c/tool/${props.type_id}/${props.id}/preview`);
   };
   const routeEditProject = (id, type_id) => {
     route.push(`/c/tool/${props.type_id}/${props.id}/edit`);
@@ -67,7 +67,7 @@ export default function ProjectAtomCardComponent(props) {
         <span className="relative text-white" onClick={() => setDrop(!drop)}>
           <FontAwesomeIcon icon={drop ? faArrowUp : faArrowDown} />
           {drop ? (
-            <ul className="absolute right-1 bg-white text-base md:text-xs   p-2 rounded divide-y w-auto  shadow-2xl ">
+            <ul className="absolute z-50 right-1 bg-white text-base md:text-xs   p-2 rounded divide-y w-auto  shadow-2xl ">
               <li
                 onClick={() => {
                   routeProject(props.id, props.type_id)
