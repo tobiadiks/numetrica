@@ -8,7 +8,7 @@ import { abtestGetVote, abtestVote } from "utils/abtest.utils";
 export default function ABTestPage() {
   const [imageUrlA, setImageUrlA] = useState(null);
   const [imageUrlB, setImageUrlB] = useState(null);
-  const [value, setValue] = useState(null);
+  
   const [voted, setVoted] = useState(false);
   const [loading, setLoading] = useState(false);
   const route = useRouter();
@@ -30,14 +30,12 @@ export default function ABTestPage() {
     getData();
   }, [route.query.id]);
 
-  const voteABTest = () => {
+  const voteABTest = (value) => {
     const response = abtestVote({
       project_id: route.query.id,
       value: value,
-    });setVoted(!voted);
-    if (response.status==201) {
-      null
-    }
+    });
+    
     
 
     console.log(response);
@@ -65,8 +63,9 @@ console.log(voted)
           <div
             onMouseDown={() => {
               setTimeout(() => {
-                setValue("A");
-                voteABTest();
+                
+                voteABTest("A");
+                setVoted(true);
               }, 3000);
             }}
             className="bg-white h-[65%]  cursor-pointer w-[65%] animate-pulse active:animate-ping rounded-full mx-auto self-center flex"
@@ -109,8 +108,9 @@ console.log(voted)
           <div
             onMouseDown={() => {
               setTimeout(() => {
-                setValue("B");
-                voteABTest();
+               
+                voteABTest("B");
+                setVoted(true);
               }, 3000);
             }}
             className="bg-white h-[65%] active:animate-ping cursor-pointer w-[65%] animate-pulse rounded-full self-center mx-auto flex"
