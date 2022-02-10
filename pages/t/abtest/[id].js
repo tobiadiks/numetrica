@@ -63,8 +63,7 @@ console.log(voted)
           <div
             onMouseDown={() => {
               setTimeout(() => {
-                
-                voteABTest("A");
+                voted?null:voteABTest("A");
                 setVoted(true);
               }, 3000);
             }}
@@ -108,8 +107,7 @@ console.log(voted)
           <div
             onMouseDown={() => {
               setTimeout(() => {
-               
-                voteABTest("B");
+               voted?null:voteABTest("B");
                 setVoted(true);
               }, 3000);
             }}

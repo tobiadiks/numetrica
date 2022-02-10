@@ -71,9 +71,7 @@ export default function ABTestPage() {
     } else if (response.data) {
       route.reload()
     }
-    else{
-      alert('failed')
-    }
+    
     console.log(response);
   };
 
