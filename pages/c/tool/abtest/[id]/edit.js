@@ -48,6 +48,8 @@ export default function ABTestPage() {
         console.log(response);
         setImageUrlA(response.data.item_a_url);
         setImageUrlB(response.data.item_b_url);
+        setLinkA(response.data.item_a_url)
+        setLinkB(response.data.item_b_url)
         setLoading(false);
       }
       setLoading(false);
@@ -69,7 +71,9 @@ export default function ABTestPage() {
     } else if (response.data) {
       route.reload()
     }
-    
+    else{
+      alert('failed')
+    }
     console.log(response);
   };
 
