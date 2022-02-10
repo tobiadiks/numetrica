@@ -88,7 +88,7 @@ export default function ProjectAtomCardComponent(props) {
                   routeShareProject(props.id, props.type_id)
                 }}
                 
-                className=" flex my-1 cursor-pointer text-green-600"
+                className=" flex my-1 cursor-pointer text-blue-600"
               >
                 <div className="mr-1">
                   <FontAwesomeIcon icon={faShare} />
