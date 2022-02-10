@@ -63,6 +63,7 @@ export default function ABTestPage() {
       item_a_url: imageUrlA,
       item_b_url: imageUrlB,
     });
+    route.reload()
     console.log(data);
   };
 
