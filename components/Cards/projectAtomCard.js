@@ -5,6 +5,7 @@ import {
   faEdit,
   faEye,
   faInfoCircle,
+  faShare,
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
@@ -48,7 +49,9 @@ export default function ProjectAtomCardComponent(props) {
   const routeEditProject = (id, type_id) => {
     route.push(`/c/tool/${props.type_id}/${props.id}/edit`);
   };
-
+  const routeShareProject = (id, type_id) => {
+    route.push(`/t/${props.type_id}/${props.id}`);
+  };
   return (
     <div
       className={cn(
@@ -79,6 +82,18 @@ export default function ProjectAtomCardComponent(props) {
                   <FontAwesomeIcon icon={faEye} />
                 </div>
                 Preview
+              </li>
+              <li
+                onClick={() => {
+                  routeShareProject(props.id, props.type_id)
+                }}
+                
+                className=" flex my-1 cursor-pointer text-green-600"
+              >
+                <div className="mr-1">
+                  <FontAwesomeIcon icon={faShare} />
+                </div>
+                Share
               </li>
               <li
                 onClick={() => {
