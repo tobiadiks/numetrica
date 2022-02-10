@@ -56,15 +56,23 @@ export default function ABTestPage() {
   }, [route,id, userState.user.accessToken, userState.user.company.company_id]);
 
   const saveABTest = () => {
-    const data = abtestEdit({
+    const response = abtestEdit({
       accessToken: userState.user.accessToken,
       company_id: userState.user.company.company_id,
       project_id: route.query.id,
       item_a_url: imageUrlA,
       item_b_url: imageUrlB,
     });
-    route.reload()
-    console.log(data);
+    if (response.status === 401) {
+      route.push("/session");
+      setLoading(false);
+    } else if (response.data) {
+      route.reload()
+    }
+    else{
+      alert('failed')
+    }
+    console.log(response);
   };
 
   return (
