@@ -21,7 +21,7 @@
   "homepage": "https://github.com/tobiadiks/numetrica#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@reduxjs/toolkit": "^1.6.2",
     "axios": "^0.23.0",
